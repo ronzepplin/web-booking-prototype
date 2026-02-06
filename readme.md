@@ -101,7 +101,6 @@ PROJECT ST NIKOLAUS
 2. Open `index.html` in a modern web browser
 3. Use the language switcher (EN / DE) in the header
 4. Navigate through pages using the main navigation and footer links
-5. website can be viewed using live server. Address: http://127.0.0.1:5500/index.html
 
 No build process or server is required.
 
