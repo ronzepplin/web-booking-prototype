@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Payment Confirmation | St. Nikolaus Tower Tour</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container" id="thankYouPage">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="book-tour.html" data-i18n="nav.book">Book</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="payment.html" data-i18n="nav.payment">Payment</a>
+      <span class="breadcrumb-sep">›</span>
+      <span aria-current="page" data-i18n="thanks.breadcrumb">Payment Confirmation</span>
+    </nav>
+
+   
+
+    <section class="booking">
+      <!-- Confirmation message -->
+      <div class="booking-header">
+        <h1 class="booking-title" data-i18n="thanks.title">Thank you for the Payment.</h1>
+        <p class="muted" data-i18n="thanks.subtitle">
+          Your payment was successful and your booking is confirmed.
+        </p>
+        <p class="muted small" data-i18n="thanks.emailNote">
+          A confirmation email will be sent to you shortly.
+        </p>
+
+        <p class="reference-line">
+          <span data-i18n="thanks.referenceLabel">Booking reference:</span>
+          <strong id="confirmRef">—</strong>
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <div class="pay-summary">
+        <h2 class="section-title" data-i18n="thanks.summaryTitle">Summary</h2>
+
+        <div class="summary-lines">
+          <p><strong data-i18n="pay.nameLabel">Name:</strong> <span id="sumName">—</span></p>
+          <p><strong data-i18n="pay.emailLabel">Email:</strong> <span id="sumEmail">—</span></p>
+          <p><strong data-i18n="pay.adultsLabel">Number of Adults:</strong> <span id="sumAdults">—</span></p>
+          <p><strong data-i18n="pay.childrenLabel">Number of Children:</strong> <span id="sumChildren">—</span></p>
+          <p><strong data-i18n="pay.dateLabel">Date:</strong> <span id="sumDate">—</span></p>
+        </div>
+
+        <p class="total-line">
+          <span class="total-label" data-i18n="pay.totalLabel">Total Cost:</span>
+          <span id="sumTotal" class="total-value">€ 0.00</span>
+        </p>
+      </div>
+
+      <!-- Support / Contact CTA -->
+      <div class="thank-support">
+        <p class="support-text" data-i18n="thanks.supportText">
+          For any questions, emergencies, or cancellations, please contact us using the contact form.
+        </p>
+
+        <div class="form-actions">
+          <a class="btn btn-primary" href="contact.html" data-i18n="thanks.contactBtn">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="pay-or" data-i18n="thanks.or">Or</div>
+
+      <!-- Office / parish contact info -->
+      <div class="thank-office">
+        <h2 class="section-title" data-i18n="thanks.officeTitle">You are welcome to visit our office</h2>
+
+        <div class="office-block">
+          <p><strong data-i18n="thanks.officeName">Pfarrbüro</strong></p>
+          <p data-i18n="thanks.officeAddress">Ludwigsplatz 3, 83022 Rosenheim</p>
+          <p>
+            <span data-i18n="thanks.officePhoneLabel">Phone number:</span>
+            <span data-i18n="thanks.officePhoneValue">08031 21050</span>
+          </p>
+          <p>
+            <span data-i18n="thanks.officeEmailLabel">Email:</span>
+            <span data-i18n="thanks.officeEmailValue">st-nikolaus.rosenheim[at]ebmuc.de</span>
+          </p>
+
+          <p class="office-hours">
+            <strong data-i18n="thanks.hoursTitle">Opening Hours</strong><br />
+            <span data-i18n="thanks.hoursLine1">Mo. - Fr. 9:00 to 12:00</span><br />
+            <span data-i18n="thanks.hoursLine2">Tuesday and Thursday 14:00 to 15:00</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

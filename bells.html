@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="bells.metaTitle">The Bells | St. Nikolaus Tower Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only layout (different structure: “catalog + detail rail + cards”) -->
+  <style>
+    .bells-shell{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 18px 64px;
+    }
+
+    /* Intro */
+    .bells-intro{
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: start;
+      margin: 10px 0 18px;
+    }
+    .bells-intro h1{
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+    .bells-intro p{
+      margin: 10px 0 0;
+      line-height: 1.65;
+      max-width: 78ch;
+      opacity: .92;
+    }
+
+    .bells-kpis{
+      display: grid;
+      gap: 12px;
+    }
+    .kpi{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 16px;
+      padding: 14px 14px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+    .kpi .label{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      opacity: .7;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .kpi .value{
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+    .kpi .sub{
+      margin-top: 6px;
+      font-size: 13px;
+      opacity: .85;
+      line-height: 1.35;
+    }
+
+    /* Hero */
+    .bells-hero{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 10px 0 22px;
+    }
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .hero-card{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+    }
+    .hero-card img{
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+    .hero-mini{
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
+    }
+    .hero-mini .hero-card img{
+      height: 174px;
+    }
+    .hero-cap{
+      padding: 12px 14px 14px;
+      font-size: 13px;
+      line-height: 1.45;
+      opacity: .92;
+      border-top: 1px solid rgba(0,0,0,.08);
+      background: rgba(0,0,0,.02);
+    }
+
+    /* Details cards (inscriptions) */
+    .bells-details{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+      align-items: start;
+    }
+
+    .detail-card{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      padding: 14px 14px 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+      display: grid;
+      gap: 10px;
+    }
+
+    /* Title + tone should sit together (not pushed to card edge) */
+    .detail-top{
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+    }
+    .bell-title{
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .detail-top h3{
+      margin: 0;
+      font-size: 16px;
+    }
+    .detail-top .tone{
+      font-size: 12px;
+      opacity: .75;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .detail-meta{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 13px;
+      opacity: .9;
+    }
+    .detail-meta div{
+      padding: 10px 10px;
+      border-radius: 14px;
+      background: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.08);
+      line-height: 1.35;
+    }
+    .detail-meta b{
+      display: block;
+      opacity: .75;
+      font-size: 12px;
+      margin-bottom: 4px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .inscription{
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(0,0,0,.03);
+      border: 1px dashed rgba(0,0,0,.20);
+      font-size: 13px;
+      line-height: 1.55;
+      opacity: .95;
+    }
+
+    /* Story section */
+    .bells-story{
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .story-card{
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .story-card h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .story-card p{
+      margin: 0 0 10px;
+      line-height: 1.68;
+      max-width: 86ch;
+    }
+    .story-card p:last-child{ margin-bottom: 0; }
+
+    /* Simple note block */
+    .bells-note{
+      margin-top: 14px;
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .bells-note h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .bells-note p{
+      margin: 0 0 10px;
+      line-height: 1.68;
+      max-width: 86ch;
+    }
+    .bells-note p:last-child{ margin-bottom: 0; }
+
+    /* CTA */
+    .bells-cta{
+      text-align: center;
+      margin-top: 18px;
+      padding: 22px 18px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+    .bells-cta h2{
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .bells-cta p{
+      margin: 0 auto 16px;
+      max-width: 72ch;
+      line-height: 1.6;
+      opacity: .92;
+    }
+    .bells-cta a{
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,.20);
+      background: rgba(0,0,0,.06);
+      color: inherit;
+      font-weight: 900;
+    }
+    .bells-cta a:hover{ background: rgba(0,0,0,.10); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .bells-intro{ grid-template-columns: 1fr; }
+      .hero-grid{ grid-template-columns: 1fr; }
+      .hero-card img{ height: 300px; }
+      .hero-mini{ grid-template-rows: auto; grid-template-columns: 1fr 1fr; }
+      .hero-mini .hero-card img{ height: 180px; }
+      .bells-details{ grid-template-columns: 1fr; }
+      .bells-story{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="bells-shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span aria-hidden="true">›</span>
+      <span data-i18n="bells.breadcrumb">The Bells</span>
+    </nav>
+
+    <!-- Intro -->
+    <section class="bells-intro" aria-label="Bells intro">
+      <div>
+        <h1 data-i18n="bells.title">The Bells</h1>
+        <p data-i18n="bells.intro">
+          The bells are one of the most interesting elements of the tower tour.
+          There are 7 bells in total. They are placed on the 9th floor.
+          They are maintained by electronic motors which are programmed with a software to deliver the intended rhythm.
+          All the bells can be functioned solely or together to create beautiful rhythmic sound.<br><br>
+
+          The smallest bell Sterbeglocke with the highest tone (fs²) is also the oldest bell,
+          built by Bartholomeus Wengle in Augsburg in 1606.
+          The other 6 bells were built in 1947 by Czudnochowsky, Erding.
+          The largest bell with the deepest tone(b⁰), Dreifaltigkeitsglocke or Trinity bell, weighs 3,100 kilograms.
+        </p>
+      </div>
+
+      <div class="bells-kpis" aria-label="Key facts">
+        <div class="kpi">
+          <div class="label" data-i18n="bells.kpi1Label">Bell set</div>
+          <div class="value" data-i18n="bells.kpi1Value">7 bells</div>
+          <div class="sub" data-i18n="bells.kpi1Sub">Located on the 9th floor</div>
+        </div>
+
+        <div class="kpi">
+          <div class="label" data-i18n="bells.kpi2Label">Largest bell</div>
+          <div class="value" data-i18n="bells.kpi2Value">Dreifaltigkeitsglocke</div>
+          <div class="sub" data-i18n="bells.kpi2Sub">Weight 62 Zentner (3,100 KG) · Cast in 1947</div>
+        </div>
+
+        <div class="kpi">
+          <div class="label" data-i18n="bells.kpi3Label">Oldest bell</div>
+          <div class="value" data-i18n="bells.kpi3Value">Sterbeglocke</div>
+          <div class="sub" data-i18n="bells.kpi3Sub">Weight 3 Zentner (150 KG) · Cast in 1606</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero collage -->
+    <section class="bells-hero" aria-label="Bells images">
+      <div class="hero-grid">
+        <figure class="hero-card">
+          <img src="assets/img/bells/bell-hero.jpg" alt="Largest bell, the Trinity bell inside the wooden bell frame" />
+          <figcaption class="hero-cap" data-i18n="bells.heroCap1">
+            Trinity Bell in the bell chamber: timber beams, controlled mechanics, and carefully balanced movement.
+          </figcaption>
+        </figure>
+
+        <div class="hero-mini">
+          <figure class="hero-card">
+            <img src="assets/img/bells/bell-mini-1.jpg" alt="Bell viewed from different angles" />
+          </figure>
+          <figure class="hero-card">
+            <img src="assets/img/bells/bell-mini-2.jpg" alt="Image showing parts of the bell and its automated mechanism" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details heading -->
+    <h2 data-i18n="bells.detailsTitle">The Bell Details</h2>
+
+    <!-- Inscriptions as readable cards -->
+    <!-- IMPORTANT FIX: all detail cards must be INSIDE this .bells-details wrapper -->
+    <div class="bells-details" aria-label="Bell inscriptions">
+      <div class="detail-card">
+        <div class="detail-top">
+          <div class="bell-title">
+            <h3 data-i18n="bells.bell1.title">Dreifaltigkeitsglocke</h3>
+            <span class="tone">(Tone: b°)</span>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div>
+            <b data-i18n="bells.founderLabel">Founder</b>
+            Czudnochowsky, Erding
+          </div>
+          <div>
+            <b data-i18n="bells.yearWeightLabel">Year / Weight</b>
+            1947 · 62 Zentner
+          </div>
+        </div>
+
+        <div class="inscription">
+          <b class="inscription-label" data-i18n="bells.inscriptionLabel">Bell inscription</b>
+          <span data-i18n="bells.bell1.inscription">
+            “Mich goß Czudnochowsky, J. Bachmairs Nachfolger zu Erding” /
+            “Mit meiner Stimm lob ich Gott, den Dreieinen”
+          </span>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-top">
+          <div class="bell-title">
+            <h3 data-i18n="bells.bell2.title">Christusglocke</h3>
+            <span class="tone">(Tone: des¹)</span>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div>
+            <b data-i18n="bells.founderLabel">Founder</b>
+            Czudnochowsky, Erding
+          </div>
+          <div>
+            <b data-i18n="bells.yearWeightLabel">Year / Weight</b>
+            1947 · 35 Zentner
+          </div>
+        </div>
+
+        <div class="inscription">
+          <b class="inscription-label" data-i18n="bells.inscriptionLabel">Bell inscription</b>
+          <span data-i18n="bells.bell2.inscription">“Kommt zu mir, ich will euch erquicken”</span>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-top">
+          <div class="bell-title">
+            <h3 data-i18n="bells.bell3.title">Mariaglocke</h3>
+            <span class="tone">(Tone:es¹)</span>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div>
+            <b data-i18n="bells.founderLabel">Founder</b>
+            Czudnochowsky, Erding
+          </div>
+          <div>
+            <b data-i18n="bells.yearWeightLabel">Year / Weight</b>
+            1947 · 24 Zentner
+          </div>
+        </div>
+
+        <div class="inscription">
+          <b class="inscription-label" data-i18n="bells.inscriptionLabel">Bell inscription</b>
+          <span data-i18n="bells.bell3.inscription">“Der Glocke Klang sei Lobgesang der Jungfrau, Mutter, Königin”</span>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-top">
+          <div class="bell-title">
+            <h3 data-i18n="bells.bell4.title">Nikolausglocke</h3>
+            <span class="tone">(Tone: f¹)</span>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div>
+            <b data-i18n="bells.founderLabel">Founder</b>
+            Czudnochowsky, Erding
+          </div>
+          <div>
+            <b data-i18n="bells.yearWeightLabel">Year / Weight</b>
+            1947 · 18 Zentner
+          </div>
+        </div>
+
+        <div class="inscription">
+          <b class="inscription-label" data-i18n="bells.inscriptionLabel">Bell inscription</b>
+          <span data-i18n="bells.bell4.inscription">“Sankt Nikolaus, schütz deine Stadt”</span>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-top">
+          <div class="bell-title">
+            <h3 data-i18n="bells.bell5.title">Michaelsglocke</h3>
+            <span class="tone">(Tone: as¹)</span>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div>
+            <b data-i18n="bells.founderLabel">Founder</b>
+            Czudnochowsky, Erding
+          </div>
+          <div>
+            <b data-i18n="bells.yearWeightLabel">Year / Weight</b>
+            1947 · 10 Zentner
+          </div>
+        </div>
+
+        <div class="inscription">
+          <b class="inscription-label" data-i18n="bells.inscriptionLabel">Bell inscription</b>
+          <span data-i18n="bells.bell5.inscription">“Führ heim die Opfer des Krieges, St. Michael”</span>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-top">
+          <div class="bell-title">
+            <h3 data-i18n="bells.bell6.title">Konradsglocke</h3>
+            <span class="tone">(Tone: b¹)</span>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div>
+            <b data-i18n="bells.founderLabel">Founder</b>
+            Czudnochowsky, Erding
+          </div>
+          <div>
+            <b data-i18n="bells.yearWeightLabel">Year / Weight</b>
+            1947 · 8 Zentner
+          </div>
+        </div>
+
+        <div class="inscription">
+          <b class="inscription-label" data-i18n="bells.inscriptionLabel">Bell inscription</b>
+          <span data-i18n="bells.bell6.inscription">“Sankt Konrad, schließ uns auf die Tür”</span>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-top">
+          <div class="bell-title">
+            <h3 data-i18n="bells.bell7.title">Sterbeglocke</h3>
+            <span class="tone">(Tone: fs²)</span>
+          </div>
+        </div>
+
+        <div class="detail-meta">
+          <div>
+            <b data-i18n="bells.founderLabel">Founder</b>
+            Bartholomeus Wengle, Augsburg
+          </div>
+          <div>
+            <b data-i18n="bells.yearWeightLabel">Year / Weight</b>
+            1606 · ca. 3 Zentner
+          </div>
+        </div>
+
+        <div class="inscription">
+          <b class="inscription-label" data-i18n="bells.inscriptionLabel">Bell inscription</b>
+          <span data-i18n="bells.bell7.inscription">“Bartholomeus Wengle hat mich gossen A° 1606”</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two story cards (split layout) -->
+    <section class="bells-story" aria-label="Bells story">
+      <article class="story-card">
+        <h2 data-i18n="bells.story1Title">Why elasticity matters</h2>
+        <p data-i18n="bells.story1Text">
+          Due to a previous renovation mistake, the wooden bell frame (Glockenstuhl) was removed and replaced with concrete frame.
+          This resulted in lack of elasticity, which is necessary for the bells.<br><br>
+          Bells are heavy, and their swinging transfers force into the tower. A wooden bell frame provides elasticity and
+          reduces stress on masonry. When rigid materials like concrete were used, it could not absorb the vibration and resulted in to creating cracks on the tower walls.
+        </p>
+
+        <figure class="story-image">
+          <img src="assets/img/bells/bell-vibration.jpg" alt="AI made diagram comparing rigid and elastic bell frames and their effects" />
+          <figcaption data-i18n="bells.story1Caption">
+            Elastic wooden frames absorb motion, reducing stress on masonry.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="story-card">
+        <h2 data-i18n="bells.story2Title">Reconstruction (1950-1951)</h2>
+        <p data-i18n="bells.story2Text">
+          After some years of vibration and deterioration, another renovation took place. The upper tower (which was affected by the vibration) was dismantled and rebuilt.
+          The wooden Glockenstuhl was restored instead of concrete to ensure elasticity. This is a marvellous example of how wood is superior to rigid materials in certain conditions.
+        </p>
+
+        <figure class="story-image">
+          <img src="assets/img/bells/bells-renovation.jpg" alt="Reconstruction work on the church tower in the early 1950s" />
+          <figcaption data-i18n="bells.story2Caption">
+            The tower was dismantled and rebuilt to restore safety and harmony.
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- Independent explanatory text -->
+    <section class="bells-note" aria-label="Historical note">
+      <h2 data-i18n="bells.noteTitle">The relic discovery</h2>
+
+      <p data-i18n="bells.noteP1">
+        During the reconstruction of the tower in 1950, workers discovered a sealed metal box
+        hidden inside the structure. The box, dated 1784, contained a relic of an unknown martyr,
+        handwritten blessings, and prayers asking for protection of the church and the city.
+      </p>
+
+      <p data-i18n="bells.noteP2">
+        After reconstruction, the contents were returned to the tower together with contemporary
+        documents from 1950, continuing a long-standing tradition of safeguarding the church
+        through faith and memory.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="bells-cta" aria-label="Book a tour">
+      <h2 data-i18n="bells.ctaTitle">Feeling curious?</h2>
+      <p data-i18n="bells.ctaText">
+        Book a tour and experience the bell chamber up close—sound, engineering, and history above the city.
+        Available from Easter Sunday to the end of October, every year.
+      </p>
+      <a href="book-tour.html" data-i18n="bells.ctaButton">Book Tour</a>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Single entry point (consistent with your working pages) -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

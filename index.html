@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title data-i18n="home.metaTitle">St. Nikolaus Tower Tour</title>
+
+  <!-- Google Font: Sansita -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- App logic: header/footer loading + i18n -->
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+
+  <!-- Shared header will be injected here -->
+  <div id="site-header"></div>
+
+  <main class="page">
+    <div class="history-card">
+
+      <!-- Hero -->
+      <section class="hero">
+        <img
+          class="hero-img"
+          src="assets/img/home/home-hero.jpg"
+          alt="St. Nikolaus Church and Tower front view in recent times"
+        />
+      </section>
+
+      <!-- Intro -->
+      <section class="history-intro">
+        <h1 class="page-title" data-i18n="home.title">
+          Welcome to St. Nikolaus Church Tower Tour
+        </h1>
+
+        <p class="page-subtitle" data-i18n="home.subtitle">
+          Discover the tower, the bells, hidden spaces, and panoramic views over Rosenheim.
+        </p>
+      </section>
+
+      <!-- What You Will Experience -->
+      <section class="history-era">
+        <h2 class="era-title" data-i18n="home.experienceTitle">What You Will Experience</h2>
+
+        <div class="home-experience-grid">
+          <!-- 1 -->
+          <figure class="history-figure">
+            <a class="card-link" href="tower-tour.html" aria-label="Open The Tower Tour page">
+              <img
+                class="history-img"
+                src="assets/img/home/tower-tour.jpg"
+                alt="Interrior of The Tower with old walls and stairs"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="history-caption">
+              <strong data-i18n="home.cards.tower.title">The Tower Tour</strong><br />
+              <span data-i18n="home.cards.tower.text">Experience the old establishment.</span>
+            </figcaption>
+          </figure>
+
+          <!-- 2 -->
+          <figure class="history-figure">
+            <a class="card-link" href="top-view.html" aria-label="Open Top View page">
+              <img
+                class="history-img"
+                src="assets/img/home/top-view.jpg"
+                alt="Top View of Rosenheim from the top of the tower"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="history-caption">
+              <strong data-i18n="home.cards.view.title">Top View</strong><br />
+              <span data-i18n="home.cards.view.text">Excellent view of Rosenheim.</span>
+            </figcaption>
+          </figure>
+
+          <!-- 3 -->
+          <figure class="history-figure">
+            <a class="card-link" href="attic.html" aria-label="Open Attic page">
+              <img
+                class="history-img"
+                src="assets/img/home/attic.jpg"
+                alt="Attic or interrior roof top of the church known as Dachboden"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="history-caption">
+              <strong data-i18n="home.cards.attic.title">Dachboden</strong><br />
+              <span data-i18n="home.cards.attic.text">Brilliant example of wood engineering.</span>
+            </figcaption>
+          </figure>
+
+          <!-- 4 -->
+          <figure class="history-figure">
+            <a class="card-link" href="bells.html" aria-label="Open The Bells page">
+              <img
+                class="history-img"
+                src="assets/img/home/bells.jpg"
+                alt="Christusglocke, one of the seven bells"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="history-caption">
+              <strong data-i18n="home.cards.bells.title">The Bells</strong><br />
+              <span data-i18n="home.cards.bells.text">Seven bells that chime together.</span>
+            </figcaption>
+          </figure>
+
+          <!-- 5 -->
+          <figure class="history-figure">
+            <a class="card-link" href="baselbag.html" aria-label="Open Baselbalg page">
+              <img
+                class="history-img"
+                src="assets/img/home/baselbalg.jpg"
+                alt="Historic Baselbalg, a wooden air blower"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="history-caption">
+              <strong data-i18n="home.cards.baselbag.title">Baselbalg</strong><br />
+              <span data-i18n="home.cards.baselbag.text">Wooden blower for the church organ.</span>
+            </figcaption>
+          </figure>
+
+          <!-- 6 -->
+          <figure class="history-figure">
+            <a class="card-link" href="church-tour.html" aria-label="Open The Church Tour page">
+              <img
+                class="history-img"
+                src="assets/img/home/church-tour.jpg"
+                alt="Interior view of St. Nikolaus Church"
+                loading="lazy"
+              />
+            </a>
+            <figcaption class="history-caption">
+              <strong data-i18n="home.cards.church.title">The Church Tour</strong><br />
+              <span data-i18n="home.cards.church.text">Witness the magnificent church interior.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Book Tour CTA (Home only) -->
+<section class="history-cta home-cta">
+  <h2 class="cta-title" data-i18n="home.bookCta.text">
+    You are warmly welcome to experience it in person.
+  </h2>
+
+  <p class="cta-note" data-i18n="home.bookCta.note">
+    From April to October, every Saturday at 10:45. Please read the safety guidelines.
+  </p>
+
+  <a
+    href="book-tour.html"
+    class="btn btn-primary"
+    data-i18n="home.bookCta.button"
+  >
+    Book Tour
+  </a>
+</section>
+
+
+
+<!-- Safety reminder (Home only) -->
+<section class="home-safety-note">
+  <h3 class="home-safety-title" data-i18n="home.safety.title">
+    Please read our Safety Guidelines
+  </h3>
+
+  <p class="home-safety-text" data-i18n="home.safety.text">
+    For your safety and comfort, we kindly ask all visitors to read the safety guidelines
+    before joining the tower tour.
+  </p>
+
+  <a
+    href="safety.html"
+    class="home-safety-link"
+    data-i18n="home.safety.link"
+  >
+    View Safety Guidelines
+  </a>
+</section>
+
+
+
+
+
+
+      <!-- Meet our Tour Guides -->
+<section class="history-era">
+  <h2 class="era-title" data-i18n="home.team.title">Meet Our Tour Guides</h2>
+
+  <a href="guide.html" class="card-link" aria-label="Meet our tour guides">
+  <figure class="history-figure" style="max-width: 560px; margin: 0 auto;">
+
+    <!-- Tour guides collage -->
+<div class="team-collage" aria-hidden="true">
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1003/300/300"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1018/300/300"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1015/300/300"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1022/300/300"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1043/200/200"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1050/200/200"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1041/300/300"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+  <span class="team-avatar">
+    <img
+      src="https://picsum.photos/id/1056/300/300"
+      alt="placeholder photo of event organizers"
+      loading="lazy"
+    />
+  </span>
+
+</div>
+
+
+    <!-- Caption -->
+    <figcaption class="history-caption" data-i18n="home.team.text">
+      Our tower tours are led by dedicated volunteers who have been sharing their knowledge and passion for many years.
+    </figcaption>
+
+  </figure>
+</a>
+
+
+  <div style="text-align:center; margin-top: 38px;">
+    <a href="contact.html" class="btn btn-primary" data-i18n="home.team.button">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+      <!-- News & Events -->
+      <section class="history-era news-section">
+  <h2 class="era-title" data-i18n="home.news.title">News & Events</h2>
+
+  <div class="news-layout">
+    <!-- Left: list -->
+    <ul class="simple-list">
+      <li data-i18n="home.news.item1">Blog post: Upcoming event: Glocken Concert</li>
+      <li data-i18n="home.news.item2">How renovation changes history</li>
+      <li data-i18n="home.news.item3">Safety Guidelines</li>
+      <li data-i18n="home.news.item4">Upcoming Plans in 2026</li>
+      <li data-i18n="home.news.item5">Our collaboration events in a blick</li>
+    </ul>
+
+    <!-- Right: image -->
+    <img
+      class="news-image"
+      src="assets/img/gallery/ex-1.jpg"
+      alt="News and events at St. Nikolaus Church"
+      loading="lazy"
+    />
+  </div>
+</section>
+
+    </div>
+  </main>
+
+  <!-- Shared footer will be injected here -->
+  <div id="site-footer"></div>
+
+</body>
+</html>

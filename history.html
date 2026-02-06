@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="nav.history">History</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only styles: “timeline cards + lightbox” (distinct but consistent) -->
+  <style>
+    /* Make each figure feel like an individual “card” */
+    .history-figure {
+      margin: 0 0 26px;
+      background: rgba(255,255,255,0.35);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
+
+    /* Images inside cards */
+    .history-img {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      cursor: zoom-in;            /* shows it is clickable */
+      transition: transform 0.18s ease;
+    }
+
+
+    /* Reduce on-page image size (zoom remains full resolution) */
+.history-figure .history-img {
+  max-width: 600px;   /* adjust: 680–760px if you prefer */
+  margin: 0 auto;
+}
+
+.hero .history-img {
+  max-width: 900px;
+}
+
+
+
+
+
+
+    .history-img:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Caption spacing */
+    .history-caption {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Hero should remain full-width but still “card-like” */
+    .hero .history-figure {
+      padding: 16px;
+      margin-bottom: 22px;
+    }
+
+    /* Slightly more breathing room between eras */
+    .history-era {
+      margin: 56px 0;
+    }
+
+    /* ============ Lightbox (click-to-zoom) ============ */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 9999;
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox-panel {
+      width: min(980px, 95vw);
+      max-height: 88vh;
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.35);
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+    }
+
+    .lightbox-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      background: #f7f4e6;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .lightbox-title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .lightbox-close {
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover {
+      background: #f9fafb;
+    }
+
+    .lightbox-body {
+      background: #111;
+      display: grid;
+      place-items: center;
+      max-height: calc(88vh - 50px);
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: calc(88vh - 50px);
+      object-fit: contain;
+      display: block;
+      cursor: zoom-out;
+    }
+
+    @media (max-width: 820px) {
+      .history-caption { font-size: 15px; }
+      .history-era { margin: 46px 0; }
+    }
+  </style>
+
+  <!-- App JS (header/footer injection + i18n) -->
+  <script defer src="assets/js/app.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="site-header"></div>
+
+  <main class="page">
+    <div class="history-card">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span data-i18n="nav.history">History</span>
+      </nav>
+
+      <!-- Hero image -->
+      <section class="hero">
+        <figure class="history-figure">
+          <img
+            class="hero-img history-img zoomable"
+            src="assets/img/history/1880.jpg"
+            alt="St. Nikolaus Church and Tower before 1880. Courtesy: Stadtarchiv Rosenheim"
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_1880">
+            Courtesy: Stadtarchiv, Rosenheim.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Intro -->
+      <section class="history-intro">
+        <h1 class="page-title" data-i18n="history.title">
+          Historical Photographs of <br />
+          St. Nikolaus Church and Tower
+        </h1>
+      </section>
+
+      <!-- ===== 1300–1500s ===== -->
+      <section class="history-era">
+        <h2 class="era-title" data-i18n="history.eras.1300_1500">1300–1500s</h2>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/gothic.jpg"
+            alt="Earliest depiction of St. Nikolaus Church from 1350. Credit St Nikolaus church and stadtarchaiv Rosenheim"
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_1350">
+            1350 - Earliest available record showing the Gothic church structure.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== 1600s–1700s ===== -->
+      <section class="history-era">
+        <h2 class="era-title" data-i18n="history.eras.1700">1600s - 1700s</h2>
+
+       
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/marien.jpg"
+            alt="Rosenheim town view in Woodcut by Jost Amman after Philipp Apian, published in Matthäus Merian the Elder’s Topographia Bavariae, 1641."
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_1655_merian">
+            1655 - Matthäus Merian’s illustration after the great city fire of 1641.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== 1800s ===== -->
+      <section class="history-era">
+        <h2 class="era-title" data-i18n="history.eras.1800">1800s</h2>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/1890-interrior.jpg"
+            alt="Interrior view of 1890, shwoing elaborated decorations, sitting area and alter. Courtesy: St. Nikolaus Church, Rosenheim"
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_late_1800s_exterior">
+            Late 1800s - Exterior view during the growing town period.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== 1900s ===== -->
+      <section class="history-era">
+        <h2 class="era-title" data-i18n="history.eras.1900">1900s</h2>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/green-market.jpg"
+            alt="Green market in front of St. Nikolaus church in 1912"
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_1912_market">
+            1912 - “Green market” in front of the church.
+          </figcaption>
+        </figure>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/1928-2.jpg"
+            alt="Church interior of 1928 showing elaborated decorations"
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_1928_interior">
+            1928 - Interior view following early renovations.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== 1950s–60s ===== -->
+      <section class="history-era">
+        <h2 class="era-title" data-i18n="history.eras.1950_60">1950s–60s</h2>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/rennovation-1.jpg"
+            alt="Renovation work 1950s: Two workers working at the top part of the tower"
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_1954_renovation">
+            1954 - Major renovation to stabilize the tower structure. Courtesy: Stadtarchiv, Rosenheim.
+          </figcaption>
+        </figure>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/rennovation-2.jpg"
+            alt="Renovation work on the tower in late 1950s, showing dismantled tower"
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_renovation_dismantling">
+            Late 1900s - Renovation: Dismantling the tower. New build will increase the dome size.
+          </figcaption>
+        </figure>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/history/late-1990.jpg"
+            alt="Church tower: before and after the renovation of 1950s, showing the dome size and window difference of the tower, before and after renovation."
+            loading="lazy"
+          />
+          <figcaption class="history-caption" data-i18n="history.captions.img_1960_after">
+            1960 - Church after completion of major renovation works.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== Modern Times (2000+) ===== -->
+      <section class="history-era">
+        <h2 class="era-title" data-i18n="history.eras.modern">Modern times (2000 and onwards)</h2>
+
+        <figure class="history-figure">
+          <img
+            class="history-img zoomable"
+            src="assets/img/home/home-hero.jpg"
+            alt="St. Nikolaus Church in modern times, captured in November, 2025"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- CTA -->
+      <section class="history-cta">
+        <p class="cta-text" data-i18n="history.cta.text">
+          Feeling curious? Book a tour and witness the legend of St. Nikolaus Church.
+        </p>
+
+        <p class="cta-note" data-i18n="history.cta.note">
+          Available only from Easter Sunday to the end of October, every year.
+        </p>
+
+        <a href="book-tour.html" class="btn btn-primary" data-i18n="history.cta.button">
+          Book Tour
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <!-- Lightbox markup -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+      <div class="lightbox-topbar">
+        <p class="lightbox-title" id="lightboxTitle">Image preview</p>
+        <button class="lightbox-close" id="lightboxClose" type="button">Close</button>
+      </div>
+      <div class="lightbox-body" id="lightboxBody">
+        <img class="lightbox-img" id="lightboxImg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Page-only JS: lightweight click-to-zoom -->
+  <script>
+    (function () {
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lightboxImg");
+      const lbTitle = document.getElementById("lightboxTitle");
+      const btnClose = document.getElementById("lightboxClose");
+      const body = document.body;
+
+      function openLightbox(src, altText) {
+        lbImg.src = src;
+        lbImg.alt = altText || "Image preview";
+        lbTitle.textContent = altText || "Image preview";
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+        body.style.overflow = "";
+      }
+
+      document.querySelectorAll("img.zoomable").forEach((img) => {
+        img.addEventListener("click", () => openLightbox(img.src, img.alt));
+        img.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") openLightbox(img.src, img.alt);
+        });
+        // Make images focusable for keyboard users
+        img.setAttribute("tabindex", "0");
+      });
+
+      btnClose.addEventListener("click", closeLightbox);
+
+      // Click outside image closes
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target === document.getElementById("lightboxBody") || e.target === lbImg) {
+          closeLightbox();
+        }
+      });
+
+      // Esc closes
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.classList.contains("is-open")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

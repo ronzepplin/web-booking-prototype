@@ -1,0 +1,934 @@
+{
+  "brand": {
+    "name": "St. Nikolaus Tower Tour"
+  },
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "gallery": "Gallery",
+    "book": "Book Tour",
+    "contact": "Contact"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "dataProtection": "Data Protection",
+    "terms": "Terms & Conditions",
+    "safety": "Safety Guide",
+    "cookies": "Cookie Policy",
+    "contactTitle": "Contact",
+    "addressLabel": "Address:",
+    "addressValue": "Ludwigsplatz 3, 83022 Rosenheim",
+    "phoneLabel": "Phone number:",
+    "phoneValue": "08031 21050",
+    "emailLabel": "Email:",
+    "emailValue": "st-nikolaus.rosenheim[at]ebmuc.de",
+    "copyright": "© 2025 St. Nikolaus Pfarrei, Rosenheim. All rights reserved.",
+    "note": "Demo project for a course. No real payments are processed."
+  },
+  "page": {
+    "landingTitle": "Landing Page (Placeholder)",
+    "landingText": "This will become the event landing page."
+  },
+
+  "history": {
+    "title": "Historical Photographs of St. Nikolaus Church and Tower",
+    "eras": {
+      "1300_1500": "1300s",
+      "1700": "1500-1600s",
+      "1800": "1800s",
+      "1900": "1900s",
+      "1950_60": "1950s-60s",
+      "modern": "Modern times (2000 and onwards)"
+    },
+    "captions": {
+      "img_1350": "1350 - Earliest available record showing the Gothic church structure. Courtesy: St. Nikolaus Church, Rosenheim, and Stadtarchiv.",
+      "img_1701_map": "Copper engraving by Michael Wening (1645–1718) showing Baroque Rosenheim and the church location. Published: 1701. Courtesy: Stadtarchiv, Rosenheim.",
+      "img_1701_engraving": "1701 - Engraving depicting St. Nikolaus Church and surroundings.",
+      "img_1655_merian": "1655 - Woodcut by Jost Amman after Philipp Apian, published in Matthäus Merian the Elder’s Topographia Bavariae, showing Gothic build after the great city fire of Rosenheim in 1641. Courtesy: St. Nikolaus Church, Rosenheim",
+      "img_1890_interior": "1890 - Interior design of St. Nikolaus Church. Courtesy: St. Nikolaus Church, Rosenheim",
+      "img_late_1800s_exterior": "Late 1800s - Interrior view of 1890. Courtesy: St. Nikolaus Church, Rosenheim",
+      "img_1912_market": "1912 - “Green market” in front of the church. Source: Wikipedia",
+      "img_1928_interior": "1928 - Interior view following early renovations. Courtesy: Stadtarchiv, Rosenheim",
+      "img_1954_renovation": "1954 - Major renovation to stabilize the tower structure. Courtesy: Stadtarchiv, Rosenheim",
+      "img_1960_after": "Smaller dome (left, 1954) was enlarged after renovation (right, 1960) and window numbers increased to two. Courtesy: St. Nikolaus Church, Rosenheim.",
+      "img_1880": "Courtesy: Stadtarchiv Rosenheim.",
+      "img_renovation_dismantling": "Late 1900s - Renovation: Dismantling the tower. New build will increase the dome size. Courtesy: St. Nikolaus Church, Rosenheim."
+
+
+    },
+    "cta": {
+      "text": "Feeling curious? Book a tour and witness the legend of St. Nikolaus Church.",
+      "note": "Available only from Easter Sunday to the end of October, every year.",
+      "button": "Book Tour"
+    }
+  },
+
+  
+  "gallery": {
+    "title": "Gallery of St. Nikolaus Church and Tower",
+    "subtitle": "Browse highlights from the church, tower, and panoramic views over Rosenheim.",
+    "filters": {
+      "all": "All",
+      "exterior": "Exterior",
+      "interior": "Interior",
+      "tower": "Tower",
+      "views": "Top Views",
+      "bells": "The Bells"
+    },
+    "items": {
+      "exterior1": {
+        "title": "Exterior view of St. Nikolaus Church Tower",
+        "caption": "Tower captured from ground level."
+      },
+      "exterior2": {
+        "title": "St. Nikolaus Church Building",
+        "caption": "The front side of St. Nikolaus Church."
+      },
+      "exterior3": {
+        "title": "The Baroque tower dome (\"Zwiebelhelm\")",
+        "caption": "Close-up view of the dome."
+      },
+      "interior1": {
+        "title": "Wooden stairs to climb the tower",
+        "caption": "One of the many staircases leading upward. Visitors can climb these stairs to reach the top."
+      },
+      "interior2": {
+        "title": "Baselbalg",
+        "caption": "The wooden blower for the church organ. It supplies the air needed for the organ to produce music."
+      },
+      "interior3": {
+        "title": "Dachboden (the church attic)",
+        "caption": "A beautiful example of timber engineering—built mostly from wood, with little iron used."
+      },
+      "tower1": {
+        "title": "Stone engraving in the attic",
+        "caption": "Written in Middle High German, this engraving records the chronological history of the church and the tower."
+      },
+      "tower2": {
+        "title": "A very old door",
+        "caption": "This cast-iron door dates back to around the 1300s and is one of the oldest objects in the tower."
+      },
+      "tower3": {
+        "title": "Old and renovated wooden stairs",
+        "caption": "This staircase leads to the attic area."
+      },
+      "views1": {
+        "title": "Tower window",
+        "caption": "One of the many windows, offering a view over the beautiful town of Rosenheim."
+      },
+      "views2": {
+        "title": "View from the top",
+        "caption": "From a height similar to a 10-storey building, this highlight offers a magnificent panoramic view of Rosenheim."
+      },
+      "views3": {
+        "title": "Beautiful top view of Rosenheim",
+        "caption": "The top level is surrounded by safety nets to protect against birds and prevent accidents."
+      },
+      "bells1": {
+        "title": "The Dreifaltigkeitsglocke (Trinity Bell)",
+        "caption": "The largest bell in the tower, weighing over 3 tonnes. Built by Czudnochowsky (Erding), it produces the deepest tone."
+      },
+      "bells2": {
+        "title": "The wooden bell frame",
+        "caption": "A wooden frame that provides the necessary flexibility and helps protect the tower structure."
+      },
+      "bells3": {
+        "title": "The Christusglocke",
+        "caption": "The second-largest bell, named after Lord Jesus Christ."
+      }
+    }
+  },
+  "cta": {
+    "galleryText": "Want to experience it in person? Book a guided tower tour.",
+    "galleryNote": "Available only from Easter Sunday to the end of October.",
+    "galleryButton": "Book Tour"
+  },
+
+
+  "book": {
+    "title": "Book Tour",
+    "subtitle": "Price & Availability",
+    "priceLine": "Adult: 3.00 € per person · Children (up to 14 years): 1.50 € per child (VAT included)",
+    "note1": "Single persons / Small groups: Every Saturday at 10:45 AM",
+    "note2": "Large groups: Please contact us in advance",
+    "note3": "Availability: From Easter Sunday to the end of October (annually)",
+    "selectDate": "Select the date of visit",
+    "dateLabel": "Date",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "adults": "Number of Adult Visitors",
+    "children": "Number of Children (up to 14 years)",
+    "total": "Total Cost (€)",
+    "adultHint": "Price: €3.00 per adult",
+    "childHint": "Price: €1.50 per child",
+    "totalHint": "Total updates automatically",
+    "continue": "Continue to Payment",
+    "disclaimer": "This is a demo booking. No real payment is processed."
+  },
+
+  "pay": {
+    "title": "Payment",
+    "summaryTitle": "Your Booking Summary",
+    "nameLabel": "Name:",
+    "emailLabel": "Email:",
+    "adultsLabel": "Number of Adults:",
+    "childrenLabel": "Number of Children:",
+    "dateLabel": "Date:",
+    "totalLabel": "Total Cost:",
+    "cardTitle": "Pay with Debit or Credit Card",
+    "cardNumber": "Card Number",
+    "cardHolder": "Card Holder Name",
+    "expiry": "Expiry Date",
+    "cvv": "CVV",
+    "termsText": "I have read & accepted the Terms & Conditions",
+    "complete": "Complete Payment",
+    "demoNote": "This is a demo payment. No card data is processed.",
+    "paypal": "Pay with PayPal"
+  },
+
+  "thanks": {
+    "breadcrumb": "Payment Confirmation",
+    "title": "Thank you for the Payment.",
+    "subtitle": "Your payment was successful and your booking is confirmed.",
+    "emailNote": "A confirmation email will be sent to you shortly.",
+    "referenceLabel": "Booking reference:",
+    "summaryTitle": "Summary",
+    "supportText": "For any questions, emergencies, or cancellations, please contact us using the contact form.",
+    "contactBtn": "Contact Us",
+    "or": "Or",
+    "officeTitle": "You are welcome to visit our office",
+    "officeName": "Pfarrbüro",
+    "officeAddress": "Ludwigsplatz 3, 83022 Rosenheim",
+    "officePhoneLabel": "Phone number:",
+    "officePhoneValue": "08031 21050",
+    "officeEmailLabel": "Email:",
+    "officeEmailValue": "st-nikolaus.rosenheim[at]ebmuc.de",
+    "hoursTitle": "Opening Hours",
+    "hoursLine1": "Mo. - Fr. 9:00 to 12:00",
+    "hoursLine2": "Tuesday and Thursday 14:00 to 15:00"
+  },
+
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Send us a message and we will get back to you.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "message": "Your Message",
+    "send": "Send",
+    "demoNote": "This is a demo contact form. No messages are actually sent.",
+    "success": "Thank you! Your message has been received (demo)."
+  },
+
+
+
+
+  "tower": {
+    "metaTitle": "The Tower Tour | St. Nikolaus Tower Tour",
+    "breadcrumb": "The Tower Tour",
+    "title": "The Tower Tour",
+    "intro": "The tower tour offers an exciting climbing experience through several levels all the way to the top of the tower. The tower consists of 10 floors, each providing a unique experience.",
+    "facts": {
+      "floors": {
+        "k": "Floors",
+        "v": "10"
+      },
+      "difficulty": {
+        "k": "Difficulty",
+        "v": "Easy–Medium"
+      },
+      "experience": {
+        "k": "Experience",
+        "v": "Stairs, historic relics, bells, top view"
+      },
+      "tip": {
+        "k": "Tip",
+        "v": "Hands free, light backpack, close-fitting clothing"
+      }
+    },
+    "steps": {
+      "step1": {
+        "title": "The climb begins",
+        "text": "The tour starts with classic twisted metal stairs. As you move upwards, wooden stairs become more common. These are a mix of older and newer wood as a result of renovations. Switching to wood helps reduce the overall weight of the tower.",
+        "cap1": "Lower sections include classic metal stairs.",
+        "cap2": "Wooden stairs appear higher up as part of renovations."
+      },
+      "step2": {
+        "title": "Narrow stairs and symbolism",
+        "text": "On the lower floors (2–4), the stairs are wider. The higher you climb, the narrower they become. This is not random—the narrow stairs reflect the Biblical verse: “Enter through the narrow gate.” (Matthew 7:13). The ancient cast-iron door from the 1300s conveys a similar message.",
+        "cap1": "Historic elements encountered along the way.",
+        "cap2": "Timber engineering in the attic area."
+      },
+      "step3": {
+        "title": "Upper floors and key attractions",
+        "text": "As the climb continues, visitors encounter various highlights: the baselbalg, the attic, the bells, and finally the top view. Modern safety features are integrated throughout the tower, including a fire protection system and air purification technology used after church rituals.",
+        "cap1": "Baselbalg: the wooden blower that supplies air to the organ.",
+        "cap2": "The wooden bell frame provides flexibility and structural protection."
+      }
+    },
+    "safety": {
+      "title": "Safety and comfort",
+      "text": "Please climb carefully, keep both hands free whenever possible, and take extra care on narrow stairs—especially when carrying a backpack. Visitors are advised to wear close-fitting clothing. Loose garments and open jacket pockets may get caught on stairs or railings."
+    },
+    "outro1": "The view over Rosenheim and the fresh air on the 10th level feel like a true reward. The effort of the final steps shows that the destination must be earned. At the top, visitors enjoy clean air and an almost 360-degree view over the city—one of the tour’s main highlights.",
+    "outro2": "The early church builders were highly skilled and intelligent people. Their craftsmanship was passed down through generations. Although the church has been renovated several times, later builders respectfully followed traditional methods—something truly worth experiencing firsthand."
+  },
+
+
+  
+  "topView": {
+    "metaTitle": "The Top View | St. Nikolaus Tower Tour",
+    "breadcrumb": "The Top View",
+    "title": "The Top View",
+    "intro": "According to visitors and organizers, the top view of Rosenheim is the most compelling attraction. It offers a wonderful bird’s-eye view of the beautifully organized city.",
+    "heroCaption": "A wide panorama over Rosenheim from the top level of the St. Nikolaus Church tower.",
+    "p1": "Most visitors come from Rosenheim and nearby towns. Many are used to living in one- to two-storey houses, so seeing the city from a height comparable to ten storeys offers a completely new perspective.",
+    "p2": "On clear, sunny days, the nearby Alps are often visible without any equipment. Since there are no taller buildings nearby, the view opens up widely and helps broaden the mind and thoughts.\n\nAs mentioned in the Tower Tour section, the climb can be a bit challenging, with steep and narrow stairs. For many sport-loving visitors, this is part of the fun. After climbing ten floors, blood circulation improves, which helps sharpen the senses. This makes the wide view even more enjoyable. At this height, the air feels fresher and cleaner. Together, these effects create a memorable experience that many visitors would happily repeat. It is also a perfect place to take spectacular photos and surprise friends and family.",
+    "splitCaption": "Through old traditional windows, visitors can experience the colorful outside view.",
+    "highlightsTitle": "What makes the top view special",
+    "highlights": {
+      "alps": {
+        "title": "Alps on clear days",
+        "text": "On a clear, sunny day, the Alps can be seen in the distance, making the view feel expansive and memorable."
+      },
+      "roofs": {
+        "title": "Rooftops and city layout",
+        "text": "Many houses have colored roofs and mostly one-storey structures. From above, this creates a clearly organized and beautiful cityscape."
+      },
+      "air": {
+        "title": "Fresh air and reward",
+        "text": "After the climb, the open air at the top feels like a reward and refreshes the senses."
+      },
+      "photos": {
+        "title": "Perfect for photos",
+        "text": "A great place to take spectacular, unique photos and share them with friends and family."
+      }
+    },
+    "quote": "“For many visitors, this is the most compelling attraction of the tour.”",
+    "quoteSource": "— Visitors and organizers",
+    "strip": {
+      "cap1": "The top of the tower is built with wood and finished with copper. This reduces weight and increases longevity.",
+      "cap2": "Wooden flooring improves safety, especially in wet weather.",
+      "cap3": "The roof is also made of wood and features decorative graphics."
+    },
+    "outro": "After climbing through all floors and experiencing many attractions, the open and fresh top area feels truly rewarding. With sharper senses and fresh air, visitors often want to return again."
+  },
+
+  
+  "bells": {
+    "metaTitle": "The Bells | St. Nikolaus Tower Tour",
+    "breadcrumb": "The Bells",
+
+    "title": "The Bells",
+    "intro": "The bells are one of the most interesting elements of the tower tour. There are 7 bells in total. They are placed on the 9th floor. They are maintained by electronic motors that are programmed with software to deliver the intended rhythm. All bells can be operated individually or together to create a beautiful rhythmic sound.The smallest bell, the Sterbeglocke with the highest tone (fs²), is also the oldest bell. It was cast in 1606 by Bartholomeus Wengle in Augsburg. The other six bells were cast in 1947 by Czudnochowsky in Erding. The largest bell with the deepest tone (b⁰), the Dreifaltigkeitsglocke (Trinity Bell), weighs 3,100 kilograms.",
+
+    "kpi1Label": "Bell set",
+    "kpi1Value": "7 bells",
+    "kpi1Sub": "Located on the 9th floor",
+
+    "kpi2Label": "Largest bell",
+    "kpi2Value": "Dreifaltigkeitsglocke",
+    "kpi2Sub": "Weight 62 Zentner (3,100 kg) · Cast in 1947",
+
+    "kpi3Label": "Oldest bell",
+    "kpi3Value": "Sterbeglocke",
+    "kpi3Sub": "Weight 3 Zentner (150 kg) · Cast in 1606",
+
+    "heroCap1": "Trinity bell and the bell chamber: timber beams, controlled mechanics, and carefully balanced movement.",
+
+   
+  "founderLabel": "Founder",
+  "yearWeightLabel": "Year / Weight",
+  "inscriptionLabel": "Bell inscription",
+
+  "bell1": {
+    "title": "Trinity Bell",
+    "inscription": "“Mich goß Czudnochowsky, J. Bachmairs Nachfolger zu Erding” / “Mit my voice I praise God, the Triune”"
+  },
+
+
+
+
+
+
+
+    "story1Title": "Why elasticity matters",
+    "story1Text": "Due to a renovation mistake in the past, the wooden bell frame (Glockenstuhl) was removed and replaced with a concrete frame. This resulted in a lack of elasticity, which is essential for the movement of the bells.Bells are heavy, and their swinging transfers force into the tower. A wooden bell frame provides elasticity and reduces stress on masonry. When rigid materials such as concrete are used, they cannot absorb the vibration adequately, making cracks in the tower walls more likely.",
+    "story1Caption": "Elastic wooden frames absorb motion, reducing stress on masonry.",
+
+    "story2Title": "Reconstruction (1950–1951)",
+    "story2Text": "After several years of vibration and structural deterioration, another renovation took place. The upper part of the tower (which was most affected by vibration) was dismantled and rebuilt. The wooden Glockenstuhl was restored instead of concrete to ensure elasticity. This is a clear example of how wood can be superior to rigid materials under certain conditions.",
+    "story2Caption": "The tower was dismantled and rebuilt to restore safety and harmony.",
+    "noteTitle": "The relic discovery",
+"noteP1": "During the reconstruction of the tower in 1950, workers discovered a sealed metal box hidden inside the structure. The box, dated 1784, contained a relic of an unknown martyr, handwritten blessings, and prayers asking for protection of the church and the city.",
+"noteP2": "After reconstruction, the contents were returned to the tower together with contemporary documents from 1950, continuing a long-standing tradition of safeguarding the church through faith and memory.",
+
+
+    "ctaTitle": "Feeling curious?",
+    "ctaText": "Book a tour and experience the bell chamber up close—sound, engineering, and history high above the city. Available from Easter Sunday to the end of October each year.",
+    "ctaButton": "Book Tour"
+  },
+
+
+
+  
+  "baselbalg": {
+    "metaTitle": "Baselbalg (The Bellow) | St. Nikolaus Tower Tour",
+    "breadcrumb": "Baselbalg",
+
+    "title": "Baselbalg (the Bellow)",
+
+    "intro": "St. Nikolaus Church houses a large and powerful pipe organ, whose sound depends entirely on a continuous and precisely regulated supply of air. This air is produced by the Baselbalg (bellows), a traditional wooden mechanism that forms the silent foundation of the organ’s voice.\n\nUnlike modern electric systems, the Baselbalg works through carefully engineered layers of wood that rise and fall slowly, storing and releasing air at a constant pressure. This gentle, rhythmic motion ensures that each pipe speaks evenly, preserving both pitch stability and tonal warmth.\n\nVisible during the tower tour, the Baselbalg offers a rare insight into historic organ craftsmanship, reminding visitors that the grandeur of the organ’s sound is made possible by a quiet, almost invisible system working continuously in the background.",
+
+    "quickTitle": "Quick facts",
+
+    "tag1": "Organ air supply",
+    "tag2": "Traditional wood",
+    "tag3": "Quiet mechanics",
+
+    "kv1Label": "Location",
+    "kv1Value": "Around the 3rd level of the tower",
+
+    "kv2Label": "Structure",
+    "kv2Value": "Four stacked wooden layers",
+
+    "kv3Label": "Function",
+    "kv3Value": "Stable airflow for organ pipes",
+
+    "heroCaption": "The organ of St. Nikolaus Church.",
+
+    "s1Title": "1) What the Baselbalg does",
+    "s1Text": "The Baselbalg provides a continuous and steady airflow that allows the organ to speak clearly and evenly. Without this stable air supply, pitch would fluctuate and the characteristic sound of the organ would be lost.",
+
+    "s2Title": "2) Built in wood, engineered for silence",
+    "s2Text": "The system is almost entirely made of wood and consists of four stacked layers. These layers move slowly and quietly, rising and falling to generate the airflow required for the organ pipes. This gentle mechanical movement helps preserve the organ’s traditional sound quality.",
+
+    "s3Title": "3) Organ concerts and community",
+    "s3Text": "St. Nikolaus Church regularly hosts organ concerts. The music is performed by an experienced musical ensemble of around 20 musicians and singers led by Mr. Christopher Ryser. The repertoire includes classical works (especially J. S. Bach), choral compositions from the 16th and 17th centuries, and contemporary sacred music. An organ concert takes place every Saturday at 12:00 noon. Everyone is welcome, admission is free, and donations are encouraged and appreciated.",
+
+    "s4Title": "4) Makers and craftsmanship",
+    "s4Text": "The large and impressive organ was built by the company Reil from the Netherlands and installed in the church on December 6, 2009 (St. Nicholas Day). Since then, its sound has become an integral part of the church’s liturgy. The chest organ in the chancel was built by the German company Linder from Nußdorf am Inn.",
+
+    "quoteTitle": "A quiet system with a powerful effect",
+    "quoteText": "The Baselbalg is neither dramatic nor loud, yet it is essential to the organ’s sound. Its steady, silent motion is a reminder that true craftsmanship often works best when it remains in the background.",
+
+    "ctaTitle": "Feeling curious?",
+    "ctaText": "Book a tour and discover the hidden mechanics that keep the organ alive. Available from Easter Sunday to the end of October, every year.",
+    "ctaButton": "Book Tour"
+  },
+
+
+  
+  "churchTour": {
+    "metaTitle": "Church Tour | St. Nikolaus Tower Tour",
+    "breadcrumb": "Church Tour",
+    "title": "The Church Tour",
+
+    "intro": "The church tour is an essential part of the overall experience and often serves as the starting point of the visit.\nBefore ascending the tower, guests are invited to enter the prayer hall and become familiar with the spiritual and architectural heart of St. Nikolaus Church.\n\nVisitors can take time to observe the interior architecture: the high vaulted ceilings, balanced proportions, and carefully guided light that together create a sense of clarity and reverence.\nSitting quietly on the wooden benches allows guests to pause, slow down, and experience the atmosphere of the space as it has developed over centuries.\n\nThe tour also offers moments for reflection on the artworks, religious symbols, and relics found throughout the church.\nEach element tells a story of faith, protection, and community life, helping visitors understand how the church interior and the tower together formed a place of worship, refuge, and identity for the city.",
+
+    "heroCaption": "A calm introduction before the tower climb: light, space, and sacred art.",
+
+    "step1Kicker": "Observation",
+    "step1Title": "Arrive and take in the nave",
+    "step1Text": "The high vaults and long central aisle define the atmosphere. Visitors can orient themselves, observe the stained glass, and experience how sound and silence interact within the space.",
+
+    "step2Kicker": "Contemplation",
+    "step2Title": "Artworks and devotional objects",
+    "step2Text": "The tour highlights selected artworks and relics. Many pieces reflect Baroque devotion and local history, shaped by centuries of faith, hardship, and restoration.",
+
+    "step3Kicker": "Understanding",
+    "step3Title": "Connect the church to the tower story",
+    "step3Text": "The interior is more than a beautiful hall: it explains why the tower mattered and connects community life, craftsmanship, and the rhythm of liturgy and music.",
+
+    "spotlightLabel": "Spotlight",
+    "spotlightTitle": "A historic altar artwork watching over the city",
+    "spotlightText1": "Visitors encounter the oldest known artwork of Rosenheim, which still serves as the current altarpiece. The historic painting was created in 1667 by Antonio Domenico Trivia, who later became the court artist of Munich.\n\nBehind the high altar hangs one of the oldest surviving artworks in Rosenheim.\nCreated in the early 17th century, the painting depicts Mary with the Christ Child, accompanied by St. Nicholas and St. Sebastian, overlooking the city of Rosenheim.\nThe artwork reflects the deep faith of its time and the belief in divine protection during an era marked by hardship, fire, and disease.\nDespite numerous reconstructions of the church, the painting has remained in its place for centuries and continues to watch over the city.",
+    "spotlightText2": "The artwork embodies the faith of its era and the hope for protection during times shaped by hardship, fire, and disease. Despite later reconstructions of the church, it has remained in its place for centuries.",
+
+    "railTitle": "Details inside the prayer hall",
+    "railCap1": "A quiet moment inside the prayer hall, where light, space, and faith meet.",
+    "railCap2": "Mosaic depicting the enthroned Virgin Mary.",
+    "railCap3": "Reliquary bust of Saint Nicholas.",
+
+    "organTitle": "The organ and the two-level interior",
+    "organText": "At the rear of the main prayer hall, the large organ is visible and mounted against the wall.\nThe interior is divided into two levels: the lower floor is dedicated to prayer and liturgy, while the upper level accommodates musicians, singers, and the organ player.",
+
+    "ctaTitle": "Feeling curious?",
+    "ctaText": "Book a tour and experience the church interior before the tower climb. Available from Easter Sunday to the end of October, every year.",
+    "ctaButton": "Book Tour"
+  },
+
+
+
+  
+  "home": {
+    "metaTitle": "St. Nikolaus Tower Tour",
+    "title": "Welcome to the St. Nikolaus Tower Tour",
+    "subtitle": "Discover the tower, the bells, hidden spaces, and panoramic views over Rosenheim.",
+    "experienceTitle": "What You Will Experience",
+    "cards": {
+      "tower": {
+        "title": "The Tower Tour",
+        "text": "Experience the historic tower up close."
+      },
+      "view": {
+        "title": "View from the Top",
+        "text": "A stunning view over Rosenheim."
+      },
+      "attic": {
+        "title": "Attic",
+        "text": "Brilliant timber construction."
+      },
+      "bells": {
+        "title": "The Bells",
+        "text": "Seven bells that ring together."
+      },
+      "baselbag": {
+        "title": "Baselbalg",
+        "text": "The bellows of the church organ."
+      },
+      "church": {
+        "title": "Church Tour",
+        "text": "Magnificent interior of the church."
+      }
+    },
+    "bookCta": {
+      "text": "You are warmly invited to experience in person.",
+      "note": "From April to October, every Saturday at 10:45 a.m. Please read the safety guidelines.",
+      "button": "Book Tour",
+      "safetyLink": "Please read the safety guidelines"
+    },
+
+    "safety": {
+    "title": "Please read our Safety Guidelines",
+    "text": "For your safety and comfort, we kindly ask all visitors to read the safety guidelines before joining the tower tour.",
+    "link": "View Safety Guidelines"
+  },
+
+
+
+    "team": {
+      "title": "Meet Our Tour Guides",
+      "text": "Our tower tours are led by dedicated volunteers, having years of experience.",
+      "button": "Contact"
+    },
+    "news": {
+      "title": "News & Events",
+      "item1": "Blog post: Announcement of the bell concert",
+      "item2": "How renovation changes history",
+      "item3": "Safety guidelines",
+      "item4": "Outlook: Plans for 2026",
+      "item5": "An overview of our collaborative events"
+    }
+  },
+
+
+
+
+  
+  "impressum": {
+    "metaTitle": "Imprint | St. Nikolaus Tower Tour",
+    "title": "Imprint",
+    "subtitle": "Information in accordance with Section 5 of the German Telemedia Act (TMG)",
+
+    "operatorTitle": "Website Operator",
+    "operatorText": "St. Nikolaus Parish (Demo Project)\nMusterstraße 1\n83022 Rosenheim\nGermany",
+
+    "contactTitle": "Contact",
+    "contactText": "Phone: +49 (0) 000 000000\nEmail: info@example.com",
+
+    "representedTitle": "Legal Representation",
+    "representedText": "Represented by the parish administration of St. Nikolaus (example information).",
+
+    "responsibleTitle": "Responsible for Content",
+    "responsibleText": "Max Mustermann\nMusterstraße 1\n83022 Rosenheim\nGermany",
+
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "This website is a demonstration project created for an academic course. All information provided here is for illustrative purposes only. No real bookings, payments, or commercial services are offered through this website.",
+
+    "externalLinksText": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+  },
+
+
+  
+  "privacy": {
+    "metaTitle": "Data Protection | St. Nikolaus Tower Tour",
+    "title": "Data Protection",
+    "subtitle": "Privacy policy and information about how we handle personal data (demo project).",
+
+    "overviewTitle": "1. Overview",
+    "overviewText": "This website is a demonstration project created for an academic course. It is not an official website of a real organization. Any forms, bookings, or payments shown on this website are simulated and do not result in real transactions.",
+
+    "controllerTitle": "2. Data Controller",
+    "controllerText": "St. Nikolaus Parish (Demo Project)\nMusterstraße 1\n83022 Rosenheim\nGermany\nEmail: info@example.com",
+
+    "dataTypesTitle": "3. What Data We Process",
+    "dataTypesText": "Depending on how you use the website, we may process the following categories of data:",
+    "dataTypes": {
+      "item1": "Technical data (e.g., browser type, operating system, time of access).",
+      "item2": "Log data (e.g., IP address in server logs, if enabled by the hosting environment).",
+      "item3": "Data you provide in forms (e.g., name and email address), if you submit a form."
+    },
+
+    "purposeTitle": "4. Purpose and Legal Basis",
+    "purposeText": "We process personal data only to operate this website and to respond to inquiries. Where applicable, the legal basis is Art. 6(1)(f) GDPR (legitimate interest in operating a secure website) and/or Art. 6(1)(b) GDPR (performance of a contract or pre-contractual measures) for simulated booking or contact flows.",
+
+    "cookiesTitle": "5. Cookies and Local Storage",
+    "cookiesText": "This website may use cookies or local storage to remember language settings or user inputs for usability reasons. You can delete cookies and website data at any time in your browser settings.",
+
+    "thirdPartiesTitle": "6. Third-Party Services",
+    "thirdPartiesText": "This demo project is designed to work without third-party tracking. If external services (such as fonts, maps, or embedded media) are added later, they may process personal data (such as IP addresses) when loaded. In that case, this privacy policy should be updated accordingly.",
+
+    "retentionTitle": "7. Data Retention",
+    "retentionText": "We retain personal data only as long as necessary for the stated purposes. In a demo context, form submissions are not intended to be stored permanently.",
+
+    "rightsTitle": "8. Your Rights",
+    "rightsText": "If personal data is processed, you may have rights under the GDPR, including the right of access, rectification, erasure, restriction of processing, data portability, and the right to object. You also have the right to lodge a complaint with a supervisory authority.",
+
+    "securityTitle": "9. Security",
+    "securityText": "We take reasonable measures to protect this website. However, data transmission over the internet (for example via email) can have security gaps. Complete protection of data against access by third parties is not possible.",
+
+    "changesTitle": "10. Changes to This Policy",
+    "changesText": "We may update this privacy policy to reflect changes to this demo website. The current version is published on this page."
+  },
+
+
+
+  
+  "terms": {
+    "metaTitle": "Terms and Conditions | St. Nikolaus Tower Tour",
+    "title": "Terms and Conditions",
+    "subtitle": "General terms for the use of this demo website and simulated services.",
+
+    "scopeTitle": "1. Scope",
+    "scopeText": "These Terms and Conditions apply to the use of this website and all content provided on it. This website is a demonstration project created for an academic course and does not represent a legally binding offer.",
+
+    "servicesTitle": "2. Services",
+    "servicesText": "The website presents information about a fictional tower tour and related activities. Any booking, payment, or contact features shown are simulated and do not result in real contractual relationships.",
+
+    "bookingsTitle": "3. Bookings and Payments",
+    "bookingsText": "All bookings and payments displayed on this website are part of a simulation. No actual reservations are made, and no payments are processed or collected.",
+
+    "liabilityTitle": "4. Liability",
+    "liabilityText": "The operator assumes no liability for the accuracy, completeness, or timeliness of the information provided. Use of the website is at your own risk.",
+
+    "externalLinksTitle": "5. External Links",
+    "externalLinksText": "This website may contain links to external websites. We have no influence over the content of those websites and therefore assume no responsibility for them.",
+
+    "availabilityTitle": "6. Availability",
+    "availabilityText": "We do not guarantee uninterrupted availability of this website. Access may be restricted temporarily for maintenance or technical reasons.",
+
+    "changesTitle": "7. Changes to These Terms",
+    "changesText": "These Terms and Conditions may be updated to reflect changes to this demo project. The current version is published on this page.",
+
+    "lawTitle": "8. Applicable Law",
+    "lawText": "These Terms and Conditions are governed by the laws of the Federal Republic of Germany, insofar as legally permissible for a demonstration project."
+  },
+
+
+
+
+  
+  "safety": {
+    "metaTitle": "Safety Guidelines | St. Nikolaus Tower Tour",
+    "title": "Safety Guidelines",
+    "subtitle": "Please read these rules carefully before entering the tower and church areas. They exist to protect you, other visitors, and the building.",
+
+    "callout1": {
+      "title": "Important",
+      "text": "Access is at your own risk. Please follow the tour guide’s instructions at all times."
+    },
+    "callout2": {
+      "title": "Before you start",
+      "text": "Wear sturdy footwear and keep your hands free on stairs (no bulky bags if possible)."
+    },
+
+    "rules": {
+      "nosmoke": {
+        "title": "No smoking",
+        "text": "Smoking is prohibited throughout the tower and church areas."
+      },
+      "shoes": {
+        "title": "Wear sturdy footwear",
+        "text": "Please wear firm, closed shoes. Stairs and surfaces can be uneven."
+      },
+      "throwing": {
+        "title": "Do not throw objects",
+        "text": "Do not throw anything from the tower or out of windows."
+      },
+      "bells": {
+        "title": "When bells ring loudly",
+        "text": "If the bells ring strongly, open your mouth slightly to reduce pressure and protect your ears."
+      },
+      "blackout": {
+        "title": "If the lights go out",
+        "text": "Stay where you are. The staff will come and escort you."
+      },
+      "children": {
+        "title": "Children must be supervised",
+        "text": "Children must be accompanied and supervised by responsible adults."
+      },
+      "follow": {
+        "title": "Follow the guide",
+        "text": "Please follow the instructions of the tour guide team."
+      },
+      "ownrisk": {
+        "title": "Entry at your own risk",
+        "text": "Entering the tower and church areas is at your own risk. We are not liable for accidents in this demo context."
+      }
+    },
+
+    "help": {
+      "title": "Need help?",
+      "text": "If you feel unwell, have mobility concerns, or need assistance, please inform the tour guide before the tour starts."
+    },
+    "reminder": {
+      "title": "Respect the space",
+      "text": "The tower is part of a historic church. Please act carefully and respectfully throughout the visit."
+    },
+
+    "ack": "By continuing, you confirm that you have read and understood these safety guidelines."
+  },
+
+
+
+
+  
+  "cookies": {
+    "metaTitle": "Cookie Policy | St. Nikolaus Tower Tour",
+    "title": "Cookie Policy",
+    "subtitle": "This page explains how cookies and similar storage technologies are used on this demo website.",
+
+    "box1": {
+      "title": "Tracking",
+      "text": "This demo website is designed to work without advertising or third-party tracking cookies."
+    },
+    "box2": {
+      "title": "Functional storage",
+      "text": "We may store your language choice and basic preferences to improve usability."
+    },
+
+    "tableTitle": "Cookies / Storage We Use (Demo)",
+    "table": {
+      "headers": {
+        "name": "Name",
+        "duration": "Duration",
+        "purpose": "Purpose"
+      },
+      "rows": {
+        "lang": {
+          "name": "language",
+          "duration": "Until changed",
+          "purpose": "Stores your selected language (DE/EN)."
+        },
+        "form": {
+          "name": "formDraft",
+          "duration": "Short-term",
+          "purpose": "May temporarily store form inputs to prevent data loss (demo)."
+        }
+      }
+    },
+
+    "manageText": "You can delete cookies and website data at any time in your browser settings. You can also block cookies, but some features (such as language persistence) may not work as intended."
+  },
+
+
+  
+  "guide": {
+    "metaTitle": "Our Tour Guides | St. Nikolaus Tower Tour",
+
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Our Tour Guides"
+    },
+
+    "title": "Meet Our Tour Guides",
+    "intro": "Our tower tours are led by dedicated volunteers closely connected to the parish life of St. Nikolaus. Each guide brings personal experience, historical knowledge, and genuine enthusiasm to every tour.",
+
+    "sections": {
+      "female": "Our Female Guides",
+      "male": "Our Male Guides"
+    },
+
+    "guides": {
+      "anna": {
+        "name": "Anna Müller",
+        "meta": "Rosenheim · Parish Educator",
+        "quote": "I have been guiding visitors through the tower for many years, and every tour still reveals something new worth sharing."
+      },
+      "maria": {
+        "name": "Maria Huber",
+        "meta": "Stephanskirchen · Church Archivist",
+        "quote": "The tower is not just stone and wood. It carries stories of faith, community, and time."
+      },
+      "elisabeth": {
+        "name": "Elisabeth König",
+        "meta": "Rosenheim · Organ Committee Member",
+        "quote": "I enjoy showing visitors how architecture and faith come together inside the tower."
+      },
+      "katharina": {
+        "name": "Katharina Bauer",
+        "meta": "Kolbermoor · Parish Volunteer",
+        "quote": "Guiding tours allows me to pass on what this church has meant to generations before us."
+      },
+
+      "thomas": {
+        "name": "Thomas Schneider",
+        "meta": "Rosenheim · Sacristan",
+        "quote": "I enjoy explaining the technical and historical details hidden behind the tower walls."
+      },
+      "michael": {
+        "name": "Michael Lang",
+        "meta": "Raubling · Church Council Member",
+        "quote": "Each climb up the tower is a small journey through Rosenheim’s history."
+      },
+      "josef": {
+        "name": "Josef Weber",
+        "meta": "Rosenheim · Bell Maintenance Volunteer",
+        "quote": "I am especially proud to introduce visitors to the bells and their unique sound."
+      },
+      "andreas": {
+        "name": "Andreas Fischer",
+        "meta": "Bad Aibling · Parish Historian",
+        "quote": "Sharing the tower’s long history helps keep its meaning alive for future generations."
+      }
+    }
+  },
+
+
+
+
+  
+  "dachboden": {
+    "metaTitle": "Attic | St. Nikolaus Tower Tour",
+
+    "breadcrumb": "Attic",
+
+    "title": "Attic",
+    "subtitle": "A calm, wooden “in-between” space where structure, silence, and history become visible.",
+
+    "chip1": "Wooden roof structure",
+    "chip2": "Medieval entry door",
+    "chip3": "Stone engravings",
+
+    "heroCaption": "The attic reveals the craftsmanship of the timber frames—quiet, spacious, and peaceful.",
+
+    "quickFactsTitle": "Quick facts",
+    "fact1Label": "Material",
+    "fact1Value": "Mostly wood (beams, frames, flooring)",
+    "fact2Label": "Mood",
+    "fact2Value": "Calm, airy, and reflective",
+    "fact3Label": "Notable",
+    "fact3Value": "Old door, engravings, bird-friendly windows",
+
+    "quoteTitle": "A small reflection",
+    "quoteLead": "Matthew 7:13",
+    "quoteText": "The old cast iron door reminds us of the Biblical phrase “enter through the narrow gate”. The attic’s entry feels narrow, then suddenly opens into a wider space. That contrast makes the experience a rewarding one.",
+
+    "section1Title": "1) Structure and craftsmanship",
+    "section1Text1": "The attic is defined by its timber geometry: beams, joints, and frames that carry the roof are all made from wood, without using much metal. Even when the space is mostly empty, the structure itself becomes the main exhibit. The smell of wood, the silence, and the wide space together create a unique feeling.",
+    "section1Text2": "According to the organizer, wood was chosen not only for aesthetics, but also for practical strength-to-weight performance and durability across centuries.\n\nThe attic also appears to be a place where a peaceful pause can be made after already climbing several floors. A little rest while walking through the place makes one prepared for the upcoming events.",
+    "section1Cap1": "Angled frames and long sightlines make the attic feel larger and spacious.",
+    "section1Cap2": "One can already see the beautiful town from the windows of the attic.",
+
+    "section2Title": "2) The entry and “narrow gate” feeling",
+    "section2Text1": "The entry point is an old iron door set into thick stone. Its proportions and material hint at medieval building methods - compact, defensive, and built for endurance.",
+    "section2Text2": "After passing the narrow entry, the space opens. This immediate expansion creates a strong contrast of “compression and release” in how visitors experience the place.",
+    "section2Cap" : "The old entry door from 1300s: a small threshold that changes how you perceive the space beyond it.",
+
+    "section3Title": "3) Inscriptions and small artifacts",
+    "section3Text1": "There is a special stone plate with historical German writing (known as Frühneuhochdeutsch). The stone plate describes the chronological history of the church and the tower. It reminds us of the older time when writing special texts on stone plates was a respectable practice. Even without reading every line, the typography and material presence communicate age and seriousness.",
+    "section3Text2": "Nearby, additional plaques and smaller elements create a compact “micro-museum” inside the attic.",
+
+    "grid1Title": "Stone plate",
+    "grid1Text": "A formal record engraved in stone, written in Frühneuhochdeutsch.",
+    "grid2Title": "Plaque",
+    "grid2Text": "A historical stone plate referring to the Church of the Holy Spirit.",
+    "grid3Title": "Mechanisms",
+    "grid3Text": "Remnants of practical systems used during church rituals and maintenance.",
+
+    "section4Title": "4) “Falconhaus” and respectful coexistence",
+    "section4Text1": "There are two falcons who live in the church (one nest in the attic, another nest is even above, near the clock). The organizers made considerable efforts to make the birds feel welcome and at home. Careful window design and nesting arrangements ensure free movement of the birds while keeping the building safe, especially in the wet season.",
+    "section4Text2": "This detail shows a thoughtful balance of heritage preservation, building safety, and respect for living nature in the same place.",
+    "section4Cap1": "Comfortable and safe nest of the falcon in the attic.",
+    "section4Cap2": "Window setup with a deliberate gap ensures the free movement of the bird and building safety in wet seasons.",
+
+    "ctaTitle": "Feeling curious?",
+    "ctaText": "Book a tour and experience the attic as a transition space between city noise and the tower heights.\nAvailable from Easter Sunday to the end of October.",
+    "ctaButton": "Book Tour",
+
+    "onThisPage": "On this page",
+    "nav1": "Structure",
+    "nav2": "Entry door",
+    "nav3": "Inscriptions",
+    "nav4": "Falconhaus"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "errors": {
+    "required": "This field is required.",
+    "email": "Please enter a valid email address."
+  }
+}

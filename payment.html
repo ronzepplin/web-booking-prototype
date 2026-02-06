@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Payment | St. Nikolaus Tower Tour</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="book-tour.html" data-i18n="nav.book">Book</a>
+      <span class="breadcrumb-sep">›</span>
+      <span aria-current="page" data-i18n="nav.payment">Payment</span>
+    </nav>
+
+  
+
+    <section class="booking">
+      <div class="booking-header">
+        <h1 class="booking-title" data-i18n="pay.title">Payment</h1>
+      </div>
+
+      <!-- Booking Summary -->
+      <div class="pay-summary">
+        <h2 class="section-title" data-i18n="pay.summaryTitle">Your Booking Summary</h2>
+
+        <div class="summary-lines">
+          <p><strong data-i18n="pay.nameLabel">Name:</strong> <span id="sumName">—</span></p>
+          <p><strong data-i18n="pay.emailLabel">Email:</strong> <span id="sumEmail">—</span></p>
+          <p><strong data-i18n="pay.adultsLabel">Number of Adults:</strong> <span id="sumAdults">—</span></p>
+          <p><strong data-i18n="pay.childrenLabel">Number of Children:</strong> <span id="sumChildren">—</span></p>
+          <p><strong data-i18n="pay.dateLabel">Date:</strong> <span id="sumDate">—</span></p>
+        </div>
+
+        <p class="total-line">
+          <span class="total-label" data-i18n="pay.totalLabel">Total Cost:</span>
+          <span id="sumTotal" class="total-value">€ 0.00</span>
+        </p>
+      </div>
+
+      <!-- Card Payment Form (mock) -->
+      <div class="pay-card">
+        <h2 class="section-title" data-i18n="pay.cardTitle">Pay with Debit or Credit Card</h2>
+
+        <form id="paymentForm" class="pay-form" novalidate>
+          <label class="field pay-field-wide">
+            <span class="label" data-i18n="pay.cardNumber">Card Number</span>
+            <input id="cardNumber" type="text" class="input" placeholder="1234 5678 9012 3456" inputmode="numeric" />
+          </label>
+
+          <div class="pay-form-row">
+            <label class="field">
+              <span class="label" data-i18n="pay.cardHolder">Card Holder Name</span>
+              <input id="cardHolder" type="text" class="input" placeholder="Name of the card holder" autocomplete="cc-name" />
+            </label>
+
+            <label class="field">
+              <span class="label" data-i18n="pay.expiry">Expiry Date</span>
+              <input id="expiry" type="text" class="input" placeholder="MM/YY" inputmode="numeric" autocomplete="cc-exp" />
+            </label>
+
+            <label class="field">
+              <span class="label" data-i18n="pay.cvv">CVV</span>
+              <input id="cvv" type="text" class="input" placeholder="3-digit security code" inputmode="numeric" autocomplete="cc-csc" />
+            </label>
+          </div>
+
+          <label class="terms">
+            <input id="terms" type="checkbox" />
+            <span data-i18n="pay.termsText">I have read & accepted the Terms & Conditions</span>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" data-i18n="pay.complete">
+              Complete Payment
+            </button>
+            <p class="muted small" data-i18n="pay.demoNote">
+              This is a demo payment. No card data is processed.
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="pay-or" aria-hidden="true">Or</div>
+
+      <!-- PayPal (mock) -->
+      <div class="pay-paypal">
+        <button id="paypalBtn" type="button" class="btn btn-paypal">
+          <span data-i18n="pay.paypal">Pay with PayPal</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

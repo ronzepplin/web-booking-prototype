@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="tower.metaTitle">The Tower Tour | St. Nikolaus Tower Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only styles (keeps this page structurally distinct) -->
+  <style>
+    .tour-shell { max-width: 980px; margin: 0 auto; }
+
+    .tour-hero {
+      text-align: center;
+      margin: 18px 0 22px;
+    }
+
+    .tour-hero h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .tour-hero p {
+      margin: 0 auto;
+      max-width: 70ch;
+    }
+
+    /* Facts grid */
+    .tour-facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 26px 0 34px;
+    }
+
+    .tour-fact {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+    }
+
+    .tour-fact .k {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      opacity: 0.75;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .tour-fact .v {
+      display: block;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    /* Timeline */
+    .tour-timeline {
+      position: relative;
+      margin: 18px 0 34px;
+      padding-left: 20px;
+    }
+
+    .tour-timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(0,0,0,0.12);
+      border-radius: 999px;
+    }
+
+    .tour-step {
+      position: relative;
+      padding: 14px 0 26px;
+    }
+
+    .tour-step::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 18px;
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: #fff;
+      border: 2px solid rgba(0,0,0,0.35);
+      box-sizing: border-box;
+    }
+
+    .tour-step h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .tour-step p {
+  margin: 0 0 14px;
+  max-width: 100%;
+  line-height: 1.65;
+}
+
+
+    .tour-media {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    .tour-figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .tour-figure img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tour-figcap {
+      padding: 10px 12px 12px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Callouts */
+    .tour-callout {
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-left: 6px solid rgba(0,0,0,0.35);
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin: 18px 0 30px;
+    }
+
+    .tour-callout h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .tour-callout p {
+      margin: 0;
+    }
+
+    /* Bottom section */
+    .tour-summary {
+      margin: 18px 0 10px;
+    }
+
+    .tour-summary p {
+      margin: 0 0 14px;
+      max-width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .tour-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .tour-media { grid-template-columns: 1fr; }
+      .tour-figure img { height: 340px; }
+    }
+
+    @media (max-width: 520px) {
+      .tour-facts { grid-template-columns: 1fr; }
+      .tour-hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="page">
+    <section class="tour-shell">
+
+      <!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <span class="breadcrumb-sep">›</span>
+  <span aria-current="page" data-i18n="tower.breadcrumb">The Tower Tour</span>
+</nav>
+
+
+      <!-- Hero -->
+      <header class="tour-hero">
+        <h1 data-i18n="tower.title">The Tower Tour</h1>
+        <p data-i18n="tower.intro">
+          The tower tour provides an exciting climbing experience through different floors to reach the top floor, which is the top of the tower.
+          The tower consists of 10 floors. Different floors will provide different experiences.
+        </p>
+      </header>
+
+      <!-- Facts -->
+      <section class="tour-facts" aria-label="Tour key facts">
+        <div class="tour-fact">
+          <span class="k" data-i18n="tower.facts.floors.k">Floors</span>
+          <span class="v" data-i18n="tower.facts.floors.v">10</span>
+        </div>
+        <div class="tour-fact">
+          <span class="k" data-i18n="tower.facts.difficulty.k">Difficulty</span>
+          <span class="v" data-i18n="tower.facts.difficulty.v">Easy-Medium</span>
+        </div>
+        <div class="tour-fact">
+          <span class="k" data-i18n="tower.facts.experience.k">Experience</span>
+          <span class="v" data-i18n="tower.facts.experience.v">Stairs, Old relics, bells, Top view</span>
+        </div>
+        <div class="tour-fact">
+          <span class="k" data-i18n="tower.facts.tip.k">Tip</span>
+          <span class="v" data-i18n="tower.facts.tip.v">Hands free, light backpack, Close-fitting clothing</span>
+        </div>
+      </section>
+
+      <!-- Timeline -->
+      <section class="tour-timeline" aria-label="Tour journey">
+
+        <article class="tour-step">
+          <h2 data-i18n="tower.steps.step1.title">The climb begins</h2>
+          <p data-i18n="tower.steps.step1.text">
+            The journey starts with classic twisted metal stairs. But as we move upwards, we see the wooden stairs.
+            Wooden stairs are a mixture of older wood and newer wood as a result of recent renovations.
+            The transition to the wooden stairs is mainly due to reducing the overall weight of the tower.
+          </p>
+
+          <div class="tour-media">
+            <figure class="tour-figure">
+              <img src="assets/img/tower-tour/metal-stairs.jpg" alt="Twisted metal stairs inside the tower" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step1.cap1">
+                Early sections include classic metal stairs.
+              </figcaption>
+            </figure>
+
+            <figure class="tour-figure">
+              <img src="assets/img/gallery/tower-3.jpg" alt="Wooden stairs leading to upper levels" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step1.cap2">
+                Wooden stairs appear higher up as part of renovations.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="tour-step">
+          <h2 data-i18n="tower.steps.step2.title">Narrow stairs and symbolism</h2>
+          <p data-i18n="tower.steps.step2.text">
+            On the lower floors (2–4) the stairs are wider. The higher we go, the stairs become narrower.
+            If we look carefully at the symbols, it is not random. The narrow stairs are reminiscent of the Biblical verse:
+            “Enter through the narrow gate.” (Matthew 7:13). Als the ancient cast iron door from the 1300s gives us almost the same reminder.
+          </p>
+
+          <div class="tour-media">
+            <figure class="tour-figure">
+              <img src="assets/img/gallery/tower-2.jpg" alt="Historic old door inside the tower" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step2.cap1">
+                Along the way: historic elements that connect you to earlier centuries.
+              </figcaption>
+            </figure>
+
+            <figure class="tour-figure">
+              <img src="assets/img/gallery/dachboden.jpg" alt="Wooden interrior of the church attic" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step2.cap2">
+                Timber engineering in the attic area.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="tour-step">
+          <h2 data-i18n="tower.steps.step3.title">Top Floors: Attractions on the upper floors</h2>
+          <p data-i18n="tower.steps.step3.text">
+            As we keep climbing, we will experience attractions at different floors: the baselbalgs, the dachboden, the bells,
+            and eventually the top view. Modern technologies have been implemented to ensure visitor safety, including a modern
+            fire-fighting system. A modern air purifier technology is also visible which is used to purify the air after church rituals which generates smoke.
+          </p>
+
+          <div class="tour-media">
+            <figure class="tour-figure">
+              <img src="assets/img/gallery/baselbalg.jpg" alt="Baselbalg or the wooden blower for the church organ" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step3.cap1">
+                Baselbalg: the wooden blower that supplies air for the organ.
+              </figcaption>
+            </figure>
+
+            <figure class="tour-figure">
+              <img src="assets/img/gallery/bell-2.jpg" alt="Wooden bell (Glockenstuhl) frame that carries the bell and provides flexibility" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step3.cap2">
+                The wooden bell frame provides flexibility and protects the tower.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Safety callout -->
+      <aside class="tour-callout" aria-label="Safety note">
+        <h3 data-i18n="tower.safety.title">Safety and comfort</h3>
+        <p data-i18n="tower.safety.text">
+          Please climb carefully, keep both hands free when possible, and take extra care on narrow stairs—especially if carrying a backpack.
+        Visitors are advised to wear clothing that stays close to body. Wider clothes and wide open jacket pockets may stuck in the stairs.
+        </p>
+      </aside>
+
+      <!-- Summary (keeps your closing paragraphs but in a distinct section) -->
+      <section class="tour-summary">
+        <p data-i18n="tower.outro1">
+          The top view of the city of Rosenheim and the open air of the 10th story truly feels like a reward.
+          The hard work through the final stair suggests that one must earn the prize. The top part of the tower provides clean fresh air and
+          nearly a 360 degree view of the city of Rosenheim. This is one of the major attractions.
+        </p>
+
+        <div class="tour-media">
+            <figure class="tour-figure">
+              <img src="assets/img/gallery/top-3.jpg" alt="top view of Rosenheim city from top of the tower" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step3.cap1">
+                On a clear day, the nearby alps are visible which creates a beautiful experience.
+              </figcaption>
+            </figure>
+
+            <figure class="tour-figure">
+              <img src="assets/img/gallery/top-4.jpg" alt="top view of Rosenheim city from top of the tower" loading="lazy" />
+              <figcaption class="tour-figcap" data-i18n="tower.steps.step3.cap2">
+                Top view of Rosenheim and the fresh air feels like a reward after the climbing experience.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+
+
+
+        <p data-i18n="tower.outro2">
+          The early church builders were highly intelligent people. Their skills have been handed down through the work of elders.
+          Although the church has been renovated multiple times, the next generation builders respectfully followed the practices of the elders.
+          This is something truly worthy to be experienced first hand.
+        </p>
+      </section>
+      
+
+      <!-- CTA (you can keep your existing CTA component styles) -->
+      <section class="gallery-cta">
+        <p class="cta-text" data-i18n="cta.galleryText">Want to experience it in person? Book a guided tower tour.</p>
+        <p class="cta-note" data-i18n="cta.galleryNote">Available only from Easter Sunday to the end of October.</p>
+        <a href="book-tour.html" class="btn btn-primary" data-i18n="cta.galleryButton">Book Tour</a>
+      </section>
+
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

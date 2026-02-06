@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Book Tour | St. Nikolaus Tower Tour</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span aria-current="page" data-i18n="nav.book">Book</span>
+    </nav>
+
+   
+
+    <!-- Booking card -->
+    <section class="booking">
+      <div class="booking-header">
+        <h1 class="booking-title" data-i18n="book.title">Book Tour</h1>
+        <p class="booking-subtitle" data-i18n="book.subtitle">Price & Availability</p>
+      </div>
+
+      <div class="booking-info">
+        <p class="booking-price" data-i18n="book.priceLine">
+          Adult: 3.00 € per person · Children (up to 14 years): 1.50 € per child (VAT included)
+        </p>
+
+        <div class="booking-notes">
+          <p data-i18n="book.note1">Single persons / Small groups: Every Saturday at 10:45 AM</p>
+          <p data-i18n="book.note2">Large groups: Please contact us in advance</p>
+          <p data-i18n="book.note3">Availability: From Easter Sunday to the end of October (annually)</p>
+        </div>
+      </div>
+
+      <div class="booking-date">
+        <h2 class="section-title" data-i18n="book.selectDate">Select the date of visit</h2>
+
+        <!-- Native date input (shows a calendar UI in browsers) -->
+        <div class="date-row">
+          <label class="field">
+            <span class="label" data-i18n="book.dateLabel">Date</span>
+            <input id="visitDate" type="date" class="input" required />
+          </label>
+        </div>
+      </div>
+
+      <form id="bookingForm" class="form-grid" novalidate>
+        <label class="field">
+          <span class="label" data-i18n="book.firstName">First Name</span>
+          <input id="firstName" type="text" class="input" autocomplete="given-name" required />
+          <span class="error" id="errFirstName" data-i18n="errors.required">This field is required.</span>
+        </label>
+
+        <label class="field">
+          <span class="label" data-i18n="book.lastName">Last Name</span>
+          <input id="lastName" type="text" class="input" autocomplete="family-name" required />
+          <span class="error" id="errLastName" data-i18n="errors.required">This field is required.</span>
+        </label>
+
+        <label class="field">
+          <span class="label" data-i18n="book.email">Email</span>
+          <input id="email" type="email" class="input" autocomplete="email" required />
+          <span class="error" id="errEmail" data-i18n="errors.email">Please enter a valid email.</span>
+        </label>
+
+        <label class="field">
+          <span class="label" data-i18n="book.adults">Number of Adult Visitors</span>
+          <input id="adults" type="number" class="input" min="0" step="1" value="0" required />
+          <span class="hint" data-i18n="book.adultHint">Price: €3.00 per adult</span>
+        </label>
+
+        <label class="field">
+          <span class="label" data-i18n="book.children">Number of Children (up to 14 years)</span>
+          <input id="children" type="number" class="input" min="0" step="1" value="0" required />
+          <span class="hint" data-i18n="book.childHint">Price: €1.50 per child</span>
+        </label>
+
+        <label class="field">
+          <span class="label" data-i18n="book.total">Total Cost (€)</span>
+          <input id="total" type="text" class="input input-readonly" value="€ 0.00" readonly />
+          <span class="hint" data-i18n="book.totalHint">Total updates automatically</span>
+        </label>
+
+        <div class="form-actions">
+          <button id="continueBtn" type="submit" class="btn btn-primary" data-i18n="book.continue">
+            Continue to Payment
+          </button>
+          <p class="muted small" data-i18n="book.disclaimer">
+            This is a demo booking. No real payment is processed.
+          </p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="dachboden.metaTitle">Dachboden | St. Nikolaus Tower Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only layout (distinct from History/Gallery/Top View) -->
+  <style>
+    /* Shell */
+    .attic-shell{
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 18px 18px 60px;
+    }
+
+    /* Top: breadcrumb + title row */
+    .attic-topbar{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 6px 0 16px;
+    }
+
+    .attic-titleblock h1{
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: .2px;
+    }
+    .attic-titleblock p{
+      margin: 8px 0 0;
+      max-width: 72ch;
+      opacity: .92;
+    }
+
+    .attic-chiprow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    .attic-chip{
+      border: 1px solid rgba(0,0,0,.14);
+      background: rgba(255,255,255,.55);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    /* Hero grid: big image + “quick facts” + key message */
+    .attic-hero{
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 18px;
+      align-items: stretch;
+      margin: 14px 0 22px;
+    }
+
+    .attic-heroFigure{
+      margin: 0;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+    .attic-heroFigure img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 440px;
+      object-fit: cover;
+    }
+    .attic-heroCaption{
+      padding: 12px 14px 14px;
+      font-size: 14px;
+      opacity: .92;
+    }
+
+    .attic-side{
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 14px;
+    }
+
+    .attic-card{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+
+    .attic-card h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .attic-facts{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+    .attic-fact{
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 10px;
+      padding: 10px 10px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.08);
+      font-size: 14px;
+    }
+    .attic-fact strong{
+      font-weight: 800;
+      opacity: .9;
+    }
+
+    .attic-quote{
+      margin: 0;
+      padding: 14px 14px;
+      border-radius: 14px;
+      background: rgba(0,0,0,.03);
+      border: 1px dashed rgba(0,0,0,.18);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .attic-quote b{
+      font-weight: 800;
+    }
+
+    /* Main content split: narrative + sticky navigation */
+    .attic-main{
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 20px;
+      align-items: start;
+      margin-top: 8px;
+    }
+
+    .attic-nav{
+      position: sticky;
+      top: 16px;
+    }
+
+    .attic-nav h3{
+      margin: 0 0 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      opacity: .75;
+    }
+
+    .attic-nav a{
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.60);
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .attic-nav a:hover{
+      background: #fff;
+      border-color: rgba(0,0,0,.18);
+    }
+
+    /* Content sections */
+    .attic-section{
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+    .attic-section h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .attic-section p{
+      margin: 0 0 10px;
+      line-height: 1.65;
+      max-width: 80ch;
+    }
+    .attic-section p:last-child{
+      margin-bottom: 0;
+    }
+
+    /* Masonry-like photo pair row */
+    .attic-photoRow{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .attic-photoCard{
+      margin: 0;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .attic-photoCard img{
+      display: block;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .attic-photoCard figcaption{
+      padding: 10px 12px 12px;
+      font-size: 13px;
+      line-height: 1.45;
+      opacity: .92;
+    }
+    /* Special handling for tall / detailed images */
+.attic-photoCard--full img {
+  height: auto;          /* let image decide height */
+  max-height: 520px;     /* prevents it from becoming too tall */
+  object-fit: contain;  /* no cropping */
+  background: #f6f6f6;  /* subtle frame for empty space */
+}
+
+
+
+
+
+
+
+    /* “Artifacts” grid: 3 cards, different heights */
+    .attic-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .attic-gridItem{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+    .attic-gridItem img{
+      display: block;
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+    .attic-gridBody{
+      padding: 12px 12px 14px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .attic-gridBody h3{
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .attic-gridBody p{
+      margin: 0;
+      opacity: .94;
+    }
+
+    /* CTA block */
+    .attic-cta{
+      text-align: center;
+      padding: 22px 18px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+      margin-top: 18px;
+    }
+    .attic-cta h2{
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .attic-cta p{
+      margin: 0 auto 16px;
+      max-width: 70ch;
+      line-height: 1.6;
+      opacity: .92;
+    }
+    .attic-cta .btn{
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,.20);
+      background: rgba(0,0,0,.06);
+      color: inherit;
+      font-weight: 700;
+    }
+    .attic-cta .btn:hover{
+      background: rgba(0,0,0,.10);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .attic-hero{ grid-template-columns: 1fr; }
+      .attic-main{ grid-template-columns: 1fr; }
+      .attic-nav{ position: relative; top: 0; }
+      .attic-chiprow{ justify-content: flex-start; }
+    }
+    @media (max-width: 760px){
+      .attic-photoRow{ grid-template-columns: 1fr; }
+      .attic-grid{ grid-template-columns: 1fr; }
+      .attic-heroFigure img{ max-height: 360px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Shared header injection -->
+  <div id="site-header"></div>
+
+  <main class="attic-shell">
+    <!-- Breadcrumb (reuse your existing breadcrumb class for consistency) -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span aria-hidden="true">›</span>
+      <span data-i18n="dachboden.breadcrumb">Dachboden</span>
+    </nav>
+
+    <div class="attic-topbar">
+      <div class="attic-titleblock">
+        <h1 data-i18n="dachboden.title">Dachboden</h1>
+        <p data-i18n="dachboden.subtitle">
+          A calm, wooden “in-between” space where structure, silence, and history become visible.
+        </p>
+      </div>
+
+      <div class="attic-chiprow" aria-label="Key highlights">
+        <span class="attic-chip" data-i18n="dachboden.chip1">Wooden roof structure</span>
+        <span class="attic-chip" data-i18n="dachboden.chip2">Medieval entry door</span>
+        <span class="attic-chip" data-i18n="dachboden.chip3">Stone engravings</span>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="attic-hero" aria-label="Dachboden overview">
+      <figure class="attic-heroFigure">
+        <!-- Replace with your real image path -->
+        <img src="assets/img/attic/attic-hero.jpg" alt="Wide view of the wooden roof structure of the church prayer hall" />
+        <figcaption class="attic-heroCaption" data-i18n="dachboden.heroCaption">
+          The Dachboden reveals the craftsmanship of the timber frames—quiet, spacious, and peaceful.
+        </figcaption>
+      </figure>
+
+      <div class="attic-side">
+        <div class="attic-card">
+          <h2 data-i18n="dachboden.quickFactsTitle">Quick facts</h2>
+          <ul class="attic-facts">
+            <li class="attic-fact">
+              <strong data-i18n="dachboden.fact1Label">Material</strong>
+              <span data-i18n="dachboden.fact1Value">Mostly wood (beams, frames, flooring)</span>
+            </li>
+            <li class="attic-fact">
+              <strong data-i18n="dachboden.fact2Label">Mood</strong>
+              <span data-i18n="dachboden.fact2Value">Calm, airy, and reflective</span>
+            </li>
+            <li class="attic-fact">
+              <strong data-i18n="dachboden.fact3Label">Notable</strong>
+              <span data-i18n="dachboden.fact3Value">Old door, engravings, bird-friendly windows</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="attic-card">
+          <h2 data-i18n="dachboden.quoteTitle">A small reflection</h2>
+          <p class="attic-quote">
+            <b data-i18n="dachboden.quoteLead">Matthew 7:13</b>
+            <span data-i18n="dachboden.quoteText">
+              The old cast iron door reminds us of the Biblical phrase “enter through the narrow gate”. The Dachboden’s entry feels narrow, then suddenly opens into a wider space.
+              That contrast makes the experience a rewarding one.
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main: content + in-page navigation -->
+    <section class="attic-main" aria-label="Dachboden content">
+      <div>
+        <!-- Section 1 -->
+        <article class="attic-section" id="structure">
+          <h2 data-i18n="dachboden.section1Title">1) Structure and craftsmanship</h2>
+          <p data-i18n="dachboden.section1Text1">
+            The Dachboden is defined by its timber geometry: beams, joints, and frames that carry the roof is all made from wood, without using much metal. Even when the space is mostly empty, the structure itself becomes the main exhibit.
+            The smell of wood, the silence and the wide space together create a unique feelings.
+
+          </p>
+          <p data-i18n="dachboden.section1Text2">
+            According to the organizer, wood was chosen not only for aesthetics, but also for practical strength-to-weight
+            performance and durability across centuries.<br><br>
+            Dachboden also appears to be a place where a peaceful pause can be made after already climbing several floors. 
+            A little rest while walking through the place, makes one prepared for the upcoming events.
+          </p>
+
+          <div class="attic-photoRow">
+            <figure class="attic-photoCard">
+              <img src="assets/img/attic/attic-roof.jpg" alt="Angled view of wooden roof frames showing the structure" />
+              <figcaption data-i18n="dachboden.section1Cap1">
+                Angled frames and long sightlines make the Dachboden feel larger and spacious.
+              </figcaption>
+            </figure>
+            <figure class="attic-photoCard">
+              <img src="assets/img/attic/attic-view.jpg" alt="View through a window of the attic, showing city life" />
+              <figcaption data-i18n="dachboden.section1Cap2">
+                One can already see the beautiful town from the windows of the attic.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Section 2 -->
+        <article class="attic-section" id="entry">
+          <h2 data-i18n="dachboden.section2Title">2) The entry and “narrow gate” feeling</h2>
+          <p data-i18n="dachboden.section2Text1">
+            The entry point is an old iron door set into thick stone. Its proportions and material hint at medieval
+            building methods - compact, defensive, and built for endurance.
+          </p>
+          <p data-i18n="dachboden.section2Text2">
+            After passing the narrow entry, the space opens. This immediate expansion creates a strong contrast of
+            “compression and release” in how visitors experience the place.
+          </p>
+
+          <figure class="attic-photoCard attic-photoCard--full">
+  <img src="assets/img/attic/attic-door.jpg"
+       alt="Old iron door serves as an entrance to the attic" />
+  <figcaption data-i18n="dachboden.section2Cap">
+    The old entry door from 1300s: a small threshold that changes how you perceive the space beyond it.
+  </figcaption>
+</figure>
+
+        </article>
+
+        <!-- Section 3 -->
+        <article class="attic-section" id="inscriptions">
+          <h2 data-i18n="dachboden.section3Title">3) Inscriptions and small artifacts</h2>
+          <p data-i18n="dachboden.section3Text1">
+            There is a special stone plate with historical German writing (known as Frühneuhochdeutsch). The stone plate describes the chonological history of the church and the tower. It reminds us of the older time when writing special texts on stone plates was a respectable practice. Even without reading
+            every line, the typography and material presence communicate age and seriousness.
+          </p>
+          <p data-i18n="dachboden.section3Text2">
+            Nearby, additional plaques and smaller elements create a compact “micro-museum” inside the attic.
+          </p>
+
+          <div class="attic-grid" aria-label="Artifacts grid">
+            <div class="attic-gridItem">
+              <img src="assets/img/attic/attic-stone.jpg" alt="A Stone plate with historical German text, describing the history of church and tower" />
+              <div class="attic-gridBody">
+                <h3 data-i18n="dachboden.grid1Title">Stone plate</h3>
+                <p data-i18n="dachboden.grid1Text">
+                  A formal record engraved in stone, written in Frühneuhochdeutsch.
+                </p>
+              </div>
+            </div>
+
+            <div class="attic-gridItem">
+              <img src="assets/img/attic/attic-plate.jpg" alt="Stone plate referencing details about the Holy Spirit church of Rosenheim" />
+              <div class="attic-gridBody">
+                <h3 data-i18n="dachboden.grid2Title">Plaque</h3>
+                <p data-i18n="dachboden.grid2Text">
+                  A historical stone plate referring to the Church of the Holy Spirit.
+                </p>
+              </div>
+            </div>
+
+            <div class="attic-gridItem">
+              <img src="assets/img/attic/attic-mechanism.jpg" alt="Old pulling mechanism used for church rituals in the past" />
+              <div class="attic-gridBody">
+                <h3 data-i18n="dachboden.grid3Title">Mechanisms</h3>
+                <p data-i18n="dachboden.grid3Text">
+                  Remnants of practical systems used during church rituals and maintenance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Section 4 -->
+        <article class="attic-section" id="falcons">
+          <h2 data-i18n="dachboden.section4Title">4) “Falconhaus” and respectful coexistence</h2>
+          <p data-i18n="dachboden.section4Text1">
+            There are two falcons who live in the Church (one nest in the attic, another nest is even above, near the clock). The organizers made considerable efforts to make the birds feel welcome and at home. Careful window design and nesting
+            arrangements ensures free movement of the birds while keeping the building safe, specially in the wet seasosn.
+          </p>
+          <p data-i18n="dachboden.section4Text2">
+            This detail shows a thoughtful balance of heritage preservation, building safety, and respect for living nature
+            in the same place.
+          </p>
+
+          <div class="attic-photoRow">
+            <figure class="attic-photoCard">
+              <img src="assets/img/attic/attic-falcon-1.jpg" alt="Window area designed to support bird nesting" />
+              <figcaption data-i18n="dachboden.section4Cap1">
+                Comfortable and safe nest of the Falcon at the attic.
+              </figcaption>
+            </figure>
+            <figure class="attic-photoCard">
+              <img src="assets/img/attic/attic-falcon-2.jpg" alt="special window design to allow birds freely in wet seasosn" />
+              <figcaption data-i18n="dachboden.section4Cap2">
+                Window setup with a deliberate gap, ensures the free movement of the bird and building safety in wet seasons.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- CTA -->
+        <section class="attic-cta" aria-label="Book a tour">
+          <h2 data-i18n="dachboden.ctaTitle">Feeling curious?</h2>
+          <p data-i18n="dachboden.ctaText">
+            Book a tour and experience the Dachboden as a transition space between city noise and the tower heights.<br>
+            Available from Easter Sunday to the end of October.
+          </p>
+          <a class="btn" href="book-tour.html" data-i18n="dachboden.ctaButton">Book Tour</a>
+        </section>
+      </div>
+
+      <!-- Sticky in-page nav -->
+      <aside class="attic-nav" aria-label="On this page">
+        <div class="attic-card">
+          <h3 data-i18n="dachboden.onThisPage">On this page</h3>
+          <a href="#structure" data-i18n="dachboden.nav1">Structure</a>
+          <a href="#entry" data-i18n="dachboden.nav2">Entry door</a>
+          <a href="#inscriptions" data-i18n="dachboden.nav3">Inscriptions</a>
+          <a href="#falcons" data-i18n="dachboden.nav4">Falconhaus</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Shared footer injection -->
+  <div id="site-footer"></div>
+
+  <!-- Your existing scripts (keep consistent with the rest of the site) -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

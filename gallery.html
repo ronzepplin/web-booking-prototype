@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="gallery.metaTitle">Gallery | St. Nikolaus Tower Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only modal styles (safe + isolated) -->
+  <style>
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+   .image-modal .modal-content {
+  max-width: 96vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+}
+
+    .image-modal .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      line-height: 1;
+      color: #fff;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      user-select: none;
+    }
+
+    .image-modal .modal-close:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* Nice affordance */
+    .gallery-item img {
+      cursor: zoom-in;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="page">
+    <section class="gallery-shell">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span data-i18n="nav.gallery">Gallery</span>
+      </nav>
+
+      <!-- Header -->
+      <header class="gallery-header">
+        <h1 class="gallery-title" data-i18n="gallery.title">
+          Gallery of St. Nikolaus Church and Tower
+        </h1>
+        <p class="gallery-subtitle" data-i18n="gallery.subtitle">
+          Browse highlights from the church, tower, and panoramic views over Rosenheim.
+        </p>
+      </header>
+
+      <!-- Filters -->
+      <div class="gallery-filters" role="tablist" aria-label="Gallery filters">
+        <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+        <button class="filter-chip" type="button" data-filter="exterior">Exterior</button>
+        <button class="filter-chip" type="button" data-filter="interior">Interior</button>
+        <button class="filter-chip" type="button" data-filter="tower">Tower</button>
+        <button class="filter-chip" type="button" data-filter="views">Top Views</button>
+        <button class="filter-chip" type="button" data-filter="bells">The Bells</button>
+      </div>
+
+      <!-- Grid -->
+      <section class="gallery-grid" aria-label="Image gallery">
+
+       <!-- =========================
+             EXTERIOR (3)
+             ========================= -->
+        <article class="gallery-item" data-category="exterior">
+          <img src="assets/img/gallery/ex-1.jpg" alt="Exterior view of St. Nikolaus Church Tower, Rosenheim" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.exterior1.title">Exterior view of St. Nikolaus Church Tower</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.exterior1.caption">Tower captured from ground floor.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="exterior">
+          <img src="assets/img/gallery/ex-2.jpg" alt="The front side of the St. Nikolaus Church" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.exterior2.title">St. Nikolaus Church Building</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.exterior2.caption">The front side of the St. Nikolaus Church.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="exterior">
+          <img src="assets/img/gallery/ex-3.jpg" alt="The Baroque style tower dome a.k.a Zwiebelhelm/Onion dome" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.exterior3.title">The Baroque tower dome a.k.a Zwiebelhelm</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.exterior3.caption">Zoomed view of the dome.</p>
+          </div>
+        </article>
+
+        <!-- =========================
+             INTERIOR (3)
+             ========================= -->
+        <article class="gallery-item" data-category="interior">
+          <img src="assets/img/gallery/stairs-wood.jpg" alt="Wooden Stairs to climb the tower" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.interior1.title">Wooden Stairs to climb the tower</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.interior1.caption">One of the many stairs to climb the tower. With these stairs, the visitors can climb their way to the top.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="interior">
+          <img src="assets/img/gallery/baselbalg.jpg" alt="The wooden blower for the church organ that supplies the necessary air for the organ to produce music." loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.interior2.title">Baselbalg</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.interior2.caption">The wooden blower for the church organ. It supplies the necessary air for the organ to produce music.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="interior">
+          <img src="assets/img/gallery/dachboden.jpg" alt="Dachboden or the church attic of St. Nikolaus church." loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.interior3.title">Dachboden or the church attic</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.interior3.caption">Beautiful example of wood-engineering. Fully made of wood, without using much iron.</p>
+          </div>
+        </article>
+
+        <!-- =========================
+             TOWER (3)
+             ========================= -->
+        <article class="gallery-item" data-category="tower">
+          <img src="assets/img/gallery/tower-1.jpg" alt="Stone engraving written in middle-old German, showing the church history." loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.tower1.title">Stone engraving at the Attic</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.tower1.caption">Written in middle-old German, this old engraving depicts the chronological history of the church and the tower.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="tower">
+          <img src="assets/img/gallery/tower-2.jpg" alt="Old cast iron door from around 1300s. It is one of the oldest objects in the tower" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.tower2.title">A very old door</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.tower2.caption">This cast iron door is from around 1300s. It is one of the oldest objects in the tower.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="tower">
+          <img src="assets/img/gallery/tower-3.jpg" alt="Wooden stair leads to the attic area." loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.tower3.title">Old and renovated wooden stairs</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.tower3.caption">This stair leads to the attic area.</p>
+          </div>
+        </article>
+
+        <!-- =========================
+             VIEWS (3)
+             ========================= -->
+        <article class="gallery-item" data-category="views">
+          <img src="assets/img/gallery/top-2.jpg" alt="One of the many windows of the church tower, showing beautiful town of Rosenheim" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.views1.title">Tower window</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.views1.caption">One of the many windows, showing beautiful town of Rosenheim.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="views">
+          <img src="assets/img/gallery/top-3.jpg" alt="A view from height equal to to a 10 story building, one of the major attractions, provides a magnificent top view of the city of Rosenheim" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.views2.title">View from top</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.views2.caption">A view from height equal to to a 10 story building, one of the major attractions, provides a magnificent top view of the city of Rosenheim.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="views">
+          <img src="assets/img/gallery/top-4.jpg" alt="Beautiful Top view of Rosenheim from the top of the tower that equals to 10 storey building" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.views3.title">Beautiful Top view of Rosenheim</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.views3.caption">The top of the tower is surrounded with nets to ensure protection from birds and unwanted accidents.</p>
+          </div>
+        </article>
+
+        <!-- =========================
+             BELLS (3)
+             ========================= -->
+        <article class="gallery-item" data-category="bells">
+          <img src="assets/img/gallery/bell-1.jpg" alt="The Dreifaltigkeitsglocke or the Trinity Bell in the wooden bell frame" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.bells1.title">The Dreifaltigkeitsglocke or the Trinity Bell.</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.bells1.caption">The Largest Bell of the tower, with a weight more than 3 tonnes. Build by Czudnochowsky, Erding, this bell delivers the deepest sound.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="bells">
+          <img src="assets/img/gallery/bell-2.jpg" alt="Wooden frame that provided necessary flexibility and protects the tower" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.bells2.title">The Wooden Bell frame</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.bells2.caption">Wooden frame that provided necessary flexibility and protects the tower.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item" data-category="bells">
+          <img src="assets/img/gallery/bell-3.jpg" alt="The second largest bell Christusglocke, named after Lord Jesus Christ" loading="lazy" />
+          <div class="gallery-meta">
+            <h3 class="gallery-item-title" data-i18n="gallery.items.bells3.title">The Christusglocke</h3>
+            <p class="gallery-item-caption" data-i18n="gallery.items.bells3.caption">The second largest bell, named after Lord Jesus Christ.</p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- CTA -->
+      <section class="gallery-cta">
+        <p class="cta-text" data-i18n="cta.galleryText">Want to experience in person? Book a guided tower tour.</p>
+<p class="cta-note" data-i18n="cta.galleryNote">Available only from Easter Sunday to the end of October.</p>
+<a href="book-tour.html" class="btn btn-primary" data-i18n="cta.galleryButton">Book Tour</a>
+
+      </section>
+
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Image Modal (click-to-zoom) -->
+  <div id="imageModal" class="image-modal" aria-hidden="true">
+    <span class="modal-close" role="button" aria-label="Close image">&times;</span>
+    <img class="modal-content" id="modalImage" alt="" />
+  </div>
+
+  <script src="assets/js/app.js"></script>
+
+  <!-- Page-only filter script -->
+  <script>
+    (function () {
+      const chips = document.querySelectorAll(".filter-chip");
+      const items = document.querySelectorAll(".gallery-item");
+
+      function setActive(btn) {
+        chips.forEach(c => c.classList.remove("is-active"));
+        btn.classList.add("is-active");
+      }
+
+      function applyFilter(filter) {
+        items.forEach(item => {
+          const cat = item.getAttribute("data-category");
+          item.style.display = (filter === "all" || cat === filter) ? "" : "none";
+        });
+      }
+
+      chips.forEach(btn => {
+        btn.addEventListener("click", () => {
+          setActive(btn);
+          applyFilter(btn.dataset.filter);
+        });
+      });
+    })();
+  </script>
+
+  <!-- Page-only click-to-zoom script -->
+  <script>
+    (function () {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeBtn = modal.querySelector(".modal-close");
+
+      function openModal(src, alt) {
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        modalImg.src = src;
+        modalImg.alt = alt || "Gallery image";
+        document.body.style.overflow = "hidden"; // prevent background scroll
+      }
+
+      function closeModal() {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        modalImg.src = "";
+        modalImg.alt = "";
+        document.body.style.overflow = ""; // restore scroll
+      }
+
+      // Delegate clicks from the grid (works even after filtering)
+      document.addEventListener("click", (e) => {
+        const img = e.target.closest(".gallery-item img");
+        if (!img) return;
+        openModal(img.src, img.alt);
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+
+      // Click on backdrop closes (but not when clicking the image itself)
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // ESC closes
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+          closeModal();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

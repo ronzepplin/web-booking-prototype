@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="baselbalg.metaTitle">Baselbalg (The Bellow) | St. Nikolaus Tower Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only layout: “glossary + alternating feature bands” (distinct from other pages) -->
+  <style>
+    .bb-shell{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 18px 64px;
+    }
+
+    /* Header block */
+    .bb-head{
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 18px;
+      align-items: start;
+      margin: 10px 0 16px;
+    }
+    .bb-head h1{
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+    .bb-lede{
+      margin: 10px 0 0;
+      line-height: 1.68;
+      max-width: 80ch;
+      opacity: .92;
+    }
+
+    /* Glossary / quick facts (NOT sticky now to avoid overlap issues) */
+    .bb-glossary{
+      position: relative;
+      top: auto;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      padding: 14px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+    .bb-glossary h2{
+      margin: 0 0 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      opacity: .75;
+    }
+    .bb-tags{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+      padding: 0;
+      list-style: none;
+    }
+    .bb-tag{
+      border: 1px solid rgba(0,0,0,.14);
+      background: rgba(0,0,0,.04);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      opacity: .9;
+      white-space: nowrap;
+    }
+    .bb-kv{
+      display: grid;
+      gap: 10px;
+      margin: 0;
+    }
+    .bb-kv div{
+      background: rgba(0,0,0,.03);
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 14px;
+      padding: 10px 10px;
+      line-height: 1.35;
+      font-size: 13px;
+      opacity: .92;
+    }
+    .bb-kv b{
+      display: block;
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      opacity: .72;
+      margin-bottom: 4px;
+      font-weight: 900;
+    }
+
+    /* Hero banner */
+    .bb-hero{
+      margin: 22px 0 18px; /* a bit more breathing room under intro */
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,.12);
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+    }
+    .bb-hero img{
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 2;   /* 1200 x 800 */
+      object-fit: cover;
+    }
+    .bb-hero .cap{
+      padding: 12px 14px 14px;
+      font-size: 13px;
+      line-height: 1.45;
+      opacity: .92;
+      border-top: 1px solid rgba(0,0,0,.08);
+      background: rgba(0,0,0,.02);
+    }
+
+    /* Feature bands: alternating image/text */
+    .bb-bands{
+      display: grid;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .bb-band{
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 14px;
+      align-items: center;
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 18px;
+      overflow: hidden;
+      padding: 14px;
+    }
+    .bb-band:nth-child(even){
+      grid-template-columns: 1.05fr .95fr;
+    }
+    .bb-media{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .bb-media img{
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    .bb-text h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    .bb-text p{
+      margin: 0 0 10px;
+      line-height: 1.68;
+      max-width: 80ch;
+      opacity: .92;
+    }
+    .bb-text p:last-child{ margin-bottom: 0; }
+
+    /* Quote panel */
+    .bb-quote{
+      margin-top: 16px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+    .bb-quote h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .bb-quote blockquote{
+      margin: 0;
+      padding: 14px 14px;
+      border-radius: 16px;
+      background: rgba(0,0,0,.03);
+      border: 1px dashed rgba(0,0,0,.20);
+      line-height: 1.7;
+      opacity: .95;
+    }
+
+    /* CTA */
+    .bb-cta{
+      text-align: center;
+      margin-top: 18px;
+      padding: 22px 18px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+    .bb-cta h2{
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .bb-cta p{
+      margin: 0 auto 16px;
+      max-width: 72ch;
+      line-height: 1.6;
+      opacity: .92;
+    }
+    .bb-cta a{
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,.20);
+      background: rgba(0,0,0,.06);
+      color: inherit;
+      font-weight: 900;
+    }
+    .bb-cta a:hover{ background: rgba(0,0,0,.10); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .bb-head{ grid-template-columns: 1fr; }
+      .bb-glossary{ position: relative; top: auto; }
+
+      /* Remove fixed hero heights: aspect-ratio handles it */
+      .bb-band,
+      .bb-band:nth-child(even){
+        grid-template-columns: 1fr;
+      }
+      .bb-media img{ height: 260px; }
+    }
+    @media (max-width: 760px){
+      .bb-media img{ height: 220px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="bb-shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span aria-hidden="true">›</span>
+      <span data-i18n="baselbalg.breadcrumb">Baselbalg</span>
+    </nav>
+
+    <!-- Header -->
+    <section class="bb-head" aria-label="Baselbalg intro">
+      <div>
+        <h1 data-i18n="baselbalg.title">Baselbalg (the Bellow)</h1>
+        <p class="bb-lede" data-i18n="baselbalg.intro">
+          St. Nikolaus Church houses a large and powerful pipe organ, whose sound depends entirely on a continuous and precisely regulated supply of air. This air is produced by the Baselbalg (bellows), a traditional wooden mechanism that forms the silent foundation of the organ’s voice.
+<br><br>
+Unlike modern electric systems, the Baselbalg works through carefully engineered layers of wood that rise and fall slowly, storing and releasing air at a constant pressure. This gentle, rhythmic motion ensures that each pipe speaks evenly, preserving both pitch stability and tonal warmth.
+<br><br>
+Visible during the tower tour, the Baselbalg offers a rare insight into historic organ craftsmanship, reminding visitors that the grandeur of the organ’s sound is made possible by a quiet, almost invisible system working continuously in the background.
+        </p>
+      </div>
+
+      <!-- Glossary / quick facts -->
+      <aside class="bb-glossary" aria-label="Quick facts">
+        <h2 data-i18n="baselbalg.quickTitle">Quick facts</h2>
+        <ul class="bb-tags" aria-label="Tags">
+          <li class="bb-tag" data-i18n="baselbalg.tag1">Organ air supply</li>
+          <li class="bb-tag" data-i18n="baselbalg.tag2">Traditional wood</li>
+          <li class="bb-tag" data-i18n="baselbalg.tag3">Quiet mechanics</li>
+        </ul>
+
+        <div class="bb-kv">
+          <div>
+            <b data-i18n="baselbalg.kv1Label">Location</b>
+            <span data-i18n="baselbalg.kv1Value">Around the 3rd level of the tower</span>
+          </div>
+          <div>
+            <b data-i18n="baselbalg.kv2Label">Structure</b>
+            <span data-i18n="baselbalg.kv2Value">Four stacked wooden layers</span>
+          </div>
+          <div>
+            <b data-i18n="baselbalg.kv3Label">Function</b>
+            <span data-i18n="baselbalg.kv3Value">Stable airflow for organ pipes</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Hero -->
+    <figure class="bb-hero" aria-label="Baselbalg hero image">
+      <img src="assets/img/baselbalg/baselbalg-hero-2.jpg" alt="Interrior view of St. Nikolaus Church showing the Organ" />
+      <figcaption class="cap" data-i18n="baselbalg.heroCaption">
+        The Organ.
+      </figcaption>
+    </figure>
+
+    <!-- Alternating feature bands -->
+    <section class="bb-bands" aria-label="Baselbalg sections">
+
+      <article class="bb-band">
+        <figure class="bb-media">
+          <img src="assets/img/gallery/baselbalg.jpg" alt="Wooden bellows for the church organ, inside the tower" />
+        </figure>
+        <div class="bb-text">
+          <h2 data-i18n="baselbalg.s1Title">1) What the Baselbalg does</h2>
+          <p data-i18n="baselbalg.s1Text">
+            The Baselbalg provides a continuous, steady airflow that allows the organ to speak clearly.
+            Without this stable air supply, the tone would be uneven and the sound would lose its character.
+          </p>
+        </div>
+      </article>
+
+      <article class="bb-band">
+        <div class="bb-text">
+          <h2 data-i18n="baselbalg.s2Title">2) Built in wood, engineered for silence</h2>
+          <p data-i18n="baselbalg.s2Text">
+            The system is almost entirely wooden and consists of four stacked layers.
+            These layers move slowly and quietly - rising and falling to generate the airflow needed for the organ pipes.
+            This gentle mechanical motion helps preserve the organ’s traditional sound quality.
+          </p>
+        </div>
+        <figure class="bb-media">
+          <img src="assets/img/baselbalg/baselbalg-close.jpg" alt="Close-up view of wooden layers of the Baselbalg" />
+        </figure>
+      </article>
+
+      <article class="bb-band">
+        <figure class="bb-media">
+          <img src="assets/img/baselbalg/group.jpg" alt="The group of church musicians and singers of St. Nikolaus Church, Rosenheim" />
+        </figure>
+        <div class="bb-text">
+          <h2 data-i18n="baselbalg.s3Title">3) Organ concerts and community</h2>
+          <p data-i18n="baselbalg.s3Text">
+            St. Nikolaus Church regularly hosts organ concerts. 
+            The organ music is performed by an experienced musical team of 20 musicians and singers. Their performance includes classical numbers (especially J.S. Bach), choral works of 16th and 17th century and contemporary sacred music. Every Saturday at 12:00  an Organ concert is arranged regularly. Every one is welcome and entry is free. 
+            Thanks to the organizers. Due to the immense cost, donations are encouraged and appreciated.
+          </p>
+        </div>
+      </article>
+
+      <article class="bb-band">
+        <div class="bb-text">
+          <h2 data-i18n="baselbalg.s4Title">4) Makers and craftsmanship</h2>
+          <p data-i18n="baselbalg.s4Text">
+            The large and magnificent organ was produced by Reil, a company from the Netherlands. 
+            It was installed in the church on 6th December (St. Nikolaus Day) of 2009. 
+            Since then its music has become an integral part of the Church liturgy. 
+            The chest organ in the chancel was built by a German company Linder from Nußdorf am inn.
+          </p>
+        </div>
+        <figure class="bb-media">
+          <img src="assets/img/baselbalg/organ-2.jpg" alt="Church organ visible inside the church" />
+        </figure>
+      </article>
+
+    </section>
+
+    <!-- A short “reflective” panel -->
+    <section class="bb-quote" aria-label="Reflection">
+      <h2 data-i18n="baselbalg.quoteTitle">A quiet system with a powerful effect</h2>
+      <blockquote data-i18n="baselbalg.quoteText">
+        The Baselbalg is not dramatic or loud, yet it is very effective in producing the sound. Its steady, silent motion is a
+        reminder that craftsmanship often works best when it stays in the background.
+      </blockquote>
+    </section>
+
+    <!-- CTA -->
+    <section class="bb-cta" aria-label="Book a tour">
+      <h2 data-i18n="baselbalg.ctaTitle">Feeling curious?</h2>
+      <p data-i18n="baselbalg.ctaText">
+        Book a tour and discover the hidden mechanics that keep the organ alive. Available from Easter Sunday to the end
+        of October, every year.
+      </p>
+      <a href="book-tour.html" data-i18n="baselbalg.ctaButton">Book Tour</a>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

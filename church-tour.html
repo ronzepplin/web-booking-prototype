@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="churchTour.metaTitle">Church Tour | St. Nikolaus Tower Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only layout: “hero + guided path + artwork spotlight + image rail” (distinct structure) -->
+  <style>
+    .ct-shell{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 18px 64px;
+    }
+
+    /* Hero */
+    .ct-hero{
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 16px;
+      align-items: start;
+      margin: 10px 0 18px;
+    }
+    .ct-hero h1{
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+    .ct-hero p{
+      margin: 10px 0 0;
+      line-height: 1.7;
+      max-width: 82ch;
+      opacity: .92;
+    }
+    .ct-heroCard{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+    }
+    .ct-heroCard img{
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+    }
+    .ct-heroCap{
+      padding: 12px 14px 14px;
+      font-size: 13px;
+      line-height: 1.45;
+      opacity: .92;
+      border-top: 1px solid rgba(0,0,0,.08);
+      background: rgba(0,0,0,.02);
+    }
+
+    /* “Tour path” cards */
+    .ct-path{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 16px 0 18px;
+    }
+    .ct-step{
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .ct-step .kicker{
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .7;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .ct-step h2{
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+    .ct-step p{
+      margin: 0;
+      line-height: 1.68;
+      opacity: .92;
+      font-size: 14px;
+    }
+
+    /* Spotlight (artwork) */
+    .ct-spotlight{
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 14px;
+      align-items: start;
+      margin: 10px 0 16px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+
+    /* IMPORTANT: portrait artwork container (matches ~628x908 ratio) */
+    .ct-spotlight figure{
+      margin: 0;
+      padding: 16px; /* gives breathing room around portrait */
+      border-right: 1px solid rgba(0,0,0,.10);
+      background: rgba(0,0,0,.03);
+      display: grid;
+      place-items: center;
+    }
+    .ct-spotlight .art-frame{
+      width: min(100%, 628px);     /* cap close to your real width */
+      aspect-ratio: 628 / 908;     /* your artwork ratio */
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(0,0,0,.12);
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    }
+    .ct-spotlight .art-frame img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain; /* shows full portrait without cropping */
+      background: rgba(255,255,255,.70);
+    }
+
+    .ct-spotlight .body{
+      padding: 16px 16px 18px;
+    }
+    .ct-spotlight .label{
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.14);
+      background: rgba(0,0,0,.04);
+      font-size: 12px;
+      font-weight: 900;
+      opacity: .9;
+      margin-bottom: 10px;
+    }
+    .ct-spotlight h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+    .ct-spotlight p{
+      margin: 0 0 10px;
+      line-height: 1.72;
+      opacity: .92;
+      max-width: 90ch;
+    }
+    .ct-spotlight p:last-child{ margin-bottom: 0; }
+
+    /* Image rail (horizontal snap rail) */
+    .ct-railWrap{
+      margin: 14px 0 16px;
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .ct-railHead{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .ct-railHead h2{
+      margin: 0;
+      font-size: 20px;
+    }
+    .ct-railHead p{
+      margin: 0;
+      font-size: 13px;
+      opacity: .8;
+    }
+    .ct-rail{
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(240px, 1fr);
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scroll-snap-type: x mandatory;
+    }
+    .ct-rail::-webkit-scrollbar{ height: 10px; }
+    .ct-railItem{
+      scroll-snap-align: start;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 22px rgba(0,0,0,.05);
+    }
+    .ct-railItem img{
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .ct-railCap{
+      padding: 10px 12px 12px;
+      font-size: 13px;
+      line-height: 1.45;
+      opacity: .92;
+      border-top: 1px solid rgba(0,0,0,.08);
+      background: rgba(0,0,0,.02);
+    }
+
+    /* Organ note */
+    .ct-organ{
+      margin: 14px 0 16px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+    .ct-organ h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    .ct-organ p{
+      margin: 0;
+      line-height: 1.7;
+      opacity: .92;
+      max-width: 92ch;
+    }
+
+    /* CTA */
+    .ct-cta{
+      text-align: center;
+      margin-top: 18px;
+      padding: 22px 18px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+    .ct-cta h2{
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .ct-cta p{
+      margin: 0 auto 16px;
+      max-width: 74ch;
+      line-height: 1.6;
+      opacity: .92;
+    }
+    .ct-cta a{
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,.20);
+      background: rgba(0,0,0,.06);
+      color: inherit;
+      font-weight: 900;
+    }
+    .ct-cta a:hover{ background: rgba(0,0,0,.10); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .ct-hero{ grid-template-columns: 1fr; }
+      .ct-path{ grid-template-columns: 1fr; }
+      .ct-spotlight{ grid-template-columns: 1fr; }
+      .ct-spotlight figure{
+        border-right: 0;
+        border-bottom: 1px solid rgba(0,0,0,.10);
+      }
+      .ct-rail{ grid-auto-columns: minmax(220px, 1fr); }
+      .ct-railItem img{ height: 240px; }
+      .ct-spotlight .art-frame{ width: min(100%, 520px); }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="ct-shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span aria-hidden="true">›</span>
+      <span data-i18n="churchTour.breadcrumb">Church Tour</span>
+    </nav>
+
+    <!-- Hero -->
+    <section class="ct-hero" aria-label="Church tour intro">
+      <div>
+        <h1 data-i18n="churchTour.title">The Church Tour</h1>
+        <p data-i18n="churchTour.intro">
+          The church tour is an integral part of the full experience and often serves as the starting point of the visit. 
+          Before ascending the tower, guests are invited to enter the prayer hall and become familiar with the spiritual and architectural heart of St. Nikolaus Church.
+<br><br>
+Visitors can take time to observe the interior architecture, its high vaulted ceilings, balanced proportions, and carefully guided light elements designed to create both clarity and reverence. 
+Sitting quietly on the wooden benches allows guests to pause, slow down, and experience the atmosphere of the space as it has been shaped over centuries.
+<br><br>
+The tour also offers moments for reflection on the artworks, religious symbols, and relics found throughout the church. 
+Each piece tells a story of faith, protection, and community life, helping visitors understand how the church interior and the tower together formed a place of worship, refuge, and identity for the city.
+        </p>
+      </div>
+
+      <figure class="ct-heroCard">
+        <!-- Replace with your real file -->
+        <img src="assets/img/church-tour/church-tour-hero.jpg" alt="Interior view of St. Nikolaus Church, shwoing the alter area and golden cross" />
+        <figcaption class="ct-heroCap" data-i18n="churchTour.heroCaption">
+          A calm introduction before the tower climb: light, space, and sacred art.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Guided path -->
+    <section class="ct-path" aria-label="Tour steps">
+      <article class="ct-step">
+        <div class="kicker" data-i18n="churchTour.step1Kicker">Observation</div>
+        <h2 data-i18n="churchTour.step1Title">Arrive and take in the nave</h2>
+        <p data-i18n="churchTour.step1Text">
+          The high vaults and long central aisle set the atmosphere. Visitors can orient themselves, notice the stained glass,
+          and experience how sound and silence behave inside the space.
+        </p>
+      </article>
+
+      <article class="ct-step">
+        <div class="kicker" data-i18n="churchTour.step2Kicker">Contemplation</div>
+        <h2 data-i18n="churchTour.step2Title">Artworks and devotional objects</h2>
+        <p data-i18n="churchTour.step2Text">
+          The tour highlights selected artworks and relics. Many pieces reflect Baroque devotion and local history,
+          shaped by centuries of faith, hardship, and restoration.
+        </p>
+      </article>
+
+      <article class="ct-step">
+        <div class="kicker" data-i18n="churchTour.step3Kicker">Understanding</div>
+        <h2 data-i18n="churchTour.step3Title">Connect the church to the tower story</h2>
+        <p data-i18n="churchTour.step3Text">
+          The interior is more than a beautiful hall: it explains why the tower mattered, connects the community,
+          craftsmanship and the rhythm of liturgy and music.
+        </p>
+      </article>
+    </section>
+
+    <!-- Artwork spotlight -->
+    <section class="ct-spotlight" aria-label="Artwork spotlight">
+      <figure>
+        <div class="art-frame">
+          <img src="assets/img/church-tour/alter-art.jpg" alt="Oldest artwork of Rosenheim,by Antonio Domenico Trivia, depicting Mary with the Christ Child, accompanied by St. Nicholas and St. Sebastian" />
+        </div>
+      </figure>
+
+      <div class="body">
+        <span class="label" data-i18n="churchTour.spotlightLabel">Spotlight</span>
+        <h2 data-i18n="churchTour.spotlightTitle">A historic altar artwork watching over the city</h2>
+        <p data-i18n="churchTour.spotlightText1">
+          The visitor will witness the oldest art work of Rosenheim, which is used as the current altarpiece. The historic work was produced in 1667 by Antonio Domenico Trivia who later became the court artist of Munich. 
+
+Behind the high altar hangs one of the oldest surviving artworks in Rosenheim. 
+Created in the early 17th century, the painting shows Mary with the Christ Child, accompanied by St. Nicholas and St. Sebastian, overlooking the city of Rosenheim below. 
+The artwork reflects the deep faith of the time and the belief in divine protection during an era marked by hardship, fire, and disease. 
+Despite many reconstructions of the church, this painting has remained in its place for centuries and continues to watch over the city.
+        </p>
+        <p data-i18n="churchTour.spotlightText2">
+          The artwork reflects the deep faith of its time and the hope for protection during eras shaped by hardship,
+          fire, and disease. Despite later reconstructions of the church, it has remained in its place for centuries.
+        </p>
+      </div>
+    </section>
+
+    <!-- Image rail -->
+    <section class="ct-railWrap" aria-label="Interior gallery">
+      <div class="ct-railHead">
+        <h2 data-i18n="churchTour.railTitle">Details inside the prayer hall</h2>
+      </div>
+
+      <div class="ct-rail">
+        <figure class="ct-railItem">
+          <img src="assets/img/church-tour/benches.jpg" alt="St. Nikolaus Church interior with benches and stained glass" />
+          <figcaption class="ct-railCap" data-i18n="churchTour.railCap1">
+            A quiet moment inside the prayer hall, where light, space, and faith meet.
+          </figcaption>
+        </figure>
+
+        <figure class="ct-railItem">
+          <img src="assets/img/church-tour/mary.jpg" alt="Mosaic of St. Nikolaus church, Rosenheim, depicting the enthroned Virgin Mary" />
+          <figcaption class="ct-railCap" data-i18n="churchTour.railCap2">
+            Mosaic depicting the enthroned Virgin Mary.
+          </figcaption>
+        </figure>
+
+        <figure class="ct-railItem">
+          <img src="assets/img/church-tour/art-2.jpg" alt="Reliquary bust of Saint Nikolaus" />
+          <figcaption class="ct-railCap" data-i18n="churchTour.railCap3">
+            Reliquary bust of Saint Nikolaus.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Organ note -->
+    <section class="ct-organ" aria-label="Organ note">
+      <h2 data-i18n="churchTour.organTitle">The organ and the two-level interior</h2>
+      <p data-i18n="churchTour.organText">
+        On the back side of the main prayer hall, the large organ is visible and mounted with the wall.
+        The interior is divided into two stories: the lower floor is dedicated to prayer and liturgy, while the upper level
+        accommodates musicians, singers, and the organ player.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="ct-cta" aria-label="Book a tour">
+      <h2 data-i18n="churchTour.ctaTitle">Feeling curious?</h2>
+      <p data-i18n="churchTour.ctaText">
+        Book a tour and experience the church interior before the tower climb. Available from Easter Sunday to the end of
+        October, every year.
+      </p>
+      <a href="book-tour.html" data-i18n="churchTour.ctaButton">Book Tour</a>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

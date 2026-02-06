@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="topView.metaTitle">The Top View | St. Nikolaus Tower Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Page-only styles (distinct layout vs Tower Tour page) -->
+  <style>
+    .view-shell { 
+        max-width: 980px; 
+        margin: 0 auto;
+        font-size: 1.10rem; 
+    }
+
+    .view-hero {
+      text-align: center;
+      margin: 18px 0 18px;
+    }
+
+    .view-hero h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    .view-hero p {
+      margin: 0 auto;
+      max-width: 78ch;
+    }
+
+    /* Hero media */
+    .view-hero-media {
+      margin: 18px 0 26px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .view-hero-media img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .view-hero-media figcaption {
+      padding: 10px 12px 12px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Two-column section: text + image */
+    .view-split {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: start;
+      margin: 26px 0 22px;
+    }
+
+    .view-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .view-card img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .view-card .cap {
+      padding: 10px 12px 12px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    .view-text p { margin: 0 0 12px; max-width: 80ch; }
+
+    /* Highlights grid */
+    .view-highlights {
+      margin: 18px 0 10px;
+    }
+
+    .view-highlights h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .highlight {
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+    }
+
+    .highlight h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    .highlight p {
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    /* Quote block */
+    .view-quote {
+      margin: 22px 0 18px;
+      padding: 14px 16px;
+      border-left: 6px solid rgba(0,0,0,0.35);
+      background: rgba(255,255,255,0.65);
+      border-radius: 16px;
+    }
+
+    .view-quote p { margin: 0 0 6px; font-style: italic; }
+    .view-quote cite { opacity: 0.8; font-size: 13px; }
+
+    /* Photo strip (horizontal scroll) */
+    .view-strip {
+      margin: 18px 0 24px;
+    }
+
+    .strip-track {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 8px 2px 12px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .strip-track figure {
+      margin: 0;
+      min-width: 320px;
+      max-width: 380px;
+      scroll-snap-align: start;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .strip-track img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .strip-track figcaption {
+      padding: 10px 12px 12px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .view-hero-media img { height: 340px; }
+      .view-split { grid-template-columns: 1fr; }
+      .highlight-grid { grid-template-columns: 1fr; }
+      .strip-track figure { min-width: 78vw; }
+    }
+
+    @media (max-width: 520px) {
+      .view-hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="page">
+    <section class="view-shell">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span aria-current="page" data-i18n="topView.breadcrumb">The Top View</span>
+      </nav>
+
+      <!-- Hero -->
+      <header class="view-hero">
+        <h1 data-i18n="topView.title">The Top View</h1>
+        <p data-i18n="topView.intro">
+          According to visitors and organizers, the top view of Rosenheim is the most compelling attraction.
+          It represents a marvelous bird’s-eye view of the beautifully organized city.
+        </p>
+      </header>
+
+      <!-- Hero image -->
+      <figure class="view-hero-media">
+        <img src="assets/img/top-view/top-view-hero.jpg" alt="Panoramic top view over Rosenheim from the top of the tower" loading="lazy" />
+        <figcaption data-i18n="topView.heroCaption">
+          A wide panorama over Rosenheim from the top level of St. Nikolaus Church tower..
+        </figcaption>
+      </figure>
+
+      <!-- Split section: visitor context + image -->
+      <section class="view-split" aria-label="Visitor context">
+        <div class="view-text">
+          <p data-i18n="topView.p1">
+            Most visitors come from Rosenheim and nearby towns. Many are used to living in one- to two-storey houses,
+            so viewing the city from a height comparable to ten storeys offers a completely new perspective.<br><br>
+          </p>
+          <p data-i18n="topView.p2">
+            On clear sunny days, the nearby Alps are often visible without any devices. Since there are no taller buildings nearby,
+            the view opens up widely and helps broaden the mind and thoughts.<br><br>
+            As mentioned in the Tower Tour section, the climb can be a bit challenging, with steep and narrow stairs. For many sport-loving visitors, this is part of the fun. 
+            After climbing ten floors, blood circulation improves, which helps sharpen the senses. This makes the wide view even more enjoyable. At this height, the air feels fresher and cleaner. 
+            Together, these effects create a memorable experience that many visitors would happily repeat. It is also a perfect place to take spectacular photos and surprise friends and family.
+          </p>
+        </div>
+
+        <figure class="view-card">
+          <img src="assets/img/top-view/window-view.jpg" alt="View of the city from old church window" loading="lazy" />
+          <figcaption class="cap" data-i18n="topView.splitCaption">
+            Through old traditional windows, one can experience the colorful outside view.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Highlights grid -->
+      <section class="view-highlights" aria-label="Top view highlights">
+        <h2 data-i18n="topView.highlightsTitle">What makes the top view special</h2>
+
+        <div class="highlight-grid">
+          <article class="highlight">
+            <h3 data-i18n="topView.highlights.alps.title">Alps on clear days</h3>
+            <p data-i18n="topView.highlights.alps.text">
+              On a clear sunny day, the Alps can be visible in the distance, making the view feel expansive and memorable.
+            </p>
+          </article>
+
+          <article class="highlight">
+            <h3 data-i18n="topView.highlights.roofs.title">Rooftops & city layout</h3>
+            <p data-i18n="topView.highlights.roofs.text">
+              Many houses have colored roofs and one-storey structures. This clearly organized and beautiful cityscape is a sight to behold from the top.
+            </p>
+          </article>
+
+          <article class="highlight">
+            <h3 data-i18n="topView.highlights.air.title">Fresh air & reward</h3>
+            <p data-i18n="topView.highlights.air.text">
+              After the climb, the open air at the top feels like a reward and refreshes the senses.
+            </p>
+          </article>
+
+          <article class="highlight">
+            <h3 data-i18n="topView.highlights.photos.title">Perfect for photos</h3>
+            <p data-i18n="topView.highlights.photos.text">
+              A great place to take spectacular, unique photos and share with friends and family.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Quote -->
+      <blockquote class="view-quote">
+        <p data-i18n="topView.quote">
+          “For many visitors, this is the most compelling attraction of the tour.”
+        </p>
+        <cite data-i18n="topView.quoteSource">— Visitors and organizers</cite>
+      </blockquote>
+
+      <!-- Photo strip -->
+      <section class="view-strip" aria-label="Top view photo strip">
+        <div class="strip-track">
+          <figure>
+            <img src="assets/img/top-view/side-view.jpg" alt="Top view through arched opening" loading="lazy" />
+            <figcaption data-i18n="topView.strip.cap1">
+              Top of the tower is build with wood and copper on top. This reduces weight and increases longevity.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/img/top-view/wood-floor.jpg" alt="Wooden platform in the top of the tower" loading="lazy" />
+            <figcaption data-i18n="topView.strip.cap2">
+              Wooden flooring improves safety, especially in wet weather.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/img/top-view/wood-roof.jpg" alt="Netting protecting the top area" loading="lazy" />
+            <figcaption data-i18n="topView.strip.cap3">
+              The roof is also made of wood with nice graphics.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Closing paragraph -->
+      <section class="view-text" aria-label="Closing text">
+        <p data-i18n="topView.outro">
+          After climbing through all floors and experiencing many attractions, the open and fresh top area feels truly rewarding. 
+          With sharper senses and fresh air, visitors often want to return again.
+        </p>
+      </section>
+
+      <!-- CTA (reuse your existing CTA component styles) -->
+      <section class="gallery-cta">
+        <p class="cta-text" data-i18n="cta.galleryText">Want to experience it in person? Book a guided tower tour.</p>
+        <p class="cta-note" data-i18n="cta.galleryNote">Available only from Easter Sunday to the end of October.</p>
+        <a href="book-tour.html" class="btn btn-primary" data-i18n="cta.galleryButton">Book Tour</a>
+      </section>
+
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

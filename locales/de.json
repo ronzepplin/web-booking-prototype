@@ -1,0 +1,923 @@
+{
+  "brand": {
+    "name": "St. Nikolaus Kirchturmführung"
+  },
+  "nav": {
+    "home": "Start",
+    "history": "Geschichte",
+    "gallery": "Galerie",
+    "book": "Turmführung buchen",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "dataProtection": "Datenschutz",
+    "terms": "AGB",
+    "safety": "Sicherheitshinweise",
+    "cookies": "Cookie-Richtlinie",
+    "contactTitle": "Kontakt",
+    "addressLabel": "Adresse:",
+    "addressValue": "Ludwigsplatz 3, 83022 Rosenheim",
+    "phoneLabel": "Telefonnummer:",
+    "phoneValue": "08031 21050",
+    "emailLabel": "E-Mail:",
+    "emailValue": "st-nikolaus.rosenheim[at]ebmuc.de",
+    "copyright": "© 2025 St. Nikolaus Pfarrei, Rosenheim. Alle Rechte vorbehalten.",
+    "note": "Demo-Projekt für einen Kurs. Es werden keine echten Zahlungen verarbeitet."
+  },
+  "page": {
+    "landingTitle": "Startseite (Platzhalter)",
+    "landingText": "Dies wird die Event-Startseite."
+  },
+  "history": {
+    "title": "Historische Fotografien der St.-Nikolaus-Kirche und des Kirchturms",
+    "eras": {
+      "1300_1500": "1300er",
+      "1700": "1500-1600er",
+      "1800": "1800er",
+      "1900": "1900er",
+      "1950_60": "1950er–60er",
+      "modern": "Moderne Zeit (ab 2000)"
+    },
+    "captions": {
+  "img_1350": "1350 - Älteste erhaltene Darstellung der gotischen Kirchenstruktur. Quelle: St.-Nikolaus-Kirche, Rosenheim, und Stadtarchiv Rosenheim.",
+  "img_1701_map": "Kupferstich von Michael Wening (1645-1718) mit Darstellung des barocken Rosenheims und der Lage der Kirche. Veröffentlicht 1701. Quelle: Stadtarchiv Rosenheim.",
+  "img_1701_engraving": "1701 - Kupferstich mit Darstellung der St.-Nikolaus-Kirche und ihrer Umgebung.",
+  "img_1655_merian": "Holzschnitt von Jost Amman nach Philipp Apian, veröffentlicht in Matthäus Merian d. Ä. Topographia Bavariae, zeigt die noch gotisch geprägte Bebauung Rosenheims nach dem großen Stadtbrand von 1641. Quelle: St. Nikolaus Kirche, Rosenheim.",
+  "img_1890_interior": "1890 - Innenansicht der St.-Nikolaus-Kirche. Quelle: St.-Nikolaus-Kirche, Rosenheim, Archiv.",
+  "img_late_1800s_exterior": "Spätes 19. Jahrhundert - Innenansicht aus dem Jahr 1890. Quelle: St.-Nikolaus-Kirche, Rosenheim, Archiv.",
+  "img_1912_market": "1912 - Der „Grüne Markt“ vor der Kirche. Quelle: Wikipedia.",
+  "img_1928_interior": "1928 - Innenansicht nach frühen Renovierungsmaßnahmen. Quelle: Stadtarchiv Rosenheim.",
+  "img_1954_renovation": "1954 - Umfassende Renovierungsarbeiten zur Stabilisierung der Turmstruktur. Quelle: Stadtarchiv Rosenheim.",
+  "img_1960_after": "Die kleinere Kuppel (links, 1954) wurde nach der Renovierung vergrößert (rechts, 1960); zudem wurde die Anzahl der Fenster auf zwei erhöht. Quelle: St.-Nikolaus-Kirche, Rosenheim, Archiv.",
+  "img_1880": "Quelle: Stadtarchiv Rosenheim.",
+  "img_renovation_dismantling": "Späte 1900er-Jahre - Sanierung: Abbau des Turms. Der Neubau vergrößerte die Kuppel. Quelle: Pfarrkirche St. Nikolaus, Rosenheim."
+
+},
+    "cta": {
+      "text": "Neugierig geworden? Buchen Sie eine Führung und erleben Sie die Geschichte der St.-Nikolaus-Kirche.",
+      "note": "Verfügbar nur vom Ostersonntag bis Ende Oktober, jedes Jahr.",
+      "button": "Führung buchen"
+    }
+  },
+  "book": {
+    "title": "Tour buchen",
+    "subtitle": "Preis & Verfügbarkeit",
+    "priceLine": "Erwachsene: 3,00 € pro Person · Kinder (bis 14 Jahre): 1,50 € pro Kind (inkl. MwSt.)",
+    "note1": "Einzelpersonen / kleine Gruppen: Jeden Samstag um 10:45 Uhr",
+    "note2": "Große Gruppen: Bitte kontaktieren Sie uns im Voraus",
+    "note3": "Verfügbarkeit: Vom Ostersonntag bis Ende Oktober (jährlich)",
+    "selectDate": "Besuchsdatum auswählen",
+    "dateLabel": "Datum",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "adults": "Anzahl erwachsener Besucher",
+    "children": "Anzahl der Kinder (bis 14 Jahre)",
+    "total": "Gesamtkosten (€)",
+    "adultHint": "Preis: 3,00 € pro Erwachsenem",
+    "childHint": "Preis: 1,50 € pro Kind",
+    "totalHint": "Summe wird automatisch aktualisiert",
+    "continue": "Weiter zur Zahlung",
+    "disclaimer": "Dies ist eine Demo-Buchung. Es werden keine echten Zahlungen verarbeitet."
+  },
+  "pay": {
+    "title": "Zahlung",
+    "summaryTitle": "Buchungsübersicht",
+    "nameLabel": "Name:",
+    "emailLabel": "E-Mail:",
+    "adultsLabel": "Anzahl Erwachsene:",
+    "childrenLabel": "Anzahl Kinder:",
+    "dateLabel": "Datum:",
+    "totalLabel": "Gesamtkosten:",
+    "cardTitle": "Mit Debit- oder Kreditkarte bezahlen",
+    "cardNumber": "Kartennummer",
+    "cardHolder": "Name des Karteninhabers",
+    "expiry": "Ablaufdatum",
+    "cvv": "CVV",
+    "termsText": "Ich habe die AGB gelesen und akzeptiert",
+    "complete": "Zahlung abschließen",
+    "demoNote": "Dies ist eine Demo-Zahlung. Es werden keine Kartendaten verarbeitet.",
+    "paypal": "Mit PayPal bezahlen"
+  },
+  "thanks": {
+    "breadcrumb": "Zahlungsbestätigung",
+    "title": "Vielen Dank für Ihre Zahlung.",
+    "subtitle": "Ihre Zahlung war erfolgreich und Ihre Buchung ist bestätigt.",
+    "emailNote": "Eine Bestätigungs-E-Mail wird Ihnen in Kürze zugesendet.",
+    "referenceLabel": "Buchungsreferenz:",
+    "summaryTitle": "Zusammenfassung",
+    "supportText": "Bei Fragen, Notfällen oder Stornierungen kontaktieren Sie uns bitte über das Kontaktformular.",
+    "contactBtn": "Kontakt",
+    "or": "Oder",
+    "officeTitle": "Sie können uns auch im Büro besuchen",
+    "officeName": "Pfarrbüro",
+    "officeAddress": "Ludwigsplatz 3, 83022 Rosenheim",
+    "officePhoneLabel": "Telefonnummer:",
+    "officePhoneValue": "08031 21050",
+    "officeEmailLabel": "E-Mail:",
+    "officeEmailValue": "st-nikolaus.rosenheim[at]ebmuc.de",
+    "hoursTitle": "Öffnungszeiten",
+    "hoursLine1": "Mo. - Fr. 9:00 bis 12:00",
+    "hoursLine2": "Dienstag und Donnerstag 14:00 bis 15:00"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Schreiben Sie uns eine Nachricht – wir melden uns so bald wie möglich.",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "message": "Ihre Nachricht",
+    "send": "Senden",
+    "demoNote": "Dies ist ein Demo-Kontaktformular. Es werden keine Nachrichten tatsächlich versendet.",
+    "success": "Vielen Dank! Ihre Nachricht wurde empfangen (Demo)."
+  },
+  
+  
+  "gallery": {
+    "title": "Galerie der St.-Nikolaus-Kirche und des Kirchturms",
+    "subtitle": "Entdecken Sie Highlights aus der Kirche, dem Turm und den Panoramablicken über Rosenheim.",
+    "filters": {
+      "all": "Alle",
+      "exterior": "Außenansicht",
+      "interior": "Innenraum",
+      "tower": "Turm",
+      "views": "Top-Ausblicke",
+      "bells": "Die Glocken"
+    },
+    "items": {
+      "exterior1": {
+        "title": "Außenansicht des Kirchturms der St.-Nikolaus-Kirche",
+        "caption": "Der Turm vom Boden aus fotografiert."
+      },
+      "exterior2": {
+        "title": "Kirchengebäude St. Nikolaus",
+        "caption": "Die Frontseite der St.-Nikolaus-Kirche."
+      },
+      "exterior3": {
+        "title": "Die barocke Turmhaube (\"Zwiebelhelm\")",
+        "caption": "Herangezoomte Ansicht der Turmhaube."
+      },
+      "interior1": {
+        "title": "Holztreppen zum Aufstieg in den Turm",
+        "caption": "Eine der vielen Treppen im Turm. Über diese Stufen gelangen Besucherinnen und Besucher bis nach oben."
+      },
+      "interior2": {
+        "title": "Baselbalg",
+        "caption": "Der hölzerne Blasebalg für die Kirchenorgel. Er liefert die Luft, die die Orgel zum Musizieren benötigt."
+      },
+      "interior3": {
+        "title": "Dachboden (Kirchendachstuhl)",
+        "caption": "Ein schönes Beispiel für Holzbaukunst – überwiegend aus Holz gefertigt, mit wenig Eisen."
+      },
+      "tower1": {
+        "title": "Steingravur im Dachboden",
+        "caption": "In Mittelhochdeutsch verfasst, erzählt diese Gravur die zeitliche Geschichte der Kirche und des Turms."
+      },
+      "tower2": {
+        "title": "Eine sehr alte Tür",
+        "caption": "Diese gusseiserne Tür stammt etwa aus dem 14. Jahrhundert und zählt zu den ältesten Objekten im Turm."
+      },
+      "tower3": {
+        "title": "Alte und renovierte Holztreppen",
+        "caption": "Diese Treppe führt in den Dachbodenbereich."
+      },
+      "views1": {
+        "title": "Turmfenster",
+        "caption": "Eines der vielen Fenster mit Blick auf die schöne Stadt Rosenheim."
+      },
+      "views2": {
+        "title": "Blick von oben",
+        "caption": "Aus einer Höhe wie bei einem zehnstöckigen Gebäude bietet dieser Höhepunkt einen beeindruckenden Rundblick über Rosenheim."
+      },
+      "views3": {
+        "title": "Wunderschöner Blick über Rosenheim",
+        "caption": "Die Turmspitze ist mit Netzen gesichert – zum Schutz vor Vögeln und zur Vermeidung von Unfällen."
+      },
+      "bells1": {
+        "title": "Die Dreifaltigkeitsglocke",
+        "caption": "Die größte Glocke im Turm, mit einem Gewicht von über 3 Tonnen. Gegossen von Czudnochowsky (Erding) – sie klingt am tiefsten."
+      },
+      "bells2": {
+        "title": "Der hölzerne Glockenstuhl",
+        "caption": "Der Holzrahmen sorgt für die nötige Elastizität und hilft, den Turm zu schützen."
+      },
+      "bells3": {
+        "title": "Die Christusglocke",
+        "caption": "Die zweitgrößte Glocke – benannt nach Jesus Christus."
+      }
+    }
+  },
+
+  "cta": {
+    "galleryText": "Möchten Sie es live erleben? Buchen Sie eine geführte Kirchturmführung.",
+    "galleryNote": "Nur verfügbar von Ostersonntag bis Ende Oktober.",
+    "galleryButton": "Tour buchen"
+  },
+
+  "tower": {
+    "metaTitle": "Die Turmführung | St.-Nikolaus-Kirchturmführung",
+    "breadcrumb": "Die Turmführung",
+    "title": "Die Turmführung",
+    "intro": "Die Turmführung bietet ein spannendes Aufstiegserlebnis über verschiedene Ebenen bis ganz nach oben – zur Turmspitze. Der Turm besteht aus 10 Stockwerken. Jede Etage vermittelt eigene Eindrücke und Erlebnisse.",
+    "facts": {
+      "floors": {
+        "k": "Stockwerke",
+        "v": "10"
+      },
+      "difficulty": {
+        "k": "Schwierigkeit",
+        "v": "Leicht–Mittel"
+      },
+      "experience": {
+        "k": "Erlebnis",
+        "v": "Treppen, alte Relikte, Glocken, Ausblick"
+      },
+      "tip": {
+        "k": "Tipp",
+        "v": "Hände frei, leichter Rucksack, eng anliegende Kleidung"
+      }
+    },
+    "steps": {
+      "step1": {
+        "title": "Der Aufstieg beginnt",
+        "text": "Die Tour startet mit klassischen, gewendelten Metalltreppen. Doch je weiter man nach oben steigt, desto häufiger sieht man Holztreppen. Diese bestehen aus einer Mischung aus älterem Holz und neuem Holz – ein Ergebnis jüngerer Renovierungen. Der Wechsel zu Holztreppen dient vor allem dazu, das Gesamtgewicht des Turms zu reduzieren.",
+        "cap1": "In den unteren Bereichen findet man klassische Metalltreppen.",
+        "cap2": "Weiter oben erscheinen Holztreppen als Teil von Renovierungen."
+      },
+      "step2": {
+        "title": "Schmale Treppen und Symbolik",
+        "text": "In den unteren Stockwerken (2–4) sind die Treppen breiter. Je höher wir steigen, desto schmaler werden sie. Wenn man die Symbole genau betrachtet, ist das kein Zufall. Die schmalen Treppen erinnern an den Bibelvers: „Geht durch die enge Pforte.“ (Matthäus 7,13). Auch die alte gusseiserne Tür aus dem 14. Jahrhundert wirkt wie eine ähnliche Erinnerung.",
+        "cap1": "Unterwegs: historische Elemente, die mit früheren Jahrhunderten verbinden.",
+        "cap2": "Holzbaukunst im Dachbodenbereich."
+      },
+      "step3": {
+        "title": "Obere Stockwerke: Attraktionen in den oberen Etagen",
+        "text": "Während wir weiter hinaufsteigen, begegnen wir auf verschiedenen Etagen besonderen Stationen: dem Baselbalg, dem Dachboden, den Glocken und schließlich dem Top-Ausblick. Zur Sicherheit der Besucher wurden moderne Technologien umgesetzt, darunter ein zeitgemäßes Brandschutzsystem. Zudem ist eine moderne Luftreinigungsanlage zu sehen, die die Luft nach kirchlichen Ritualen reinigt, bei denen Rauch entsteht.",
+        "cap1": "Baselbalg: Der hölzerne Blasebalg, der die Orgel mit Luft versorgt.",
+        "cap2": "Der hölzerne Glockenstuhl sorgt für Elastizität und schützt die Turmkonstruktion."
+      }
+    },
+    "safety": {
+      "title": "Sicherheit und Komfort",
+      "text": "Bitte steigen Sie vorsichtig, halten Sie möglichst beide Hände frei und seien Sie auf schmalen Treppen besonders achtsam – vor allem, wenn Sie einen Rucksack tragen. Es wird empfohlen, eng anliegende Kleidung zu tragen. Weite Kleidung und offene, große Jackentaschen können an Treppen oder Geländern hängen bleiben."
+    },
+    "outro1": "Der Ausblick über Rosenheim und die frische Luft in der 10. Etage fühlen sich wie eine Belohnung an. Die Mühe der letzten Stufen zeigt: Man muss sich das Ziel ein Stück weit verdienen. Ganz oben bietet der Turm saubere, frische Luft und nahezu einen 360-Grad-Blick über Rosenheim – einer der großen Höhepunkte der Führung.",
+    "outro2": "Die frühen Kirchenbauer waren äußerst kluge Menschen. Ihr Wissen und ihre Handwerkskunst wurden über Generationen weitergegeben. Obwohl die Kirche mehrfach renoviert wurde, folgten die nachfolgenden Baumeister respektvoll den bewährten Praktiken der Älteren. Das ist etwas, das man wirklich einmal aus erster Hand erleben sollte."
+  },
+
+
+
+  "topView": {
+    "metaTitle": "Der Top-Ausblick | St.-Nikolaus-Kirchturmführung",
+    "breadcrumb": "Der Top-Ausblick",
+    "title": "Der Top-Ausblick",
+    "intro": "Laut Besucherinnen, Besuchern und Organisatoren ist der Ausblick über Rosenheim die eindrucksvollste Attraktion. Er bietet einen wunderbaren Blick aus der Vogelperspektive auf die schön geordnete Stadt.",
+    "heroCaption": "Ein weites Panorama über Rosenheim von der obersten Ebene des Kirchturms der St.-Nikolaus-Kirche.",
+    "p1": "Die meisten Besucherinnen und Besucher kommen aus Rosenheim und den umliegenden Orten. Viele sind es gewohnt, in ein- bis zweistöckigen Häusern zu wohnen – deshalb bietet der Blick aus einer Höhe, die etwa einem zehnstöckigen Gebäude entspricht, eine völlig neue Perspektive.",
+    "p2": "An klaren, sonnigen Tagen sind die nahe gelegenen Alpen oft ohne Hilfsmittel zu sehen. Da es in der Umgebung keine höheren Gebäude gibt, öffnet sich der Blick weit und hilft, Gedanken und Geist zu weiten.\n\nWie im Abschnitt „Die Turmführung“ beschrieben, kann der Aufstieg mit steilen und schmalen Treppen etwas anspruchsvoll sein. Für viele sportliche Besucherinnen und Besucher gehört genau das zum Erlebnis. Nach zehn Stockwerken wird der Kreislauf aktiviert, die Sinne werden wacher – und der weite Ausblick lässt sich noch intensiver genießen. In dieser Höhe wirkt die Luft frischer und sauberer. Diese Kombination macht den Besuch so eindrucksvoll, dass viele gerne wiederkommen. Außerdem ist es ein idealer Ort für spektakuläre Fotos, die man mit Freunden und Familie teilen kann.",
+    "splitCaption": "Durch alte, traditionelle Fenster kann man die farbenfrohe Aussicht nach draußen erleben.",
+    "highlightsTitle": "Was den Top-Ausblick besonders macht",
+    "highlights": {
+      "alps": {
+        "title": "Alpen an klaren Tagen",
+        "text": "An einem klaren, sonnigen Tag sind die Alpen oft in der Ferne sichtbar – das macht den Ausblick weit, beeindruckend und unvergesslich."
+      },
+      "roofs": {
+        "title": "Dächer und Stadtbild",
+        "text": "Viele Häuser haben farbige Dächer und meist nur ein Stockwerk. Von oben wirkt das Stadtbild besonders geordnet und schön."
+      },
+      "air": {
+        "title": "Frische Luft und Belohnung",
+        "text": "Nach dem Aufstieg fühlt sich die offene Luft oben wie eine Belohnung an und erfrischt die Sinne."
+      },
+      "photos": {
+        "title": "Perfekt für Fotos",
+        "text": "Ein idealer Ort für spektakuläre, einzigartige Fotos zum Teilen mit Freunden und Familie."
+      }
+    },
+    "quote": "„Für viele Besucherinnen und Besucher ist dies die eindrucksvollste Attraktion der Führung.“",
+    "quoteSource": "— Besucherinnen, Besucher und Organisatoren",
+    "strip": {
+      "cap1": "Der obere Teil des Turms ist aus Holz gebaut und oben mit Kupfer versehen. Das reduziert das Gewicht und erhöht die Langlebigkeit.",
+      "cap2": "Holzböden verbessern die Sicherheit – besonders bei nassem Wetter.",
+      "cap3": "Auch das Dach ist aus Holz gefertigt und mit schönen Grafiken gestaltet."
+    },
+    "outro": "Nach dem Aufstieg durch alle Stockwerke und den vielen Stationen fühlt sich der offene, frische Bereich ganz oben wirklich belohnend an. Mit wachen Sinnen und frischer Luft möchten viele Besucherinnen und Besucher gerne wiederkommen."
+  },
+
+
+  
+  "bells": {
+    "metaTitle": "Die Glocken | St. Nikolaus Kirchturmführung",
+    "breadcrumb": "Die Glocken",
+
+    "title": "Die Glocken",
+    "intro": "Die Glocken gehören zu den interessantesten Elementen der Kirchturmführung. Insgesamt gibt es 7 Glocken. Sie befinden sich im 9. Stockwerk. Sie werden von elektronischen Motoren betrieben, die mithilfe einer Software so programmiert werden, dass der gewünschte Rhythmus entsteht. Alle Glocken können einzeln oder gemeinsam gespielt werden, um einen schönen, rhythmischen Klang zu erzeugen. Die kleinste Glocke, die Sterbeglocke mit dem höchsten Ton (fs²), ist zugleich die älteste Glocke. Sie wurde 1606 von Bartholomeus Wengle in Augsburg gegossen. Die anderen 6 Glocken wurden 1947 von Czudnochowsky in Erding gegossen. Die größte Glocke mit dem tiefsten Ton (b⁰), die Dreifaltigkeitsglocke (Trinity Bell), wiegt 3.100 Kilogramm.",
+
+    "kpi1Label": "Glockenbestand",
+    "kpi1Value": "7 Glocken",
+    "kpi1Sub": "Im 9. Stockwerk",
+
+    "kpi2Label": "Größte Glocke",
+    "kpi2Value": "Dreifaltigkeitsglocke",
+    "kpi2Sub": "Gewicht 62 Zentner (3.100 kg) · Gegossen 1947",
+
+    "kpi3Label": "Älteste Glocke",
+    "kpi3Value": "Sterbeglocke",
+    "kpi3Sub": "Gewicht 3 Zentner (150 kg) · Gegossen 1606",
+
+    "heroCap1": "Dreifaltigkeitsglocke und die Glockenstube: Holzbalken, kontrollierte Mechanik und sorgfältig ausbalancierte Bewegung.",
+
+   
+  "founderLabel": "Gießer",
+  "yearWeightLabel": "Jahr / Gewicht",
+  "inscriptionLabel": "Glockeninschrift",
+
+  "bell1": {
+    "title": "Dreifaltigkeitsglocke",
+    "inscription": "„Mich goß Czudnochowsky, J. Bachmairs Nachfolger zu Erding“ / „Mit meiner Stimm lob ich Gott, den Dreieinen“"
+  },
+
+
+
+
+
+
+
+
+    "story1Title": "Warum Elastizität wichtig ist",
+    "story1Text": "Durch einen Renovierungsfehler in der Vergangenheit wurde der hölzerne Glockenstuhl entfernt und durch einen Betonglockenstuhl ersetzt. Dadurch fehlte die Elastizität, die für die Glockenbewegung notwendig ist. Glocken sind schwer und ihre Schwingung überträgt Kräfte auf den Turm. Ein hölzerner Glockenstuhl sorgt für Elastizität und reduziert die Belastung des Mauerwerks. Wenn starre Materialien wie Beton verwendet werden, können sie die Schwingungen nicht ausreichend aufnehmen – es kommt eher zu Rissen in den Turmwänden.",
+    "story1Caption": "Elastische Holzrahmen nehmen Bewegung auf und reduzieren die Belastung des Mauerwerks.",
+
+    "story2Title": "Wiederaufbau (1950-1951)",
+    "story2Text": "Nach einigen Jahren von Schwingungen und zunehmender Bauschädigung fand eine weitere Renovierung statt. Der obere Turmteil (der besonders von den Vibrationen betroffen war) wurde abgetragen und neu aufgebaut. Der hölzerne Glockenstuhl wurde anstelle von Beton wiederhergestellt, um die notwendige Elastizität zu gewährleisten. Dies ist ein anschauliches Beispiel dafür, dass Holz unter bestimmten Bedingungen starren Materialien überlegen sein kann.",
+    "story2Caption": "Der Turm wurde abgetragen und neu aufgebaut, um Sicherheit und Harmonie wiederherzustellen.",
+    "noteTitle": "Die Entdeckung der Reliquie",
+"noteP1": "Während des Wiederaufbaus des Turms im Jahr 1950 entdeckten Arbeiter eine versiegelte Metallkassette, die im Bauwerk verborgen war. Die Kassette, datiert auf das Jahr 1784, enthielt eine Reliquie eines unbekannten Märtyrers sowie handschriftliche Segens- und Schutzgebete für die Kirche und die Stadt.",
+"noteP2": "Nach Abschluss der Bauarbeiten wurden die Inhalte gemeinsam mit zeitgenössischen Dokumenten aus dem Jahr 1950 wieder in den Turm eingesetzt. Damit wurde eine jahrhundertealte Tradition fortgeführt, den Bau durch Glauben und Erinnerung zu schützen.",
+
+
+    "ctaTitle": "Neugierig geworden?",
+    "ctaText": "Buche eine Tour und erlebe die Glockenstube aus nächster Nähe - Klang, Ingenieurskunst und Geschichte hoch über der Stadt. Verfügbar von Ostersonntag bis Ende Oktober, jedes Jahr.",
+    "ctaButton": "Tour buchen"
+  },
+
+  
+  "baselbalg": {
+    "metaTitle": "Baselbalg (Balg) | St. Nikolaus Kirchturmführung",
+    "breadcrumb": "Baselbalg",
+
+    "title": "Baselbalg (der Balg)",
+
+    "intro": "Die Kirche St. Nikolaus beherbergt eine große und kraftvolle Pfeifenorgel, deren Klang vollständig von einer kontinuierlichen und präzise regulierten Luftzufuhr abhängt. Diese Luft wird durch den Baselbalg (Balg) erzeugt – eine traditionelle Holzkonstruktion, die das stille Fundament der Orgelstimme bildet.\n\nIm Gegensatz zu modernen elektrischen Systemen arbeitet der Baselbalg mit sorgfältig konstruierten Holzlagen, die sich langsam heben und senken. Dabei wird die Luft mit konstantem Druck gespeichert und freigegeben. Diese ruhige, rhythmische Bewegung sorgt dafür, dass jede Pfeife gleichmäßig anspricht und sowohl Tonstabilität als auch klangliche Wärme erhalten bleiben.\n\nWährend der Turmführung sichtbar, bietet der Baselbalg einen seltenen Einblick in die historische Orgelbaukunst und erinnert daran, dass die beeindruckende Klangfülle der Orgel durch ein leises, nahezu unsichtbares System im Hintergrund ermöglicht wird.",
+
+    "quickTitle": "Kurzinfos",
+
+    "tag1": "Orgel-Luftversorgung",
+    "tag2": "Traditionelles Holz",
+    "tag3": "Leise Mechanik",
+
+    "kv1Label": "Standort",
+    "kv1Value": "Etwa auf der 3. Ebene des Turms",
+
+    "kv2Label": "Aufbau",
+    "kv2Value": "Vier übereinanderliegende Holzlagen",
+
+    "kv3Label": "Funktion",
+    "kv3Value": "Stabile Luftzufuhr für Orgelpfeifen",
+
+    "heroCaption": "Die Orgel von St. Nikolaus.",
+
+    "s1Title": "1) Die Funktion des Baselbalgs",
+    "s1Text": "Der Baselbalg stellt eine gleichmäßige und konstante Luftzufuhr sicher, damit die Orgel klar und ausgewogen klingt. Ohne diese stabile Luftversorgung würden Tonhöhe und Klangbild unruhig und ungleichmäßig werden.",
+
+    "s2Title": "2) Aus Holz gebaut – für Stille konstruiert",
+    "s2Text": "Das System besteht fast vollständig aus Holz und setzt sich aus vier übereinanderliegenden Lagen zusammen. Diese bewegen sich langsam und nahezu geräuschlos auf und ab, um die für die Orgelpfeifen benötigte Luft zu erzeugen. Diese sanfte Mechanik bewahrt den traditionellen Klangcharakter der Orgel.",
+
+    "s3Title": "3) Orgelkonzerte und Gemeinschaft",
+    "s3Text": "Die Kirche St. Nikolaus veranstaltet regelmäßig Orgelkonzerte. Die Musik wird von einem erfahrenen Ensemble aus rund 20 Musikerinnen, Musikern und Sängerinnen und Sängern aufgeführt. Das Repertoire umfasst klassische Werke (insbesondere von J. S. Bach), Chorwerke des 16. und 17. Jahrhunderts sowie zeitgenössische geistliche Musik. Jeden Samstag um 12:00 Uhr findet ein Orgelkonzert statt. Der Eintritt ist frei, Spenden sind jedoch willkommen und werden sehr geschätzt.",
+
+    "s4Title": "4) Orgelbau und Handwerkskunst",
+    "s4Text": "Die große und eindrucksvolle Orgel wurde von der Firma Reil aus den Niederlanden gefertigt und am 6. Dezember 2009 (Nikolaustag) in der Kirche installiert. Seitdem ist ihr Klang ein fester Bestandteil der Liturgie. Die Truhenorgel im Chorraum wurde von der deutschen Firma Linder aus Nußdorf am Inn gebaut.",
+
+    "quoteTitle": "Ein leises System mit großer Wirkung",
+    "quoteText": "Der Baselbalg ist weder laut noch auffällig, doch seine Wirkung ist entscheidend für den Klang der Orgel. Seine stetige, ruhige Bewegung zeigt, dass wahre Handwerkskunst oft im Hintergrund wirkt.",
+
+    "ctaTitle": "Neugierig geworden?",
+    "ctaText": "Buchen Sie eine Führung und entdecken Sie die verborgene Technik, die die Orgel zum Klingen bringt. Verfügbar von Ostersonntag bis Ende Oktober – jedes Jahr.",
+    "ctaButton": "Tour buchen"
+  },
+
+
+  
+  "churchTour": {
+    "metaTitle": "Kirchenführung | St. Nikolaus Kirchturmführung",
+    "breadcrumb": "Kirchenführung",
+    "title": "Die Kirchenführung",
+
+    "intro": "Die Kirchenführung ist ein wesentlicher Teil des Gesamterlebnisses und oft der Einstieg in den Besuch.\nBevor es hinauf in den Turm geht, betreten die Gäste den Gebetsraum und lernen das spirituelle und architektonische Zentrum der Kirche St. Nikolaus kennen.\n\nBesucherinnen und Besucher können sich Zeit nehmen, die Innenarchitektur zu betrachten: die hohen Gewölbe, die ausgewogenen Proportionen und das gezielt geführte Licht – Elemente, die Klarheit und Ehrfurcht zugleich schaffen.\nWer auf den Holzbänken ruhig Platz nimmt, kann innehalten, langsamer werden und die Atmosphäre spüren, wie sie über Jahrhunderte gewachsen ist.\n\nDie Führung eröffnet außerdem Momente der Betrachtung zu Kunstwerken, religiösen Symbolen und Reliquien im Kirchenraum.\nJedes Stück erzählt von Glaube, Schutz und Gemeinschaft und hilft zu verstehen, wie Kirchenraum und Turm zusammen einen Ort des Gottesdienstes, der Zuflucht und der Identität für die Stadt bilden.",
+
+    "heroCaption": "Ein ruhiger Einstieg vor dem Aufstieg: Licht, Raum und sakrale Kunst.",
+
+    "step1Kicker": "Beobachten",
+    "step1Title": "Ankommen und das Langhaus wahrnehmen",
+    "step1Text": "Hohe Gewölbe und der lange Mittelgang prägen die Stimmung. Besucher können sich orientieren, die Fenster betrachten und erleben, wie Klang und Stille im Raum wirken.",
+
+    "step2Kicker": "Betrachten",
+    "step2Title": "Kunstwerke und Andachtsobjekte",
+    "step2Text": "Die Führung lenkt den Blick auf ausgewählte Kunstwerke und Reliquien. Viele Stücke spiegeln barocke Frömmigkeit und lokale Geschichte wider – geprägt von Jahrhunderten des Glaubens, von Krisen und von Wiederaufbau.",
+
+    "step3Kicker": "Verstehen",
+    "step3Title": "Kirchenraum und Turmgeschichte verbinden",
+    "step3Text": "Der Innenraum ist mehr als ein schöner Saal: Er erklärt, warum der Turm wichtig war, und verbindet Gemeinschaft, Handwerk sowie den Rhythmus von Liturgie und Musik.",
+
+    "spotlightLabel": "Im Fokus",
+    "spotlightTitle": "Ein historisches Altarbild, das über die Stadt wacht",
+    "spotlightText1": "Besucherinnen und Besucher sehen eines der ältesten Kunstwerke Rosenheims, das heute als Altarbild genutzt wird. Das historische Werk entstand 1667 durch Antonio Domenico Trivia, der später Hofkünstler in München wurde.\n\nHinter dem Hochaltar hängt eines der ältesten erhaltenen Kunstwerke in Rosenheim.\nDas Gemälde aus dem frühen 17. Jahrhundert zeigt Maria mit dem Jesuskind, begleitet von St. Nikolaus und St. Sebastian – mit Blick auf Rosenheim.\nEs spiegelt den tiefen Glauben seiner Zeit und die Hoffnung auf göttlichen Schutz in Epochen wider, die von Not, Feuer und Krankheit geprägt waren.\nTrotz vieler Umbauten der Kirche blieb das Bild über Jahrhunderte an seinem Platz und scheint bis heute über die Stadt zu wachen.",
+    "spotlightText2": "Das Bild steht für den Glauben seiner Zeit und den Wunsch nach Schutz in Epochen voller Not, Feuer und Krankheit. Trotz späterer Umbauten der Kirche blieb es über Jahrhunderte an seinem Platz.",
+
+    "railTitle": "Details im Gebetsraum",
+    "railCap1": "Ein ruhiger Moment im Gebetsraum, in dem Licht, Raum und Glaube zusammenkommen.",
+    "railCap2": "Mosaik mit der thronenden Jungfrau Maria.",
+    "railCap3": "Reliquienbüste des Heiligen Nikolaus.",
+
+    "organTitle": "Die Orgel und der zweigeschossige Innenraum",
+    "organText": "Auf der Rückseite des Gebetsraums ist die große Orgel sichtbar und an der Wand montiert.\nDer Innenraum ist zweigeschossig: Das Erdgeschoss dient Gebet und Liturgie, während die Empore den Musikerinnen und Musikern, dem Chor und dem Orgelspieler Platz bietet.",
+
+    "ctaTitle": "Neugierig geworden?",
+    "ctaText": "Buchen Sie eine Führung und erleben Sie zunächst den Kirchenraum, bevor es hinauf in den Turm geht. Verfügbar von Ostersonntag bis Ende Oktober – jedes Jahr.",
+    "ctaButton": "Tour buchen"
+  },
+
+
+
+  
+  "home": {
+    "metaTitle": "St. Nikolaus Kirchturmführung",
+    "title": "Willkommen zur St.-Nikolaus-Kirchturmführung",
+    "subtitle": "Entdecken Sie den Turm, die Glocken, verborgene Räume und den Panoramablick über Rosenheim.",
+    "experienceTitle": "Was Sie erleben werden",
+    "cards": {
+      "tower": {
+        "title": "Die Turmführung",
+        "text": "Erleben Sie den historischen Turm."
+      },
+      "view": {
+        "title": "Aussicht",
+        "text": "Ein Beeindruckender Blick."
+      },
+      "attic": {
+        "title": "Dachboden",
+        "text": "Ein eindrucksvolles Holzbaukunst."
+      },
+      "bells": {
+        "title": "Die Glocken",
+        "text": "7 Glocken, die gemeinsam erklingen."
+      },
+      "baselbag": {
+        "title": "Baselbalg",
+        "text": "Der hölzerne Blasebalg."
+      },
+      "church": {
+        "title": "Kirchenführung",
+        "text": "Eindrucksvoller Kirchenraum."
+      }
+    },
+    "bookCta": {
+      "text": "Sie sind herzlich eingeladen, das Erlebnis vor Ort zu entdecken.",
+      "note": "Von April bis Oktober jeden Samstag um 10:45 Uhr. Bitte lesen Sie die Sicherheitshinweise.",
+      "button": "Tour buchen",
+      "safetyLink": "Bitte Sicherheitshinweise lesen"
+    },
+
+
+  "safety": {
+    "title": "Bitte lesen Sie unsere Sicherheitshinweise",
+    "text": "Zu Ihrer Sicherheit und Ihrem Komfort bitten wir alle Besucher, vor der Turmführung die Sicherheitshinweise zu lesen.",
+    "link": "Sicherheitshinweise ansehen"
+  },
+
+
+
+
+
+    "team": {
+      "title": "Lernen Sie unsere Tourguides kennen",
+      "text": "Unsere Turmführungen werden von engagierten Ehrenamtlichen geleitet, die ihr Wissen und ihre Begeisterung seit vielen Jahren teilen.",
+      "button": "Kontakt"
+    },
+    "news": {
+      "title": "Neuigkeiten & Veranstaltungen",
+      "item1": "Blogbeitrag: Ankündigung: Glockenkonzert",
+      "item2": "Wie Renovierung Geschichte verändert",
+      "item3": "Sicherheitshinweise",
+      "item4": "Ausblick: Pläne für 2026",
+      "item5": "Unsere Kooperationsveranstaltungen im Überblick"
+    }
+  },
+
+
+  
+  "impressum": {
+    "metaTitle": "Impressum | St. Nikolaus Kirchturmführung",
+    "title": "Impressum",
+    "subtitle": "Angaben gemäß § 5 Telemediengesetz (TMG)",
+
+    "operatorTitle": "Betreiber der Website",
+    "operatorText": "St. Nikolaus Kirchengemeinde (Demo-Projekt)\nMusterstraße 1\n83022 Rosenheim\nDeutschland",
+
+    "contactTitle": "Kontakt",
+    "contactText": "Telefon: +49 (0) 000 000000\nE-Mail: info@example.com",
+
+    "representedTitle": "Vertreten durch",
+    "representedText": "Pfarrverwaltung St. Nikolaus (Beispielangaben).",
+
+    "responsibleTitle": "Verantwortlich für den Inhalt",
+    "responsibleText": "Max Mustermann\nMusterstraße 1\n83022 Rosenheim\nDeutschland",
+
+    "disclaimerTitle": "Haftungsausschluss",
+    "disclaimerText": "Diese Website ist ein Demo-Projekt, das im Rahmen eines Hochschulkurses erstellt wurde. Alle hier bereitgestellten Informationen dienen ausschließlich Demonstrationszwecken. Es werden keine echten Buchungen, Zahlungen oder kommerziellen Dienstleistungen über diese Website angeboten.",
+
+    "externalLinksText": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+  },
+
+  
+  "privacy": {
+    "metaTitle": "Datenschutz | St. Nikolaus Kirchturmführung",
+    "title": "Datenschutz",
+    "subtitle": "Datenschutzerklärung und Informationen zum Umgang mit personenbezogenen Daten (Demo-Projekt).",
+
+    "overviewTitle": "1. Überblick",
+    "overviewText": "Diese Website ist ein Demo-Projekt, das im Rahmen eines Hochschulkurses erstellt wurde. Es handelt sich nicht um die offizielle Website einer realen Organisation. Alle auf dieser Website dargestellten Formulare, Buchungen oder Zahlungen sind simuliert und führen zu keinen echten Transaktionen.",
+
+    "controllerTitle": "2. Verantwortliche Stelle",
+    "controllerText": "St. Nikolaus Kirchengemeinde (Demo-Projekt)\nMusterstraße 1\n83022 Rosenheim\nDeutschland\nE-Mail: info@example.com",
+
+    "dataTypesTitle": "3. Welche Daten wir verarbeiten",
+    "dataTypesText": "Je nach Nutzung dieser Website können folgende Kategorien personenbezogener Daten verarbeitet werden:",
+    "dataTypes": {
+      "item1": "Technische Daten (z. B. Browsertyp, Betriebssystem, Zeitpunkt des Zugriffs).",
+      "item2": "Protokolldaten (z. B. IP-Adresse in Server-Logs, sofern dies durch die Hosting-Umgebung erfolgt).",
+      "item3": "Daten, die Sie in Formularen angeben (z. B. Name und E-Mail-Adresse), sofern Sie ein Formular absenden."
+    },
+
+    "purposeTitle": "4. Zweck und Rechtsgrundlage",
+    "purposeText": "Die Verarbeitung personenbezogener Daten erfolgt ausschließlich zum Betrieb dieser Website und zur Beantwortung von Anfragen. Rechtsgrundlage ist, soweit anwendbar, Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website) sowie Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen) im Rahmen der simulierten Buchungs- oder Kontaktabläufe.",
+
+    "cookiesTitle": "5. Cookies und Local Storage",
+    "cookiesText": "Diese Website kann Cookies oder Local Storage verwenden, um Spracheinstellungen oder Nutzereingaben aus Gründen der Benutzerfreundlichkeit zu speichern. Sie können Cookies und Website-Daten jederzeit in den Einstellungen Ihres Browsers löschen.",
+
+    "thirdPartiesTitle": "6. Einbindung von Drittanbietern",
+    "thirdPartiesText": "Dieses Demo-Projekt ist so konzipiert, dass es ohne Tracking durch Drittanbieter funktioniert. Sollten künftig externe Dienste (z. B. Schriftarten, Karten oder eingebettete Medien) eingebunden werden, können diese personenbezogene Daten (z. B. IP-Adresse) verarbeiten. In diesem Fall ist diese Datenschutzerklärung entsprechend anzupassen.",
+
+    "retentionTitle": "7. Speicherdauer",
+    "retentionText": "Personenbezogene Daten werden nur so lange gespeichert, wie dies für die genannten Zwecke erforderlich ist. Im Rahmen dieses Demo-Projekts ist keine dauerhafte Speicherung von Formulardaten vorgesehen.",
+
+    "rightsTitle": "8. Rechte der betroffenen Personen",
+    "rightsText": "Sofern personenbezogene Daten verarbeitet werden, haben Sie gemäß DSGVO insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie das Recht auf Widerspruch. Zudem haben Sie das Recht, sich bei einer zuständigen Aufsichtsbehörde zu beschweren.",
+
+    "securityTitle": "9. Datensicherheit",
+    "securityText": "Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz dieser Website. Dennoch können Datenübertragungen im Internet (z. B. per E-Mail) Sicherheitslücken aufweisen. Ein vollständiger Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
+
+    "changesTitle": "10. Änderungen dieser Datenschutzerklärung",
+    "changesText": "Diese Datenschutzerklärung kann angepasst werden, um Änderungen an diesem Demo-Projekt abzubilden. Die jeweils aktuelle Version ist auf dieser Seite veröffentlicht."
+  },
+
+
+
+
+
+  
+  "terms": {
+    "metaTitle": "Allgemeine Geschäftsbedingungen | St. Nikolaus Kirchturmführung",
+    "title": "Allgemeine Geschäftsbedingungen",
+    "subtitle": "Allgemeine Bedingungen für die Nutzung dieser Demo-Website und der dargestellten simulierten Leistungen.",
+
+    "scopeTitle": "1. Geltungsbereich",
+    "scopeText": "Diese Allgemeinen Geschäftsbedingungen gelten für die Nutzung dieser Website sowie für alle darauf bereitgestellten Inhalte. Diese Website ist ein Demo-Projekt, das im Rahmen eines Hochschulkurses erstellt wurde, und stellt kein rechtlich bindendes Angebot dar.",
+
+    "servicesTitle": "2. Leistungen",
+    "servicesText": "Die Website informiert über eine fiktive Kirchturmführung und damit verbundene Aktivitäten. Sämtliche dargestellten Buchungs-, Zahlungs- oder Kontaktfunktionen sind simuliert und führen zu keinem tatsächlichen Vertragsverhältnis.",
+
+    "bookingsTitle": "3. Buchungen und Zahlungen",
+    "bookingsText": "Alle auf dieser Website dargestellten Buchungen und Zahlungen sind Bestandteil einer Simulation. Es werden keine echten Reservierungen vorgenommen und keine Zahlungen verarbeitet oder eingezogen.",
+
+    "liabilityTitle": "4. Haftung",
+    "liabilityText": "Der Betreiber übernimmt keine Haftung für die Richtigkeit, Vollständigkeit oder Aktualität der bereitgestellten Inhalte. Die Nutzung der Website erfolgt auf eigene Verantwortung.",
+
+    "externalLinksTitle": "5. Externe Links",
+    "externalLinksText": "Diese Website kann Links zu externen Websites enthalten. Auf die Inhalte dieser externen Seiten haben wir keinen Einfluss und übernehmen daher keine Verantwortung für deren Inhalte.",
+
+    "availabilityTitle": "6. Verfügbarkeit",
+    "availabilityText": "Es wird keine Gewähr für die ununterbrochene Verfügbarkeit dieser Website übernommen. Der Zugriff kann aus technischen Gründen oder zu Wartungszwecken vorübergehend eingeschränkt sein.",
+
+    "changesTitle": "7. Änderungen dieser Bedingungen",
+    "changesText": "Diese Allgemeinen Geschäftsbedingungen können angepasst werden, um Änderungen an diesem Demo-Projekt abzubilden. Die jeweils aktuelle Version ist auf dieser Seite veröffentlicht.",
+
+    "lawTitle": "8. Anwendbares Recht",
+    "lawText": "Diese Allgemeinen Geschäftsbedingungen unterliegen dem Recht der Bundesrepublik Deutschland, soweit dies für ein Demo-Projekt rechtlich zulässig ist."
+  },
+
+
+  
+  "safety": {
+    "metaTitle": "Sicherheitshinweise | St. Nikolaus Kirchturmführung",
+    "title": "Sicherheitshinweise",
+    "subtitle": "Bitte lesen Sie diese Hinweise sorgfältig durch, bevor Sie den Turm und die Kirche betreten. Sie dienen Ihrer Sicherheit, der Sicherheit anderer Besucher und dem Schutz des Gebäudes.",
+
+    "callout1": {
+      "title": "Wichtiger Hinweis",
+      "text": "Das Betreten erfolgt auf eigene Gefahr. Bitte folgen Sie jederzeit den Anweisungen des Turmführungspersonals."
+    },
+    "callout2": {
+      "title": "Vor Beginn",
+      "text": "Bitte tragen Sie festes Schuhwerk und halten Sie Ihre Hände auf den Treppen frei (möglichst keine sperrigen Taschen)."
+    },
+
+    "rules": {
+      "nosmoke": {
+        "title": "Rauchverbot",
+        "text": "Im gesamten Turm- und Kirchenbereich besteht Rauchverbot."
+      },
+      "shoes": {
+        "title": "Festes Schuhwerk tragen",
+        "text": "Bitte tragen Sie festes, geschlossenes Schuhwerk. Treppen und Flächen können uneben sein."
+      },
+      "throwing": {
+        "title": "Keine Gegenstände werfen",
+        "text": "Bitte werfen Sie keine Gegenstände vom Turm oder aus den Fenstern."
+      },
+      "bells": {
+        "title": "Bei starkem Glockengeläut",
+        "text": "Bei starkem Glockengeläut öffnen Sie bitte den Mund leicht, um den Druck auszugleichen und Ihre Ohren zu schützen."
+      },
+      "blackout": {
+        "title": "Bei Lichtausfall",
+        "text": "Bleiben Sie bitte an Ort und Stelle. Sie werden vom Personal abgeholt."
+      },
+      "children": {
+        "title": "Kinder beaufsichtigen",
+        "text": "Kinder müssen von geeigneten Erwachsenen begleitet und beaufsichtigt werden."
+      },
+      "follow": {
+        "title": "Anweisungen befolgen",
+        "text": "Bitte leisten Sie den Anweisungen des Turmführungspersonals Folge."
+      },
+      "ownrisk": {
+        "title": "Betreten auf eigene Gefahr",
+        "text": "Das Betreten des Turms und der Kirche erfolgt auf eigene Gefahr. Für Unfälle wird in diesem Demo-Kontext keine Haftung übernommen."
+      }
+    },
+
+    "help": {
+      "title": "Benötigen Sie Hilfe?",
+      "text": "Wenn Sie sich unwohl fühlen, gesundheitliche Einschränkungen haben oder Unterstützung benötigen, informieren Sie bitte vor Beginn der Führung das Personal."
+    },
+    "reminder": {
+      "title": "Respektvoller Umgang",
+      "text": "Der Turm ist Teil einer historischen Kirche. Bitte verhalten Sie sich während des Besuchs umsichtig und respektvoll."
+    },
+
+    "ack": "Mit dem Fortfahren bestätigen Sie, dass Sie diese Sicherheitshinweise gelesen und verstanden haben."
+  },
+
+
+
+
+  
+  "cookies": {
+    "metaTitle": "Cookie-Richtlinie | St. Nikolaus Kirchturmführung",
+    "title": "Cookie-Richtlinie",
+    "subtitle": "Diese Seite erklärt, wie Cookies und ähnliche Speichertechnologien auf dieser Demo-Website verwendet werden.",
+
+    "box1": {
+      "title": "Tracking",
+      "text": "Diese Demo-Website ist so konzipiert, dass sie ohne Werbe- oder Tracking-Cookies von Drittanbietern funktioniert."
+    },
+    "box2": {
+      "title": "Funktionaler Speicher",
+      "text": "Wir können Ihre Sprachauswahl und grundlegende Einstellungen speichern, um die Benutzerfreundlichkeit zu verbessern."
+    },
+
+    "tableTitle": "Verwendete Cookies / Speicher (Demo)",
+    "table": {
+      "headers": {
+        "name": "Name",
+        "duration": "Speicherdauer",
+        "purpose": "Zweck"
+      },
+      "rows": {
+        "lang": {
+          "name": "language",
+          "duration": "Bis zur Änderung",
+          "purpose": "Speichert Ihre ausgewählte Sprache (DE/EN)."
+        },
+        "form": {
+          "name": "formDraft",
+          "duration": "Kurzzeitig",
+          "purpose": "Kann Eingaben in Formularen vorübergehend speichern, um Datenverlust zu vermeiden (Demo)."
+        }
+      }
+    },
+
+    "manageText": "Sie können Cookies und Website-Daten jederzeit in den Einstellungen Ihres Browsers löschen. Sie können Cookies auch blockieren; in diesem Fall funktionieren einige Funktionen (z. B. die Speicherung der Spracheinstellung) möglicherweise nicht wie vorgesehen."
+  },
+
+
+  
+  "guide": {
+    "metaTitle": "Unsere Turmführerinnen und Turmführer | St.-Nikolaus-Kirchturmführung",
+
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Unsere Turmführerinnen und Turmführer"
+    },
+
+    "title": "Unsere Turmführerinnen und Turmführer",
+    "intro": "Unsere Kirchturmführungen werden von engagierten Ehrenamtlichen begleitet, die eng mit dem Gemeindeleben von St. Nikolaus verbunden sind. Jede Führung verbindet persönliches Engagement, historisches Wissen und echte Begeisterung.",
+
+    "sections": {
+      "female": "Unsere Turmführerinnen",
+      "male": "Unsere Turmführer"
+    },
+
+    "guides": {
+      "anna": {
+        "name": "Anna Müller",
+        "meta": "Rosenheim · Gemeindepädagogin",
+        "quote": "Seit vielen Jahren begleite ich Besucherinnen und Besucher durch den Kirchturm – und entdecke dabei immer wieder Neues."
+      },
+      "maria": {
+        "name": "Maria Huber",
+        "meta": "Stephanskirchen · Kirchenarchivarin",
+        "quote": "Der Turm besteht nicht nur aus Stein und Holz – er erzählt von Glauben, Gemeinschaft und Zeit."
+      },
+      "elisabeth": {
+        "name": "Elisabeth König",
+        "meta": "Rosenheim · Mitglied des Orgelkreises",
+        "quote": "Ich zeige gerne, wie sich Architektur und Glaube im Kirchturm miteinander verbinden."
+      },
+      "katharina": {
+        "name": "Katharina Bauer",
+        "meta": "Kolbermoor · Ehrenamtliche Mitarbeiterin",
+        "quote": "Führungen geben mir die Möglichkeit, weiterzugeben, was diese Kirche über Generationen hinweg bedeutet hat."
+      },
+
+      "thomas": {
+        "name": "Thomas Schneider",
+        "meta": "Rosenheim · Mesner",
+        "quote": "Besonders gerne erkläre ich die technischen und historischen Details, die sich hinter den Mauern des Turms verbergen."
+      },
+      "michael": {
+        "name": "Michael Lang",
+        "meta": "Raubling · Mitglied des Pfarrgemeinderats",
+        "quote": "Jeder Aufstieg in den Turm ist eine kleine Reise durch die Geschichte Rosenheims."
+      },
+      "josef": {
+        "name": "Josef Weber",
+        "meta": "Rosenheim · Ehrenamtlicher Glockenbetreuer",
+        "quote": "Es macht mir große Freude, Besucherinnen und Besuchern die Glocken und ihren besonderen Klang näherzubringen."
+      },
+      "andreas": {
+        "name": "Andreas Fischer",
+        "meta": "Bad Aibling · Pfarrhistoriker",
+        "quote": "Die Geschichte des Kirchturms weiterzugeben hilft, seine Bedeutung auch für kommende Generationen lebendig zu halten."
+      }
+    }
+  },
+
+
+
+  
+  "dachboden": {
+    "metaTitle": "Dachboden | St. Nikolaus Kirchturmführung",
+
+    "breadcrumb": "Dachboden",
+
+    "title": "Dachboden",
+    "subtitle": "Ein ruhiger, hölzerner „Zwischenraum“, in dem Struktur, Stille und Geschichte sichtbar werden.",
+
+    "chip1": "Hölzerne Dachkonstruktion",
+    "chip2": "Mittelalterliche Eingangstür",
+    "chip3": "Steingravuren",
+
+    "heroCaption": "Der Dachboden zeigt die Handwerkskunst der Holzbalken: ruhig, weitläufig und friedlich.",
+
+    "quickFactsTitle": "Kurzinfos",
+    "fact1Label": "Material",
+    "fact1Value": "Überwiegend Holz (Balken, Tragwerk, Boden)",
+    "fact2Label": "Atmosphäre",
+    "fact2Value": "Ruhig, luftig und nachdenklich",
+    "fact3Label": "Besonderes",
+    "fact3Value": "Alte Tür, Gravuren, vogelfreundliche Fenster",
+
+    "quoteTitle": "Eine kleine Reflexion",
+    "quoteLead": "Matthäus 7,13",
+    "quoteText": "Die alte gusseiserne Tür erinnert an den biblischen Satz „Geht durch die enge Pforte“. Der Zugang zum Dachboden wirkt zunächst schmal und öffnet sich dann plötzlich zu einem weiten Raum. Dieser Kontrast macht das Erlebnis besonders eindrücklich.",
+
+    "section1Title": "1) Konstruktion und Handwerkskunst",
+    "section1Text1": "Der Dachboden ist geprägt von seiner hölzernen Geometrie: Balken, Verbindungen und Rahmen tragen das Dach fast vollständig aus Holz, mit nur wenig Metall. Selbst wenn der Raum weitgehend leer ist, wird die Konstruktion selbst zum Hauptausstellungsstück. Der Geruch des Holzes, die Stille und die Weite schaffen gemeinsam ein einzigartiges Raumgefühl.",
+    "section1Text2": "Laut den Organisatoren wurde Holz nicht nur aus ästhetischen Gründen gewählt, sondern auch wegen seines guten Verhältnisses von Stabilität zu Gewicht und seiner Langlebigkeit über Jahrhunderte hinweg.\n\nDer Dachboden wirkt außerdem wie ein Ort der kurzen Ruhepause nach dem Aufstieg über mehrere Ebenen. Ein Moment des Innehaltens bereitet auf die kommenden Stationen vor.",
+    "section1Cap1": "Schräg verlaufende Balken und lange Sichtachsen lassen den Dachboden größer und offener wirken.",
+    "section1Cap2": "Schon von den Fenstern des Dachbodens aus eröffnet sich ein Blick auf die Stadt.",
+
+    "section2Title": "2) Der Eingang und das Gefühl der „engen Pforte“",
+    "section2Text1": "Der Eingang besteht aus einer alten Eisentür, die in dickes Mauerwerk eingelassen ist. Proportionen und Material verweisen auf mittelalterliche Bauweisen – kompakt, defensiv und auf Dauerhaftigkeit ausgelegt.",
+    "section2Text2": "Nach dem Durchschreiten dieses schmalen Zugangs öffnet sich der Raum deutlich. Dieses unmittelbare Erleben von Enge und Weite erzeugt einen starken räumlichen Kontrast für die Besucher.",
+    "section2Cap" : "Die alte Eingangstür aus dem 14. Jahrhundert: eine kleine Schwelle, die die Wahrnehmung des dahinterliegenden Raumes verändert.",
+ 
+    "section3Title": "3) Inschriften und kleine Artefakte",
+    "section3Text1": "Eine besondere Steinplatte mit historischer deutscher Schrift (Frühneuhochdeutsch) beschreibt die chronologische Geschichte der Kirche und des Turms. Sie erinnert an eine Zeit, in der wichtige Texte in Stein festgehalten wurden. Auch ohne jedes Wort zu lesen, vermitteln Typografie und Material Alter und Bedeutung.",
+    "section3Text2": "In der Nähe ergänzen weitere Tafeln und kleinere Elemente diesen Bereich zu einer Art kompaktem „Mikromuseum“ im Dachboden.",
+
+    "grid1Title": "Steinplatte",
+    "grid1Text": "Eine formelle Inschrift aus Stein, verfasst in Frühneuhochdeutsch.",
+    "grid2Title": "Gedenkplatte",
+    "grid2Text": "Historische Steinplatte mit Bezug zur Heilig-Geist-Kirche.",
+    "grid3Title": "Mechanismen",
+    "grid3Text": "Überreste praktischer Systeme aus kirchlichen Ritualen und der Instandhaltung.",
+
+    "section4Title": "4) „Falkenhaus“ und respektvolles Zusammenleben",
+    "section4Text1": "In der Kirche leben zwei Falken (ein Nest befindet sich im Dachboden, ein weiteres darüber in der Nähe der Turmuhr). Die Organisatoren haben große Sorgfalt darauf verwendet, den Vögeln einen sicheren Lebensraum zu bieten. Durchdachte Fensterlösungen und Nistplätze ermöglichen freie Bewegung der Tiere und schützen gleichzeitig das Gebäude – besonders in der feuchten Jahreszeit.",
+    "section4Text2": "Dieses Detail zeigt eindrucksvoll das Zusammenspiel von Denkmalschutz, Gebäudesicherheit und Respekt gegenüber der Natur an einem Ort.",
+    "section4Cap1": "Sicherer und geschützter Nistplatz der Falken im Dachboden.",
+    "section4Cap2": "Fensterkonstruktion mit bewusstem Spalt, die Bewegungsfreiheit der Vögel und Schutz des Bauwerks gewährleistet.",
+
+    "ctaTitle": "Neugierig geworden?",
+    "ctaText": "Buchen Sie eine Führung und erleben Sie den Dachboden als Übergangsraum zwischen dem Lärm der Stadt und den Höhen des Turms.\nVerfügbar von Ostersonntag bis Ende Oktober.",
+    "ctaButton": "Führung buchen",
+
+    "onThisPage": "Auf dieser Seite",
+    "nav1": "Konstruktion",
+    "nav2": "Eingangstür",
+    "nav3": "Inschriften",
+    "nav4": "Falkenhaus"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "errors": {
+    "required": "Dieses Feld ist erforderlich.",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+  }
+}
